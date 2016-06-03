@@ -1,0 +1,3 @@
+SensorCmd.name			max_size:32
+SensorCmd.unit			max_size:32
+McuWrapperMessage.msg	no_unions:false
