@@ -1,9 +1,11 @@
-# addrobots_proto
+#addrobots_proto
 
-# Build Java messages
-protoc -I=./VehicleDriveProto/Design\ Files/ --java_out=./VehicleDriveProto/Production\ Files/Java/ ./VehicleDriveProto/Design\ Files/vehicledriveprotocol.proto
+The Google Protocol Buffers to encode sensor and motor commands over the various interfaces.
 
-# Build Python message
+##Build Java messages
+>protoc -I=./VehicleDriveProto/Design\ Files/ --java_out=./VehicleDriveProto/Production\ Files/Java/ ./VehicleDriveProto/Design\ Files/vehicledriveprotocol.proto
+
+##Build Python message
 
 >cd ~/git/addrobots_proto/VehicleDriveProto/Production
 
@@ -11,7 +13,7 @@ protoc -I=./VehicleDriveProto/Design\ Files/ --java_out=./VehicleDriveProto/Prod
 
 >protoc -I=../SourceMessages/ --python_out=./Python/ ../SourceMessages/McuCmdMsg.proto
 
-# NanoPB message generation steps
+##NanoPB message generation steps
 
 >cd ~/git/addrobots_proto/VehicleDriveProto/Production
 
