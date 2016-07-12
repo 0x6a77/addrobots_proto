@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 message Drive {
-	int32 velocity = 1;
+	double velocity = 1;
 	string direction = 2;
 	double acceleration = 3;
 	double distance = 4;
