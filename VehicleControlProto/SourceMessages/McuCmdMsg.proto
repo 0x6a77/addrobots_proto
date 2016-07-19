@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option java_package = "com.addrobots.protobuf";
+
 message MotorCmd {
 	int32 num = 1;
 	int32 dir = 2;

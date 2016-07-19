@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option java_package = "com.addrobots.protobuf";
+
 message Drive {
 	double velocity = 1;
 	string direction = 2;

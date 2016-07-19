@@ -4,27 +4,29 @@ The Google Protocol Buffers to encode sensor and motor commands over the various
 
 ## Java message generation
 
->cd ~/git/addrobots_proto/
+>cd ~/git/addrobots_proto/VehicleControlProto/
 
->protoc -I=./VehicleDriveProto/SourceMessages/ --java_out=./VehicleDriveProto/Production/Java/ ./VehicleDriveProto/SourceMessages/VcuCmdMsg.proto
+>protoc -I=./SourceMessages/ --java_out=./Production/Java/ ./SourceMessages/VcuCmdMsg.proto
+
+>protoc -I=./SourceMessages/ --java_out=./Production/Java/ ./SourceMessages/McuCmdMsg.proto
 
 ## Javascript message generation
 
 >cd ~/git/addrobots_proto/
 
->protoc -I=./VehicleDriveProto/SourceMessages/ --js_out=./VehicleDriveProto/Production/Javascript/ ./VehicleDriveProto/SourceMessages/VcuCmdMsg.proto
+>protoc -I=./SourceMessages/ --js_out=./Production/Javascript/ ./SourceMessages/VcuCmdMsg.proto
 
 ## Python message generation
 
->cd ~/git/addrobots_proto/VehicleDriveProto/Production
+>cd ~/git/addrobots_proto/VehicleControlProto/
 
->protoc -I=../SourceMessages/ --python_out=./Python/ ../SourceMessages/VcuCmdMsg.proto
+>protoc -I=../SourceMessages/ --python_out=./Production/Python/ ../SourceMessages/VcuCmdMsg.proto
 
->protoc -I=../SourceMessages/ --python_out=./Python/ ../SourceMessages/McuCmdMsg.proto
+>protoc -I=../SourceMessages/ --python_out=./Production/Python/ ../SourceMessages/McuCmdMsg.proto
 
-## NanoPB message generation 
+## NanoPB message generation (C code for firmware)
 
->cd ~/git/addrobots_proto/VehicleDriveProto/Production
+>cd ~/git/addrobots_proto/VehicleControlProto/Production
 
 >protoc --plugin=nanopb=~/git/nanopb/generator/protoc-gen-nanopb --include_imports=~/git/nanopb/generator/proto/nanopb.proto --proto_path=../SourceMessages -o./McuCmdMsg.pb ../SourceMessages/McuCmdMsg.proto
 
