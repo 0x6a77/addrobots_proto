@@ -8,6 +8,8 @@
 goog.provide('proto.VcuWrapperMessage');
 
 goog.require('jspb.Message');
+goog.require('jspb.BinaryReader');
+goog.require('jspb.BinaryWriter');
 goog.require('proto.Drive');
 goog.require('proto.Halt');
 goog.require('proto.Orbit');
@@ -96,6 +98,112 @@ proto.VcuWrapperMessage.toObject = function(includeInstance, msg) {
   return obj;
 };
 }
+
+
+/**
+ * Deserializes binary data (in protobuf wire format).
+ * @param {jspb.ByteSource} bytes The bytes to deserialize.
+ * @return {!proto.VcuWrapperMessage}
+ */
+proto.VcuWrapperMessage.deserializeBinary = function(bytes) {
+  var reader = new jspb.BinaryReader(bytes);
+  var msg = new proto.VcuWrapperMessage;
+  return proto.VcuWrapperMessage.deserializeBinaryFromReader(msg, reader);
+};
+
+
+/**
+ * Deserializes binary data (in protobuf wire format) from the
+ * given reader into the given message object.
+ * @param {!proto.VcuWrapperMessage} msg The message object to deserialize into.
+ * @param {!jspb.BinaryReader} reader The BinaryReader to use.
+ * @return {!proto.VcuWrapperMessage}
+ */
+proto.VcuWrapperMessage.deserializeBinaryFromReader = function(msg, reader) {
+  while (reader.nextField()) {
+    if (reader.isEndGroup()) {
+      break;
+    }
+    var field = reader.getFieldNumber();
+    switch (field) {
+    case 1:
+      var value = new proto.Drive;
+      reader.readMessage(value,proto.Drive.deserializeBinaryFromReader);
+      msg.setDrive(value);
+      break;
+    case 2:
+      var value = new proto.Orbit;
+      reader.readMessage(value,proto.Orbit.deserializeBinaryFromReader);
+      msg.setOrbit(value);
+      break;
+    case 3:
+      var value = new proto.Halt;
+      reader.readMessage(value,proto.Halt.deserializeBinaryFromReader);
+      msg.setHalt(value);
+      break;
+    default:
+      reader.skipField();
+      break;
+    }
+  }
+  return msg;
+};
+
+
+/**
+ * Class method variant: serializes the given message to binary data
+ * (in protobuf wire format), writing to the given BinaryWriter.
+ * @param {!proto.VcuWrapperMessage} message
+ * @param {!jspb.BinaryWriter} writer
+ */
+proto.VcuWrapperMessage.serializeBinaryToWriter = function(message, writer) {
+  message.serializeBinaryToWriter(writer);
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format).
+ * @return {!Uint8Array}
+ */
+proto.VcuWrapperMessage.prototype.serializeBinary = function() {
+  var writer = new jspb.BinaryWriter();
+  this.serializeBinaryToWriter(writer);
+  return writer.getResultBuffer();
+};
+
+
+/**
+ * Serializes the message to binary data (in protobuf wire format),
+ * writing to the given BinaryWriter.
+ * @param {!jspb.BinaryWriter} writer
+ */
+proto.VcuWrapperMessage.prototype.serializeBinaryToWriter = function (writer) {
+  var f = undefined;
+  f = this.getDrive();
+  if (f != null) {
+    writer.writeMessage(
+      1,
+      f,
+      proto.Drive.serializeBinaryToWriter
+    );
+  }
+  f = this.getOrbit();
+  if (f != null) {
+    writer.writeMessage(
+      2,
+      f,
+      proto.Orbit.serializeBinaryToWriter
+    );
+  }
+  f = this.getHalt();
+  if (f != null) {
+    writer.writeMessage(
+      3,
+      f,
+      proto.Halt.serializeBinaryToWriter
+    );
+  }
+};
 
 
 /**

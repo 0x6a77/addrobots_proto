@@ -12,9 +12,9 @@ The Google Protocol Buffers to encode sensor and motor commands over the various
 
 ## Javascript message generation
 
->cd ~/git/addrobots_proto/
+>cd ~/git/addrobots_proto/VehicleControlProto/
 
->protoc -I=./SourceMessages/ --js_out=./Production/Javascript/ ./SourceMessages/VcuCmdMsg.proto
+>protoc -I=./SourceMessages/ --js_out=binary:./Production/Javascript/ ./SourceMessages/VcuCmdMsg.proto
 
 ## Python message generation
 
