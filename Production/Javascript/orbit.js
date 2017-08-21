@@ -57,14 +57,14 @@ proto.Orbit.prototype.toObject = function(opt_includeInstance) {
  */
 proto.Orbit.toObject = function(includeInstance, msg) {
   var f, obj = {
-    velocity: msg.getVelocity(),
-    direction: msg.getDirection(),
-    acceleration: msg.getAcceleration(),
-    degrees: msg.getDegrees()
+    velocity: +jspb.Message.getFieldWithDefault(msg, 1, 0.0),
+    direction: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    acceleration: +jspb.Message.getFieldWithDefault(msg, 3, 0.0),
+    degrees: +jspb.Message.getFieldWithDefault(msg, 4, 0.0)
   };
 
   if (includeInstance) {
-    obj.$jspbMessageInstance = msg
+    obj.$jspbMessageInstance = msg;
   }
   return obj;
 };
@@ -123,56 +123,46 @@ proto.Orbit.deserializeBinaryFromReader = function(msg, reader) {
 
 
 /**
- * Class method variant: serializes the given message to binary data
- * (in protobuf wire format), writing to the given BinaryWriter.
- * @param {!proto.Orbit} message
- * @param {!jspb.BinaryWriter} writer
- */
-proto.Orbit.serializeBinaryToWriter = function(message, writer) {
-  message.serializeBinaryToWriter(writer);
-};
-
-
-/**
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
 proto.Orbit.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  this.serializeBinaryToWriter(writer);
+  proto.Orbit.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
 
 /**
- * Serializes the message to binary data (in protobuf wire format),
- * writing to the given BinaryWriter.
+ * Serializes the given message to binary data (in protobuf wire
+ * format), writing to the given BinaryWriter.
+ * @param {!proto.Orbit} message
  * @param {!jspb.BinaryWriter} writer
  */
-proto.Orbit.prototype.serializeBinaryToWriter = function (writer) {
+proto.Orbit.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = this.getVelocity();
+  f = message.getVelocity();
   if (f !== 0.0) {
     writer.writeDouble(
       1,
       f
     );
   }
-  f = this.getDirection();
+  f = message.getDirection();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = this.getAcceleration();
+  f = message.getAcceleration();
   if (f !== 0.0) {
     writer.writeDouble(
       3,
       f
     );
   }
-  f = this.getDegrees();
+  f = message.getDegrees();
   if (f !== 0.0) {
     writer.writeDouble(
       4,
@@ -183,24 +173,15 @@ proto.Orbit.prototype.serializeBinaryToWriter = function (writer) {
 
 
 /**
- * Creates a deep clone of this proto. No data is shared with the original.
- * @return {!proto.Orbit} The clone.
- */
-proto.Orbit.prototype.cloneMessage = function() {
-  return /** @type {!proto.Orbit} */ (jspb.Message.cloneMessage(this));
-};
-
-
-/**
  * optional double velocity = 1;
  * @return {number}
  */
 proto.Orbit.prototype.getVelocity = function() {
-  return /** @type {number} */ (jspb.Message.getFieldProto3(this, 1, 0));
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 1, 0.0));
 };
 
 
-/** @param {number} value  */
+/** @param {number} value */
 proto.Orbit.prototype.setVelocity = function(value) {
   jspb.Message.setField(this, 1, value);
 };
@@ -211,11 +192,11 @@ proto.Orbit.prototype.setVelocity = function(value) {
  * @return {string}
  */
 proto.Orbit.prototype.getDirection = function() {
-  return /** @type {string} */ (jspb.Message.getFieldProto3(this, 2, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
-/** @param {string} value  */
+/** @param {string} value */
 proto.Orbit.prototype.setDirection = function(value) {
   jspb.Message.setField(this, 2, value);
 };
@@ -226,11 +207,11 @@ proto.Orbit.prototype.setDirection = function(value) {
  * @return {number}
  */
 proto.Orbit.prototype.getAcceleration = function() {
-  return /** @type {number} */ (jspb.Message.getFieldProto3(this, 3, 0));
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 3, 0.0));
 };
 
 
-/** @param {number} value  */
+/** @param {number} value */
 proto.Orbit.prototype.setAcceleration = function(value) {
   jspb.Message.setField(this, 3, value);
 };
@@ -241,11 +222,11 @@ proto.Orbit.prototype.setAcceleration = function(value) {
  * @return {number}
  */
 proto.Orbit.prototype.getDegrees = function() {
-  return /** @type {number} */ (jspb.Message.getFieldProto3(this, 4, 0));
+  return /** @type {number} */ (+jspb.Message.getFieldWithDefault(this, 4, 0.0));
 };
 
 
-/** @param {number} value  */
+/** @param {number} value */
 proto.Orbit.prototype.setDegrees = function(value) {
   jspb.Message.setField(this, 4, value);
 };
