@@ -1,6 +1,7 @@
 syntax = "proto3";
 
 option java_package = "com.addrobots.protobuf";
+option java_outer_classname = "VehicleMsg";
 
 message Drive {
 	double velocity = 1;
@@ -22,7 +23,7 @@ message Halt {
 	double acceleration = 1;
 }
 
-message VcuWrapperMessage {
+message VcuWrapper {
 	oneof msg {
 		Drive drive = 1;
 		Orbit orbit = 2;

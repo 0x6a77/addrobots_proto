@@ -1,2 +1,2 @@
-MotorMsg.content	no_unions:false
-MotorMsg.uuid		max_size:36
+McuWrapper.content	no_unions:false
+McuWrapper.uuid		max_size:36

@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_package = "com.addrobots.protobuf";
-option java_outer_classname = "MotorMsgProto";
+option java_outer_classname = "MotorMsg";
 
 // This message contains one or more motor data samples
 message MotorData {
@@ -16,7 +16,7 @@ message MotorCmd {
 }
 
 // This message is the outside wrapper that contains one or more motor messages (data or cmd)
-message MotorMsg {
+message McuWrapper {
 	string uuid = 1;
 	oneof content {
 		MotorData motorData = 2;

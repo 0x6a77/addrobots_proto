@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='VehicleMsg.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x10VehicleMsg.proto\"|\n\x05\x44rive\x12\x10\n\x08velocity\x18\x01 \x01(\x01\x12\x11\n\tdirection\x18\x02 \x01(\t\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x10\n\x08\x64istance\x18\x04 \x01(\x01\x12\x14\n\x0c\x65\x64geDistance\x18\x05 \x01(\x01\x12\x10\n\x08\x65\x64geSide\x18\x06 \x01(\t\"S\n\x05Orbit\x12\x10\n\x08velocity\x18\x01 \x01(\x01\x12\x11\n\tdirection\x18\x02 \x01(\t\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x0f\n\x07\x64\x65grees\x18\x04 \x01(\x01\"\x1c\n\x04Halt\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x01 \x01(\x01\"c\n\x11VcuWrapperMessage\x12\x17\n\x05\x64rive\x18\x01 \x01(\x0b\x32\x06.DriveH\x00\x12\x17\n\x05orbit\x18\x02 \x01(\x0b\x32\x06.OrbitH\x00\x12\x15\n\x04halt\x18\x03 \x01(\x0b\x32\x05.HaltH\x00\x42\x05\n\x03msgB\x18\n\x16\x63om.addrobots.protobufb\x06proto3')
+  serialized_pb=_b('\n\x10VehicleMsg.proto\"|\n\x05\x44rive\x12\x10\n\x08velocity\x18\x01 \x01(\x01\x12\x11\n\tdirection\x18\x02 \x01(\t\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x10\n\x08\x64istance\x18\x04 \x01(\x01\x12\x14\n\x0c\x65\x64geDistance\x18\x05 \x01(\x01\x12\x10\n\x08\x65\x64geSide\x18\x06 \x01(\t\"S\n\x05Orbit\x12\x10\n\x08velocity\x18\x01 \x01(\x01\x12\x11\n\tdirection\x18\x02 \x01(\t\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x03 \x01(\x01\x12\x0f\n\x07\x64\x65grees\x18\x04 \x01(\x01\"\x1c\n\x04Halt\x12\x14\n\x0c\x61\x63\x63\x65leration\x18\x01 \x01(\x01\"\\\n\nVcuWrapper\x12\x17\n\x05\x64rive\x18\x01 \x01(\x0b\x32\x06.DriveH\x00\x12\x17\n\x05orbit\x18\x02 \x01(\x0b\x32\x06.OrbitH\x00\x12\x15\n\x04halt\x18\x03 \x01(\x0b\x32\x05.HaltH\x00\x42\x05\n\x03msgB$\n\x16\x63om.addrobots.protobufB\nVehicleMsgb\x06proto3')
 )
 
 
@@ -38,42 +38,42 @@ _DRIVE = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='direction', full_name='Drive.direction', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='acceleration', full_name='Drive.acceleration', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='distance', full_name='Drive.distance', index=3,
       number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='edgeDistance', full_name='Drive.edgeDistance', index=4,
       number=5, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='edgeSide', full_name='Drive.edgeSide', index=5,
       number=6, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -104,28 +104,28 @@ _ORBIT = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='direction', full_name='Orbit.direction', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='acceleration', full_name='Orbit.acceleration', index=2,
       number=3, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='degrees', full_name='Orbit.degrees', index=3,
       number=4, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -156,7 +156,7 @@ _HALT = _descriptor.Descriptor(
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -174,34 +174,34 @@ _HALT = _descriptor.Descriptor(
 )
 
 
-_VCUWRAPPERMESSAGE = _descriptor.Descriptor(
-  name='VcuWrapperMessage',
-  full_name='VcuWrapperMessage',
+_VCUWRAPPER = _descriptor.Descriptor(
+  name='VcuWrapper',
+  full_name='VcuWrapper',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='drive', full_name='VcuWrapperMessage.drive', index=0,
+      name='drive', full_name='VcuWrapper.drive', index=0,
       number=1, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='orbit', full_name='VcuWrapperMessage.orbit', index=1,
+      name='orbit', full_name='VcuWrapper.orbit', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='halt', full_name='VcuWrapperMessage.halt', index=2,
+      name='halt', full_name='VcuWrapper.halt', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -214,29 +214,29 @@ _VCUWRAPPERMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
     _descriptor.OneofDescriptor(
-      name='msg', full_name='VcuWrapperMessage.msg',
+      name='msg', full_name='VcuWrapper.msg',
       index=0, containing_type=None, fields=[]),
   ],
   serialized_start=261,
-  serialized_end=360,
+  serialized_end=353,
 )
 
-_VCUWRAPPERMESSAGE.fields_by_name['drive'].message_type = _DRIVE
-_VCUWRAPPERMESSAGE.fields_by_name['orbit'].message_type = _ORBIT
-_VCUWRAPPERMESSAGE.fields_by_name['halt'].message_type = _HALT
-_VCUWRAPPERMESSAGE.oneofs_by_name['msg'].fields.append(
-  _VCUWRAPPERMESSAGE.fields_by_name['drive'])
-_VCUWRAPPERMESSAGE.fields_by_name['drive'].containing_oneof = _VCUWRAPPERMESSAGE.oneofs_by_name['msg']
-_VCUWRAPPERMESSAGE.oneofs_by_name['msg'].fields.append(
-  _VCUWRAPPERMESSAGE.fields_by_name['orbit'])
-_VCUWRAPPERMESSAGE.fields_by_name['orbit'].containing_oneof = _VCUWRAPPERMESSAGE.oneofs_by_name['msg']
-_VCUWRAPPERMESSAGE.oneofs_by_name['msg'].fields.append(
-  _VCUWRAPPERMESSAGE.fields_by_name['halt'])
-_VCUWRAPPERMESSAGE.fields_by_name['halt'].containing_oneof = _VCUWRAPPERMESSAGE.oneofs_by_name['msg']
+_VCUWRAPPER.fields_by_name['drive'].message_type = _DRIVE
+_VCUWRAPPER.fields_by_name['orbit'].message_type = _ORBIT
+_VCUWRAPPER.fields_by_name['halt'].message_type = _HALT
+_VCUWRAPPER.oneofs_by_name['msg'].fields.append(
+  _VCUWRAPPER.fields_by_name['drive'])
+_VCUWRAPPER.fields_by_name['drive'].containing_oneof = _VCUWRAPPER.oneofs_by_name['msg']
+_VCUWRAPPER.oneofs_by_name['msg'].fields.append(
+  _VCUWRAPPER.fields_by_name['orbit'])
+_VCUWRAPPER.fields_by_name['orbit'].containing_oneof = _VCUWRAPPER.oneofs_by_name['msg']
+_VCUWRAPPER.oneofs_by_name['msg'].fields.append(
+  _VCUWRAPPER.fields_by_name['halt'])
+_VCUWRAPPER.fields_by_name['halt'].containing_oneof = _VCUWRAPPER.oneofs_by_name['msg']
 DESCRIPTOR.message_types_by_name['Drive'] = _DRIVE
 DESCRIPTOR.message_types_by_name['Orbit'] = _ORBIT
 DESCRIPTOR.message_types_by_name['Halt'] = _HALT
-DESCRIPTOR.message_types_by_name['VcuWrapperMessage'] = _VCUWRAPPERMESSAGE
+DESCRIPTOR.message_types_by_name['VcuWrapper'] = _VCUWRAPPER
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 Drive = _reflection.GeneratedProtocolMessageType('Drive', (_message.Message,), dict(
@@ -260,14 +260,14 @@ Halt = _reflection.GeneratedProtocolMessageType('Halt', (_message.Message,), dic
   ))
 _sym_db.RegisterMessage(Halt)
 
-VcuWrapperMessage = _reflection.GeneratedProtocolMessageType('VcuWrapperMessage', (_message.Message,), dict(
-  DESCRIPTOR = _VCUWRAPPERMESSAGE,
+VcuWrapper = _reflection.GeneratedProtocolMessageType('VcuWrapper', (_message.Message,), dict(
+  DESCRIPTOR = _VCUWRAPPER,
   __module__ = 'VehicleMsg_pb2'
-  # @@protoc_insertion_point(class_scope:VcuWrapperMessage)
+  # @@protoc_insertion_point(class_scope:VcuWrapper)
   ))
-_sym_db.RegisterMessage(VcuWrapperMessage)
+_sym_db.RegisterMessage(VcuWrapper)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\026com.addrobots.protobuf'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\026com.addrobots.protobufB\nVehicleMsg'))
 # @@protoc_insertion_point(module_scope)
