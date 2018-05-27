@@ -3,93 +3,92 @@ syntax = "proto3";
 option java_package = "com.addrobots.protobuf";
 option java_outer_classname = "MotorMsg";
 
-// This message contains one or more motor data samples
-message MotorData {
-	DataAction action = 1;
-	repeated DataParam params = 2;
-}
-
-// The message contains one or more motor command tuples
-message MotorCmd {
-	MotorAction action = 1;
-	repeated CmdParam params = 2;
-}
-
 // This message is the outside wrapper that contains one or more motor messages (data or cmd)
 message McuWrapper {
+
+	enum Unit {
+		UNKNOWN_UNIT = 0;
+		STRING = 1;
+		BOOLEAN = 2;
+		INTEGER = 3;
+		DOUBLE = 4;
+		SECOND = 5;
+		DEGREE = 6;
+		AMP = 7;
+		VOLT = 8;
+		NEWTON = 9;
+		UHENRY = 10;
+	}
+
+	// This message contains one or more motor data samples
+	message MotorData {
+		enum DataAction {
+			UKNONWN_ACTION = 0;
+			GET = 1;
+			RESULT = 2;
+		}
+
+		message DataParam {
+			enum MotorDataId {
+				UNKNOWN_ID = 0;
+				UUID = 1;
+				VERSION = 2;
+				MFG_DATE_YYYYMMDD = 3;
+				MFG_ID = 4;
+				MODEL_ID = 5;
+				STEP_COUNT = 6;
+				INDUCTANCE = 8;		// MicroHenry
+				CUR_POS = 12;
+				CUR_AMP = 13;
+				CUR_VOLT = 14;
+			}
+
+			MotorDataId id = 1;
+			double value = 2;
+			Unit unit = 3;
+		}
+
+		DataAction action = 1;
+		repeated DataParam params = 2;
+	}
+
+	// The message contains one or more motor command tuples
+	message MotorCmd {
+		enum MotorAction {
+			UNKNOWN = 0;
+			BRAKE = 1;
+			FREEWHEEL = 2;
+			RUN = 3;
+			GOTO_POS = 4;
+		}
+
+		message CmdParam {
+			enum MotorCmdParamId {
+				UNKNOWN_PARAM = 0;
+				CLOCKWISE = 1;			// Boolean
+				POSITION = 2; 			// Degree
+				VELOCITY = 3; 			// Degree/sec
+				ACCEL = 4; 				// Degree/sec^2
+				HOLD_TORQUE = 5;			// Newton
+				BREAKAWAY = 6;			// MS
+				MIN_CURRENT_LIMIT = 7;	// Amp
+				MAX_CURRENT_LIMIT = 8;	// Amp
+				MIN_VOLT_VELOCITY = 9;	// Degree/sec
+				MAX_VOLT_VELOCITY = 10;	// Degree/sec
+				MIN_VOLTAGE_LIMIT = 11;	// Volt
+				MAX_VOLTAGE_LIMIT = 12;	// Volt
+			}
+			MotorCmdParamId id = 1;
+			double value = 2;
+			Unit unit = 3;
+		}
+
+		MotorAction action = 1;
+		repeated CmdParam params = 2;
+	}
 	string uuid = 1;
 	oneof content {
-		MotorData motorData = 2;
-		MotorCmd motorCmd = 3;
+		MotorData motor_data = 2;
+		MotorCmd motor_cmd = 3;
 	}
-}
-
-enum DataAction {
-	UKNONWN_ACTION = 0;
-	GET = 1;
-	RESULT = 2;
-}
-
-enum MotorAction {
-	UNKNOWN = 0;
-	BRAKE = 1;
-	FREEWHEEL = 2;
-	RUN = 3;
-	GOTO_POS = 4;
-}
-
-enum MotorDataId {
-	UNKNOWN_ID = 0;
-	UUID = 1;
-	VERSION = 2;
-	MFG_DATE_YYYYMMDD = 3;
-	MFG_ID = 4;
-	MODEL_ID = 5;
-	STEP_COUNT = 6;
-	INDUCTANCE = 8;		// MicroHenry
-	CUR_POS = 12;
-	CUR_AMP = 13;
-	CUR_VOLT = 14;
-}
-
-enum Unit {
-	UNKNOWN_UNIT = 0;
-	STRING = 1;
-	BOOLEAN = 2;
-	INTEGER = 3;
-	DOUBLE = 4;
-	SECOND = 5;
-	DEGREE = 6;
-	AMP = 7;
-	VOLT = 8;
-	NEWTON = 9;
-	UHENRY = 10;
-}
-
-enum MotorCmdParamId {
-	UNKNOWN_PARAM = 0;
-	CLOCKWISE = 1;			// Boolean
-	POSITION = 2; 			// Degree
-	VELOCITY = 3; 			// Degree/sec
-	ACCEL = 4; 				// Degree/sec^2
-	HOLD_TORQUE = 5;		// Newton
-	BREAKAWAY = 6;			// MS
-	MIN_CURRENT_LIMIT = 7;	// Amp
-	MAX_CURRENT_LIMIT = 8;	// Amp
-	MIN_VOLT_VELOCITY = 9;	// Degree/sec
-	MAX_VOLT_VELOCITY = 10;	// Degree/sec
-	MIN_VOLTAGE_LIMIT = 11;	// Volt
-	MAX_VOLTAGE_LIMIT = 12;	// Volt
-}
-
-message DataParam {
-	MotorDataId id = 1;
-	double value = 2;
-	Unit unit = 3;
-}
-
-message CmdParam {
-	MotorCmdParamId id = 1;
-	double value = 2;
-	Unit unit = 3;
 }

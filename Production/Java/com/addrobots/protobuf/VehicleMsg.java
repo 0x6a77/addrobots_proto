@@ -14,2151 +14,48 @@ public final class VehicleMsg {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface DriveOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Drive)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>double velocity = 1;</code>
-     */
-    double getVelocity();
-
-    /**
-     * <code>string direction = 2;</code>
-     */
-    java.lang.String getDirection();
-    /**
-     * <code>string direction = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getDirectionBytes();
-
-    /**
-     * <code>double acceleration = 3;</code>
-     */
-    double getAcceleration();
-
-    /**
-     * <code>double distance = 4;</code>
-     */
-    double getDistance();
-
-    /**
-     * <code>double edgeDistance = 5;</code>
-     */
-    double getEdgeDistance();
-
-    /**
-     * <code>string edgeSide = 6;</code>
-     */
-    java.lang.String getEdgeSide();
-    /**
-     * <code>string edgeSide = 6;</code>
-     */
-    com.google.protobuf.ByteString
-        getEdgeSideBytes();
-  }
-  /**
-   * Protobuf type {@code Drive}
-   */
-  public  static final class Drive extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Drive)
-      DriveOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Drive.newBuilder() to construct.
-    private Drive(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Drive() {
-      velocity_ = 0D;
-      direction_ = "";
-      acceleration_ = 0D;
-      distance_ = 0D;
-      edgeDistance_ = 0D;
-      edgeSide_ = "";
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Drive(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 9: {
-
-              velocity_ = input.readDouble();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              direction_ = s;
-              break;
-            }
-            case 25: {
-
-              acceleration_ = input.readDouble();
-              break;
-            }
-            case 33: {
-
-              distance_ = input.readDouble();
-              break;
-            }
-            case 41: {
-
-              edgeDistance_ = input.readDouble();
-              break;
-            }
-            case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              edgeSide_ = s;
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.addrobots.protobuf.VehicleMsg.internal_static_Drive_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.addrobots.protobuf.VehicleMsg.internal_static_Drive_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.addrobots.protobuf.VehicleMsg.Drive.class, com.addrobots.protobuf.VehicleMsg.Drive.Builder.class);
-    }
-
-    public static final int VELOCITY_FIELD_NUMBER = 1;
-    private double velocity_;
-    /**
-     * <code>double velocity = 1;</code>
-     */
-    public double getVelocity() {
-      return velocity_;
-    }
-
-    public static final int DIRECTION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object direction_;
-    /**
-     * <code>string direction = 2;</code>
-     */
-    public java.lang.String getDirection() {
-      java.lang.Object ref = direction_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        direction_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string direction = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getDirectionBytes() {
-      java.lang.Object ref = direction_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        direction_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ACCELERATION_FIELD_NUMBER = 3;
-    private double acceleration_;
-    /**
-     * <code>double acceleration = 3;</code>
-     */
-    public double getAcceleration() {
-      return acceleration_;
-    }
-
-    public static final int DISTANCE_FIELD_NUMBER = 4;
-    private double distance_;
-    /**
-     * <code>double distance = 4;</code>
-     */
-    public double getDistance() {
-      return distance_;
-    }
-
-    public static final int EDGEDISTANCE_FIELD_NUMBER = 5;
-    private double edgeDistance_;
-    /**
-     * <code>double edgeDistance = 5;</code>
-     */
-    public double getEdgeDistance() {
-      return edgeDistance_;
-    }
-
-    public static final int EDGESIDE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object edgeSide_;
-    /**
-     * <code>string edgeSide = 6;</code>
-     */
-    public java.lang.String getEdgeSide() {
-      java.lang.Object ref = edgeSide_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        edgeSide_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string edgeSide = 6;</code>
-     */
-    public com.google.protobuf.ByteString
-        getEdgeSideBytes() {
-      java.lang.Object ref = edgeSide_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        edgeSide_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (velocity_ != 0D) {
-        output.writeDouble(1, velocity_);
-      }
-      if (!getDirectionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, direction_);
-      }
-      if (acceleration_ != 0D) {
-        output.writeDouble(3, acceleration_);
-      }
-      if (distance_ != 0D) {
-        output.writeDouble(4, distance_);
-      }
-      if (edgeDistance_ != 0D) {
-        output.writeDouble(5, edgeDistance_);
-      }
-      if (!getEdgeSideBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, edgeSide_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (velocity_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(1, velocity_);
-      }
-      if (!getDirectionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, direction_);
-      }
-      if (acceleration_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(3, acceleration_);
-      }
-      if (distance_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(4, distance_);
-      }
-      if (edgeDistance_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(5, edgeDistance_);
-      }
-      if (!getEdgeSideBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, edgeSide_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.addrobots.protobuf.VehicleMsg.Drive)) {
-        return super.equals(obj);
-      }
-      com.addrobots.protobuf.VehicleMsg.Drive other = (com.addrobots.protobuf.VehicleMsg.Drive) obj;
-
-      boolean result = true;
-      result = result && (
-          java.lang.Double.doubleToLongBits(getVelocity())
-          == java.lang.Double.doubleToLongBits(
-              other.getVelocity()));
-      result = result && getDirection()
-          .equals(other.getDirection());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getAcceleration())
-          == java.lang.Double.doubleToLongBits(
-              other.getAcceleration()));
-      result = result && (
-          java.lang.Double.doubleToLongBits(getDistance())
-          == java.lang.Double.doubleToLongBits(
-              other.getDistance()));
-      result = result && (
-          java.lang.Double.doubleToLongBits(getEdgeDistance())
-          == java.lang.Double.doubleToLongBits(
-              other.getEdgeDistance()));
-      result = result && getEdgeSide()
-          .equals(other.getEdgeSide());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VELOCITY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getVelocity()));
-      hash = (37 * hash) + DIRECTION_FIELD_NUMBER;
-      hash = (53 * hash) + getDirection().hashCode();
-      hash = (37 * hash) + ACCELERATION_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getAcceleration()));
-      hash = (37 * hash) + DISTANCE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getDistance()));
-      hash = (37 * hash) + EDGEDISTANCE_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getEdgeDistance()));
-      hash = (37 * hash) + EDGESIDE_FIELD_NUMBER;
-      hash = (53 * hash) + getEdgeSide().hashCode();
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.addrobots.protobuf.VehicleMsg.Drive parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Drive parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Drive parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Drive parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Drive parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Drive parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Drive parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Drive parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Drive parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Drive parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Drive parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Drive parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.addrobots.protobuf.VehicleMsg.Drive prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Drive}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Drive)
-        com.addrobots.protobuf.VehicleMsg.DriveOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.addrobots.protobuf.VehicleMsg.internal_static_Drive_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.addrobots.protobuf.VehicleMsg.internal_static_Drive_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.addrobots.protobuf.VehicleMsg.Drive.class, com.addrobots.protobuf.VehicleMsg.Drive.Builder.class);
-      }
-
-      // Construct using com.addrobots.protobuf.VehicleMsg.Drive.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        velocity_ = 0D;
-
-        direction_ = "";
-
-        acceleration_ = 0D;
-
-        distance_ = 0D;
-
-        edgeDistance_ = 0D;
-
-        edgeSide_ = "";
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.addrobots.protobuf.VehicleMsg.internal_static_Drive_descriptor;
-      }
-
-      public com.addrobots.protobuf.VehicleMsg.Drive getDefaultInstanceForType() {
-        return com.addrobots.protobuf.VehicleMsg.Drive.getDefaultInstance();
-      }
-
-      public com.addrobots.protobuf.VehicleMsg.Drive build() {
-        com.addrobots.protobuf.VehicleMsg.Drive result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.addrobots.protobuf.VehicleMsg.Drive buildPartial() {
-        com.addrobots.protobuf.VehicleMsg.Drive result = new com.addrobots.protobuf.VehicleMsg.Drive(this);
-        result.velocity_ = velocity_;
-        result.direction_ = direction_;
-        result.acceleration_ = acceleration_;
-        result.distance_ = distance_;
-        result.edgeDistance_ = edgeDistance_;
-        result.edgeSide_ = edgeSide_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.addrobots.protobuf.VehicleMsg.Drive) {
-          return mergeFrom((com.addrobots.protobuf.VehicleMsg.Drive)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.addrobots.protobuf.VehicleMsg.Drive other) {
-        if (other == com.addrobots.protobuf.VehicleMsg.Drive.getDefaultInstance()) return this;
-        if (other.getVelocity() != 0D) {
-          setVelocity(other.getVelocity());
-        }
-        if (!other.getDirection().isEmpty()) {
-          direction_ = other.direction_;
-          onChanged();
-        }
-        if (other.getAcceleration() != 0D) {
-          setAcceleration(other.getAcceleration());
-        }
-        if (other.getDistance() != 0D) {
-          setDistance(other.getDistance());
-        }
-        if (other.getEdgeDistance() != 0D) {
-          setEdgeDistance(other.getEdgeDistance());
-        }
-        if (!other.getEdgeSide().isEmpty()) {
-          edgeSide_ = other.edgeSide_;
-          onChanged();
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.addrobots.protobuf.VehicleMsg.Drive parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.addrobots.protobuf.VehicleMsg.Drive) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private double velocity_ ;
-      /**
-       * <code>double velocity = 1;</code>
-       */
-      public double getVelocity() {
-        return velocity_;
-      }
-      /**
-       * <code>double velocity = 1;</code>
-       */
-      public Builder setVelocity(double value) {
-        
-        velocity_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>double velocity = 1;</code>
-       */
-      public Builder clearVelocity() {
-        
-        velocity_ = 0D;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object direction_ = "";
-      /**
-       * <code>string direction = 2;</code>
-       */
-      public java.lang.String getDirection() {
-        java.lang.Object ref = direction_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          direction_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string direction = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getDirectionBytes() {
-        java.lang.Object ref = direction_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          direction_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string direction = 2;</code>
-       */
-      public Builder setDirection(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        direction_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string direction = 2;</code>
-       */
-      public Builder clearDirection() {
-        
-        direction_ = getDefaultInstance().getDirection();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string direction = 2;</code>
-       */
-      public Builder setDirectionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        direction_ = value;
-        onChanged();
-        return this;
-      }
-
-      private double acceleration_ ;
-      /**
-       * <code>double acceleration = 3;</code>
-       */
-      public double getAcceleration() {
-        return acceleration_;
-      }
-      /**
-       * <code>double acceleration = 3;</code>
-       */
-      public Builder setAcceleration(double value) {
-        
-        acceleration_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>double acceleration = 3;</code>
-       */
-      public Builder clearAcceleration() {
-        
-        acceleration_ = 0D;
-        onChanged();
-        return this;
-      }
-
-      private double distance_ ;
-      /**
-       * <code>double distance = 4;</code>
-       */
-      public double getDistance() {
-        return distance_;
-      }
-      /**
-       * <code>double distance = 4;</code>
-       */
-      public Builder setDistance(double value) {
-        
-        distance_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>double distance = 4;</code>
-       */
-      public Builder clearDistance() {
-        
-        distance_ = 0D;
-        onChanged();
-        return this;
-      }
-
-      private double edgeDistance_ ;
-      /**
-       * <code>double edgeDistance = 5;</code>
-       */
-      public double getEdgeDistance() {
-        return edgeDistance_;
-      }
-      /**
-       * <code>double edgeDistance = 5;</code>
-       */
-      public Builder setEdgeDistance(double value) {
-        
-        edgeDistance_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>double edgeDistance = 5;</code>
-       */
-      public Builder clearEdgeDistance() {
-        
-        edgeDistance_ = 0D;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object edgeSide_ = "";
-      /**
-       * <code>string edgeSide = 6;</code>
-       */
-      public java.lang.String getEdgeSide() {
-        java.lang.Object ref = edgeSide_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          edgeSide_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string edgeSide = 6;</code>
-       */
-      public com.google.protobuf.ByteString
-          getEdgeSideBytes() {
-        java.lang.Object ref = edgeSide_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          edgeSide_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string edgeSide = 6;</code>
-       */
-      public Builder setEdgeSide(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        edgeSide_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string edgeSide = 6;</code>
-       */
-      public Builder clearEdgeSide() {
-        
-        edgeSide_ = getDefaultInstance().getEdgeSide();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string edgeSide = 6;</code>
-       */
-      public Builder setEdgeSideBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        edgeSide_ = value;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Drive)
-    }
-
-    // @@protoc_insertion_point(class_scope:Drive)
-    private static final com.addrobots.protobuf.VehicleMsg.Drive DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.addrobots.protobuf.VehicleMsg.Drive();
-    }
-
-    public static com.addrobots.protobuf.VehicleMsg.Drive getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Drive>
-        PARSER = new com.google.protobuf.AbstractParser<Drive>() {
-      public Drive parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Drive(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Drive> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Drive> getParserForType() {
-      return PARSER;
-    }
-
-    public com.addrobots.protobuf.VehicleMsg.Drive getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface OrbitOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Orbit)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>double velocity = 1;</code>
-     */
-    double getVelocity();
-
-    /**
-     * <code>string direction = 2;</code>
-     */
-    java.lang.String getDirection();
-    /**
-     * <code>string direction = 2;</code>
-     */
-    com.google.protobuf.ByteString
-        getDirectionBytes();
-
-    /**
-     * <code>double acceleration = 3;</code>
-     */
-    double getAcceleration();
-
-    /**
-     * <code>double degrees = 4;</code>
-     */
-    double getDegrees();
-  }
-  /**
-   * Protobuf type {@code Orbit}
-   */
-  public  static final class Orbit extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Orbit)
-      OrbitOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Orbit.newBuilder() to construct.
-    private Orbit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Orbit() {
-      velocity_ = 0D;
-      direction_ = "";
-      acceleration_ = 0D;
-      degrees_ = 0D;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Orbit(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 9: {
-
-              velocity_ = input.readDouble();
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              direction_ = s;
-              break;
-            }
-            case 25: {
-
-              acceleration_ = input.readDouble();
-              break;
-            }
-            case 33: {
-
-              degrees_ = input.readDouble();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.addrobots.protobuf.VehicleMsg.internal_static_Orbit_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.addrobots.protobuf.VehicleMsg.internal_static_Orbit_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.addrobots.protobuf.VehicleMsg.Orbit.class, com.addrobots.protobuf.VehicleMsg.Orbit.Builder.class);
-    }
-
-    public static final int VELOCITY_FIELD_NUMBER = 1;
-    private double velocity_;
-    /**
-     * <code>double velocity = 1;</code>
-     */
-    public double getVelocity() {
-      return velocity_;
-    }
-
-    public static final int DIRECTION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object direction_;
-    /**
-     * <code>string direction = 2;</code>
-     */
-    public java.lang.String getDirection() {
-      java.lang.Object ref = direction_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        direction_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string direction = 2;</code>
-     */
-    public com.google.protobuf.ByteString
-        getDirectionBytes() {
-      java.lang.Object ref = direction_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        direction_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int ACCELERATION_FIELD_NUMBER = 3;
-    private double acceleration_;
-    /**
-     * <code>double acceleration = 3;</code>
-     */
-    public double getAcceleration() {
-      return acceleration_;
-    }
-
-    public static final int DEGREES_FIELD_NUMBER = 4;
-    private double degrees_;
-    /**
-     * <code>double degrees = 4;</code>
-     */
-    public double getDegrees() {
-      return degrees_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (velocity_ != 0D) {
-        output.writeDouble(1, velocity_);
-      }
-      if (!getDirectionBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, direction_);
-      }
-      if (acceleration_ != 0D) {
-        output.writeDouble(3, acceleration_);
-      }
-      if (degrees_ != 0D) {
-        output.writeDouble(4, degrees_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (velocity_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(1, velocity_);
-      }
-      if (!getDirectionBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, direction_);
-      }
-      if (acceleration_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(3, acceleration_);
-      }
-      if (degrees_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(4, degrees_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.addrobots.protobuf.VehicleMsg.Orbit)) {
-        return super.equals(obj);
-      }
-      com.addrobots.protobuf.VehicleMsg.Orbit other = (com.addrobots.protobuf.VehicleMsg.Orbit) obj;
-
-      boolean result = true;
-      result = result && (
-          java.lang.Double.doubleToLongBits(getVelocity())
-          == java.lang.Double.doubleToLongBits(
-              other.getVelocity()));
-      result = result && getDirection()
-          .equals(other.getDirection());
-      result = result && (
-          java.lang.Double.doubleToLongBits(getAcceleration())
-          == java.lang.Double.doubleToLongBits(
-              other.getAcceleration()));
-      result = result && (
-          java.lang.Double.doubleToLongBits(getDegrees())
-          == java.lang.Double.doubleToLongBits(
-              other.getDegrees()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + VELOCITY_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getVelocity()));
-      hash = (37 * hash) + DIRECTION_FIELD_NUMBER;
-      hash = (53 * hash) + getDirection().hashCode();
-      hash = (37 * hash) + ACCELERATION_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getAcceleration()));
-      hash = (37 * hash) + DEGREES_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getDegrees()));
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.addrobots.protobuf.VehicleMsg.Orbit parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Orbit parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Orbit parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Orbit parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Orbit parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Orbit parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Orbit parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Orbit parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Orbit parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Orbit parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Orbit parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Orbit parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.addrobots.protobuf.VehicleMsg.Orbit prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Orbit}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Orbit)
-        com.addrobots.protobuf.VehicleMsg.OrbitOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.addrobots.protobuf.VehicleMsg.internal_static_Orbit_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.addrobots.protobuf.VehicleMsg.internal_static_Orbit_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.addrobots.protobuf.VehicleMsg.Orbit.class, com.addrobots.protobuf.VehicleMsg.Orbit.Builder.class);
-      }
-
-      // Construct using com.addrobots.protobuf.VehicleMsg.Orbit.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        velocity_ = 0D;
-
-        direction_ = "";
-
-        acceleration_ = 0D;
-
-        degrees_ = 0D;
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.addrobots.protobuf.VehicleMsg.internal_static_Orbit_descriptor;
-      }
-
-      public com.addrobots.protobuf.VehicleMsg.Orbit getDefaultInstanceForType() {
-        return com.addrobots.protobuf.VehicleMsg.Orbit.getDefaultInstance();
-      }
-
-      public com.addrobots.protobuf.VehicleMsg.Orbit build() {
-        com.addrobots.protobuf.VehicleMsg.Orbit result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.addrobots.protobuf.VehicleMsg.Orbit buildPartial() {
-        com.addrobots.protobuf.VehicleMsg.Orbit result = new com.addrobots.protobuf.VehicleMsg.Orbit(this);
-        result.velocity_ = velocity_;
-        result.direction_ = direction_;
-        result.acceleration_ = acceleration_;
-        result.degrees_ = degrees_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.addrobots.protobuf.VehicleMsg.Orbit) {
-          return mergeFrom((com.addrobots.protobuf.VehicleMsg.Orbit)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.addrobots.protobuf.VehicleMsg.Orbit other) {
-        if (other == com.addrobots.protobuf.VehicleMsg.Orbit.getDefaultInstance()) return this;
-        if (other.getVelocity() != 0D) {
-          setVelocity(other.getVelocity());
-        }
-        if (!other.getDirection().isEmpty()) {
-          direction_ = other.direction_;
-          onChanged();
-        }
-        if (other.getAcceleration() != 0D) {
-          setAcceleration(other.getAcceleration());
-        }
-        if (other.getDegrees() != 0D) {
-          setDegrees(other.getDegrees());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.addrobots.protobuf.VehicleMsg.Orbit parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.addrobots.protobuf.VehicleMsg.Orbit) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private double velocity_ ;
-      /**
-       * <code>double velocity = 1;</code>
-       */
-      public double getVelocity() {
-        return velocity_;
-      }
-      /**
-       * <code>double velocity = 1;</code>
-       */
-      public Builder setVelocity(double value) {
-        
-        velocity_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>double velocity = 1;</code>
-       */
-      public Builder clearVelocity() {
-        
-        velocity_ = 0D;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object direction_ = "";
-      /**
-       * <code>string direction = 2;</code>
-       */
-      public java.lang.String getDirection() {
-        java.lang.Object ref = direction_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          direction_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string direction = 2;</code>
-       */
-      public com.google.protobuf.ByteString
-          getDirectionBytes() {
-        java.lang.Object ref = direction_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          direction_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string direction = 2;</code>
-       */
-      public Builder setDirection(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        direction_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string direction = 2;</code>
-       */
-      public Builder clearDirection() {
-        
-        direction_ = getDefaultInstance().getDirection();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string direction = 2;</code>
-       */
-      public Builder setDirectionBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        direction_ = value;
-        onChanged();
-        return this;
-      }
-
-      private double acceleration_ ;
-      /**
-       * <code>double acceleration = 3;</code>
-       */
-      public double getAcceleration() {
-        return acceleration_;
-      }
-      /**
-       * <code>double acceleration = 3;</code>
-       */
-      public Builder setAcceleration(double value) {
-        
-        acceleration_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>double acceleration = 3;</code>
-       */
-      public Builder clearAcceleration() {
-        
-        acceleration_ = 0D;
-        onChanged();
-        return this;
-      }
-
-      private double degrees_ ;
-      /**
-       * <code>double degrees = 4;</code>
-       */
-      public double getDegrees() {
-        return degrees_;
-      }
-      /**
-       * <code>double degrees = 4;</code>
-       */
-      public Builder setDegrees(double value) {
-        
-        degrees_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>double degrees = 4;</code>
-       */
-      public Builder clearDegrees() {
-        
-        degrees_ = 0D;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Orbit)
-    }
-
-    // @@protoc_insertion_point(class_scope:Orbit)
-    private static final com.addrobots.protobuf.VehicleMsg.Orbit DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.addrobots.protobuf.VehicleMsg.Orbit();
-    }
-
-    public static com.addrobots.protobuf.VehicleMsg.Orbit getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Orbit>
-        PARSER = new com.google.protobuf.AbstractParser<Orbit>() {
-      public Orbit parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Orbit(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Orbit> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Orbit> getParserForType() {
-      return PARSER;
-    }
-
-    public com.addrobots.protobuf.VehicleMsg.Orbit getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
-  public interface HaltOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:Halt)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>double acceleration = 1;</code>
-     */
-    double getAcceleration();
-  }
-  /**
-   * Protobuf type {@code Halt}
-   */
-  public  static final class Halt extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:Halt)
-      HaltOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use Halt.newBuilder() to construct.
-    private Halt(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private Halt() {
-      acceleration_ = 0D;
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private Halt(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      int mutable_bitField0_ = 0;
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-            case 9: {
-
-              acceleration_ = input.readDouble();
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.addrobots.protobuf.VehicleMsg.internal_static_Halt_descriptor;
-    }
-
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.addrobots.protobuf.VehicleMsg.internal_static_Halt_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.addrobots.protobuf.VehicleMsg.Halt.class, com.addrobots.protobuf.VehicleMsg.Halt.Builder.class);
-    }
-
-    public static final int ACCELERATION_FIELD_NUMBER = 1;
-    private double acceleration_;
-    /**
-     * <code>double acceleration = 1;</code>
-     */
-    public double getAcceleration() {
-      return acceleration_;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (acceleration_ != 0D) {
-        output.writeDouble(1, acceleration_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (acceleration_ != 0D) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeDoubleSize(1, acceleration_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.addrobots.protobuf.VehicleMsg.Halt)) {
-        return super.equals(obj);
-      }
-      com.addrobots.protobuf.VehicleMsg.Halt other = (com.addrobots.protobuf.VehicleMsg.Halt) obj;
-
-      boolean result = true;
-      result = result && (
-          java.lang.Double.doubleToLongBits(getAcceleration())
-          == java.lang.Double.doubleToLongBits(
-              other.getAcceleration()));
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + ACCELERATION_FIELD_NUMBER;
-      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-          java.lang.Double.doubleToLongBits(getAcceleration()));
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.addrobots.protobuf.VehicleMsg.Halt parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Halt parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Halt parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Halt parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Halt parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Halt parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Halt parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Halt parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Halt parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Halt parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Halt parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.addrobots.protobuf.VehicleMsg.Halt parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.addrobots.protobuf.VehicleMsg.Halt prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code Halt}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:Halt)
-        com.addrobots.protobuf.VehicleMsg.HaltOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.addrobots.protobuf.VehicleMsg.internal_static_Halt_descriptor;
-      }
-
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.addrobots.protobuf.VehicleMsg.internal_static_Halt_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.addrobots.protobuf.VehicleMsg.Halt.class, com.addrobots.protobuf.VehicleMsg.Halt.Builder.class);
-      }
-
-      // Construct using com.addrobots.protobuf.VehicleMsg.Halt.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      public Builder clear() {
-        super.clear();
-        acceleration_ = 0D;
-
-        return this;
-      }
-
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.addrobots.protobuf.VehicleMsg.internal_static_Halt_descriptor;
-      }
-
-      public com.addrobots.protobuf.VehicleMsg.Halt getDefaultInstanceForType() {
-        return com.addrobots.protobuf.VehicleMsg.Halt.getDefaultInstance();
-      }
-
-      public com.addrobots.protobuf.VehicleMsg.Halt build() {
-        com.addrobots.protobuf.VehicleMsg.Halt result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      public com.addrobots.protobuf.VehicleMsg.Halt buildPartial() {
-        com.addrobots.protobuf.VehicleMsg.Halt result = new com.addrobots.protobuf.VehicleMsg.Halt(this);
-        result.acceleration_ = acceleration_;
-        onBuilt();
-        return result;
-      }
-
-      public Builder clone() {
-        return (Builder) super.clone();
-      }
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.setField(field, value);
-      }
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
-      }
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
-      }
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
-      }
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
-      }
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.addrobots.protobuf.VehicleMsg.Halt) {
-          return mergeFrom((com.addrobots.protobuf.VehicleMsg.Halt)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.addrobots.protobuf.VehicleMsg.Halt other) {
-        if (other == com.addrobots.protobuf.VehicleMsg.Halt.getDefaultInstance()) return this;
-        if (other.getAcceleration() != 0D) {
-          setAcceleration(other.getAcceleration());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.addrobots.protobuf.VehicleMsg.Halt parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.addrobots.protobuf.VehicleMsg.Halt) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private double acceleration_ ;
-      /**
-       * <code>double acceleration = 1;</code>
-       */
-      public double getAcceleration() {
-        return acceleration_;
-      }
-      /**
-       * <code>double acceleration = 1;</code>
-       */
-      public Builder setAcceleration(double value) {
-        
-        acceleration_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>double acceleration = 1;</code>
-       */
-      public Builder clearAcceleration() {
-        
-        acceleration_ = 0D;
-        onChanged();
-        return this;
-      }
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
-      }
-
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:Halt)
-    }
-
-    // @@protoc_insertion_point(class_scope:Halt)
-    private static final com.addrobots.protobuf.VehicleMsg.Halt DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.addrobots.protobuf.VehicleMsg.Halt();
-    }
-
-    public static com.addrobots.protobuf.VehicleMsg.Halt getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<Halt>
-        PARSER = new com.google.protobuf.AbstractParser<Halt>() {
-      public Halt parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Halt(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<Halt> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<Halt> getParserForType() {
-      return PARSER;
-    }
-
-    public com.addrobots.protobuf.VehicleMsg.Halt getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface VcuWrapperOrBuilder extends
       // @@protoc_insertion_point(interface_extends:VcuWrapper)
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.Drive drive = 1;</code>
+     * <code>.VcuWrapper.Drive drive = 1;</code>
      */
     boolean hasDrive();
     /**
-     * <code>.Drive drive = 1;</code>
+     * <code>.VcuWrapper.Drive drive = 1;</code>
      */
-    com.addrobots.protobuf.VehicleMsg.Drive getDrive();
+    com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive getDrive();
     /**
-     * <code>.Drive drive = 1;</code>
+     * <code>.VcuWrapper.Drive drive = 1;</code>
      */
-    com.addrobots.protobuf.VehicleMsg.DriveOrBuilder getDriveOrBuilder();
+    com.addrobots.protobuf.VehicleMsg.VcuWrapper.DriveOrBuilder getDriveOrBuilder();
 
     /**
-     * <code>.Orbit orbit = 2;</code>
+     * <code>.VcuWrapper.Orbit orbit = 2;</code>
      */
     boolean hasOrbit();
     /**
-     * <code>.Orbit orbit = 2;</code>
+     * <code>.VcuWrapper.Orbit orbit = 2;</code>
      */
-    com.addrobots.protobuf.VehicleMsg.Orbit getOrbit();
+    com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit getOrbit();
     /**
-     * <code>.Orbit orbit = 2;</code>
+     * <code>.VcuWrapper.Orbit orbit = 2;</code>
      */
-    com.addrobots.protobuf.VehicleMsg.OrbitOrBuilder getOrbitOrBuilder();
+    com.addrobots.protobuf.VehicleMsg.VcuWrapper.OrbitOrBuilder getOrbitOrBuilder();
 
     /**
-     * <code>.Halt halt = 3;</code>
+     * <code>.VcuWrapper.Halt halt = 3;</code>
      */
     boolean hasHalt();
     /**
-     * <code>.Halt halt = 3;</code>
+     * <code>.VcuWrapper.Halt halt = 3;</code>
      */
-    com.addrobots.protobuf.VehicleMsg.Halt getHalt();
+    com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt getHalt();
     /**
-     * <code>.Halt halt = 3;</code>
+     * <code>.VcuWrapper.Halt halt = 3;</code>
      */
-    com.addrobots.protobuf.VehicleMsg.HaltOrBuilder getHaltOrBuilder();
+    com.addrobots.protobuf.VehicleMsg.VcuWrapper.HaltOrBuilder getHaltOrBuilder();
 
     public com.addrobots.protobuf.VehicleMsg.VcuWrapper.MsgCase getMsgCase();
   }
@@ -2209,42 +106,42 @@ public final class VehicleMsg {
               break;
             }
             case 10: {
-              com.addrobots.protobuf.VehicleMsg.Drive.Builder subBuilder = null;
+              com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.Builder subBuilder = null;
               if (msgCase_ == 1) {
-                subBuilder = ((com.addrobots.protobuf.VehicleMsg.Drive) msg_).toBuilder();
+                subBuilder = ((com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) msg_).toBuilder();
               }
               msg_ =
-                  input.readMessage(com.addrobots.protobuf.VehicleMsg.Drive.parser(), extensionRegistry);
+                  input.readMessage(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.addrobots.protobuf.VehicleMsg.Drive) msg_);
+                subBuilder.mergeFrom((com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) msg_);
                 msg_ = subBuilder.buildPartial();
               }
               msgCase_ = 1;
               break;
             }
             case 18: {
-              com.addrobots.protobuf.VehicleMsg.Orbit.Builder subBuilder = null;
+              com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.Builder subBuilder = null;
               if (msgCase_ == 2) {
-                subBuilder = ((com.addrobots.protobuf.VehicleMsg.Orbit) msg_).toBuilder();
+                subBuilder = ((com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) msg_).toBuilder();
               }
               msg_ =
-                  input.readMessage(com.addrobots.protobuf.VehicleMsg.Orbit.parser(), extensionRegistry);
+                  input.readMessage(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.addrobots.protobuf.VehicleMsg.Orbit) msg_);
+                subBuilder.mergeFrom((com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) msg_);
                 msg_ = subBuilder.buildPartial();
               }
               msgCase_ = 2;
               break;
             }
             case 26: {
-              com.addrobots.protobuf.VehicleMsg.Halt.Builder subBuilder = null;
+              com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.Builder subBuilder = null;
               if (msgCase_ == 3) {
-                subBuilder = ((com.addrobots.protobuf.VehicleMsg.Halt) msg_).toBuilder();
+                subBuilder = ((com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) msg_).toBuilder();
               }
               msg_ =
-                  input.readMessage(com.addrobots.protobuf.VehicleMsg.Halt.parser(), extensionRegistry);
+                  input.readMessage(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.addrobots.protobuf.VehicleMsg.Halt) msg_);
+                subBuilder.mergeFrom((com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) msg_);
                 msg_ = subBuilder.buildPartial();
               }
               msgCase_ = 3;
@@ -2272,6 +169,2109 @@ public final class VehicleMsg {
       return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.addrobots.protobuf.VehicleMsg.VcuWrapper.class, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Builder.class);
+    }
+
+    public interface HaltOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:VcuWrapper.Halt)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>double acceleration = 1;</code>
+       */
+      double getAcceleration();
+    }
+    /**
+     * Protobuf type {@code VcuWrapper.Halt}
+     */
+    public  static final class Halt extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:VcuWrapper.Halt)
+        HaltOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Halt.newBuilder() to construct.
+      private Halt(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Halt() {
+        acceleration_ = 0D;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Halt(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 9: {
+
+                acceleration_ = input.readDouble();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Halt_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Halt_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.class, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.Builder.class);
+      }
+
+      public static final int ACCELERATION_FIELD_NUMBER = 1;
+      private double acceleration_;
+      /**
+       * <code>double acceleration = 1;</code>
+       */
+      public double getAcceleration() {
+        return acceleration_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (acceleration_ != 0D) {
+          output.writeDouble(1, acceleration_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (acceleration_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(1, acceleration_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt)) {
+          return super.equals(obj);
+        }
+        com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt other = (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) obj;
+
+        boolean result = true;
+        result = result && (
+            java.lang.Double.doubleToLongBits(getAcceleration())
+            == java.lang.Double.doubleToLongBits(
+                other.getAcceleration()));
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + ACCELERATION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getAcceleration()));
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code VcuWrapper.Halt}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:VcuWrapper.Halt)
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.HaltOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Halt_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Halt_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.class, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.Builder.class);
+        }
+
+        // Construct using com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          acceleration_ = 0D;
+
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Halt_descriptor;
+        }
+
+        public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt getDefaultInstanceForType() {
+          return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.getDefaultInstance();
+        }
+
+        public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt build() {
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt buildPartial() {
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt result = new com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt(this);
+          result.acceleration_ = acceleration_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) {
+            return mergeFrom((com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt other) {
+          if (other == com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.getDefaultInstance()) return this;
+          if (other.getAcceleration() != 0D) {
+            setAcceleration(other.getAcceleration());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private double acceleration_ ;
+        /**
+         * <code>double acceleration = 1;</code>
+         */
+        public double getAcceleration() {
+          return acceleration_;
+        }
+        /**
+         * <code>double acceleration = 1;</code>
+         */
+        public Builder setAcceleration(double value) {
+          
+          acceleration_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double acceleration = 1;</code>
+         */
+        public Builder clearAcceleration() {
+          
+          acceleration_ = 0D;
+          onChanged();
+          return this;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:VcuWrapper.Halt)
+      }
+
+      // @@protoc_insertion_point(class_scope:VcuWrapper.Halt)
+      private static final com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt();
+      }
+
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Halt>
+          PARSER = new com.google.protobuf.AbstractParser<Halt>() {
+        public Halt parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Halt(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Halt> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Halt> getParserForType() {
+        return PARSER;
+      }
+
+      public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface OrbitOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:VcuWrapper.Orbit)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>double velocity = 1;</code>
+       */
+      double getVelocity();
+
+      /**
+       * <code>string direction = 2;</code>
+       */
+      java.lang.String getDirection();
+      /**
+       * <code>string direction = 2;</code>
+       */
+      com.google.protobuf.ByteString
+          getDirectionBytes();
+
+      /**
+       * <code>double acceleration = 3;</code>
+       */
+      double getAcceleration();
+
+      /**
+       * <code>double degrees = 4;</code>
+       */
+      double getDegrees();
+    }
+    /**
+     * Protobuf type {@code VcuWrapper.Orbit}
+     */
+    public  static final class Orbit extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:VcuWrapper.Orbit)
+        OrbitOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Orbit.newBuilder() to construct.
+      private Orbit(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Orbit() {
+        velocity_ = 0D;
+        direction_ = "";
+        acceleration_ = 0D;
+        degrees_ = 0D;
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Orbit(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 9: {
+
+                velocity_ = input.readDouble();
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                direction_ = s;
+                break;
+              }
+              case 25: {
+
+                acceleration_ = input.readDouble();
+                break;
+              }
+              case 33: {
+
+                degrees_ = input.readDouble();
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Orbit_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Orbit_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.class, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.Builder.class);
+      }
+
+      public static final int VELOCITY_FIELD_NUMBER = 1;
+      private double velocity_;
+      /**
+       * <code>double velocity = 1;</code>
+       */
+      public double getVelocity() {
+        return velocity_;
+      }
+
+      public static final int DIRECTION_FIELD_NUMBER = 2;
+      private volatile java.lang.Object direction_;
+      /**
+       * <code>string direction = 2;</code>
+       */
+      public java.lang.String getDirection() {
+        java.lang.Object ref = direction_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          direction_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string direction = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDirectionBytes() {
+        java.lang.Object ref = direction_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          direction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int ACCELERATION_FIELD_NUMBER = 3;
+      private double acceleration_;
+      /**
+       * <code>double acceleration = 3;</code>
+       */
+      public double getAcceleration() {
+        return acceleration_;
+      }
+
+      public static final int DEGREES_FIELD_NUMBER = 4;
+      private double degrees_;
+      /**
+       * <code>double degrees = 4;</code>
+       */
+      public double getDegrees() {
+        return degrees_;
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (velocity_ != 0D) {
+          output.writeDouble(1, velocity_);
+        }
+        if (!getDirectionBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, direction_);
+        }
+        if (acceleration_ != 0D) {
+          output.writeDouble(3, acceleration_);
+        }
+        if (degrees_ != 0D) {
+          output.writeDouble(4, degrees_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (velocity_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(1, velocity_);
+        }
+        if (!getDirectionBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, direction_);
+        }
+        if (acceleration_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(3, acceleration_);
+        }
+        if (degrees_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(4, degrees_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit)) {
+          return super.equals(obj);
+        }
+        com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit other = (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) obj;
+
+        boolean result = true;
+        result = result && (
+            java.lang.Double.doubleToLongBits(getVelocity())
+            == java.lang.Double.doubleToLongBits(
+                other.getVelocity()));
+        result = result && getDirection()
+            .equals(other.getDirection());
+        result = result && (
+            java.lang.Double.doubleToLongBits(getAcceleration())
+            == java.lang.Double.doubleToLongBits(
+                other.getAcceleration()));
+        result = result && (
+            java.lang.Double.doubleToLongBits(getDegrees())
+            == java.lang.Double.doubleToLongBits(
+                other.getDegrees()));
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + VELOCITY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getVelocity()));
+        hash = (37 * hash) + DIRECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDirection().hashCode();
+        hash = (37 * hash) + ACCELERATION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getAcceleration()));
+        hash = (37 * hash) + DEGREES_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getDegrees()));
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code VcuWrapper.Orbit}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:VcuWrapper.Orbit)
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.OrbitOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Orbit_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Orbit_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.class, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.Builder.class);
+        }
+
+        // Construct using com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          velocity_ = 0D;
+
+          direction_ = "";
+
+          acceleration_ = 0D;
+
+          degrees_ = 0D;
+
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Orbit_descriptor;
+        }
+
+        public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit getDefaultInstanceForType() {
+          return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.getDefaultInstance();
+        }
+
+        public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit build() {
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit buildPartial() {
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit result = new com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit(this);
+          result.velocity_ = velocity_;
+          result.direction_ = direction_;
+          result.acceleration_ = acceleration_;
+          result.degrees_ = degrees_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) {
+            return mergeFrom((com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit other) {
+          if (other == com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.getDefaultInstance()) return this;
+          if (other.getVelocity() != 0D) {
+            setVelocity(other.getVelocity());
+          }
+          if (!other.getDirection().isEmpty()) {
+            direction_ = other.direction_;
+            onChanged();
+          }
+          if (other.getAcceleration() != 0D) {
+            setAcceleration(other.getAcceleration());
+          }
+          if (other.getDegrees() != 0D) {
+            setDegrees(other.getDegrees());
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private double velocity_ ;
+        /**
+         * <code>double velocity = 1;</code>
+         */
+        public double getVelocity() {
+          return velocity_;
+        }
+        /**
+         * <code>double velocity = 1;</code>
+         */
+        public Builder setVelocity(double value) {
+          
+          velocity_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double velocity = 1;</code>
+         */
+        public Builder clearVelocity() {
+          
+          velocity_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object direction_ = "";
+        /**
+         * <code>string direction = 2;</code>
+         */
+        public java.lang.String getDirection() {
+          java.lang.Object ref = direction_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            direction_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string direction = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getDirectionBytes() {
+          java.lang.Object ref = direction_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            direction_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string direction = 2;</code>
+         */
+        public Builder setDirection(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          direction_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string direction = 2;</code>
+         */
+        public Builder clearDirection() {
+          
+          direction_ = getDefaultInstance().getDirection();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string direction = 2;</code>
+         */
+        public Builder setDirectionBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          direction_ = value;
+          onChanged();
+          return this;
+        }
+
+        private double acceleration_ ;
+        /**
+         * <code>double acceleration = 3;</code>
+         */
+        public double getAcceleration() {
+          return acceleration_;
+        }
+        /**
+         * <code>double acceleration = 3;</code>
+         */
+        public Builder setAcceleration(double value) {
+          
+          acceleration_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double acceleration = 3;</code>
+         */
+        public Builder clearAcceleration() {
+          
+          acceleration_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double degrees_ ;
+        /**
+         * <code>double degrees = 4;</code>
+         */
+        public double getDegrees() {
+          return degrees_;
+        }
+        /**
+         * <code>double degrees = 4;</code>
+         */
+        public Builder setDegrees(double value) {
+          
+          degrees_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double degrees = 4;</code>
+         */
+        public Builder clearDegrees() {
+          
+          degrees_ = 0D;
+          onChanged();
+          return this;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:VcuWrapper.Orbit)
+      }
+
+      // @@protoc_insertion_point(class_scope:VcuWrapper.Orbit)
+      private static final com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit();
+      }
+
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Orbit>
+          PARSER = new com.google.protobuf.AbstractParser<Orbit>() {
+        public Orbit parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Orbit(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Orbit> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Orbit> getParserForType() {
+        return PARSER;
+      }
+
+      public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
+    }
+
+    public interface DriveOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:VcuWrapper.Drive)
+        com.google.protobuf.MessageOrBuilder {
+
+      /**
+       * <code>double velocity = 1;</code>
+       */
+      double getVelocity();
+
+      /**
+       * <code>string direction = 2;</code>
+       */
+      java.lang.String getDirection();
+      /**
+       * <code>string direction = 2;</code>
+       */
+      com.google.protobuf.ByteString
+          getDirectionBytes();
+
+      /**
+       * <code>double acceleration = 3;</code>
+       */
+      double getAcceleration();
+
+      /**
+       * <code>double distance = 4;</code>
+       */
+      double getDistance();
+
+      /**
+       * <code>double edge_distance = 5;</code>
+       */
+      double getEdgeDistance();
+
+      /**
+       * <code>string edge_side = 6;</code>
+       */
+      java.lang.String getEdgeSide();
+      /**
+       * <code>string edge_side = 6;</code>
+       */
+      com.google.protobuf.ByteString
+          getEdgeSideBytes();
+    }
+    /**
+     * Protobuf type {@code VcuWrapper.Drive}
+     */
+    public  static final class Drive extends
+        com.google.protobuf.GeneratedMessageV3 implements
+        // @@protoc_insertion_point(message_implements:VcuWrapper.Drive)
+        DriveOrBuilder {
+    private static final long serialVersionUID = 0L;
+      // Use Drive.newBuilder() to construct.
+      private Drive(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        super(builder);
+      }
+      private Drive() {
+        velocity_ = 0D;
+        direction_ = "";
+        acceleration_ = 0D;
+        distance_ = 0D;
+        edgeDistance_ = 0D;
+        edgeSide_ = "";
+      }
+
+      @java.lang.Override
+      public final com.google.protobuf.UnknownFieldSet
+      getUnknownFields() {
+        return this.unknownFields;
+      }
+      private Drive(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        this();
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        int mutable_bitField0_ = 0;
+        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+            com.google.protobuf.UnknownFieldSet.newBuilder();
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              default: {
+                if (!parseUnknownFieldProto3(
+                    input, unknownFields, extensionRegistry, tag)) {
+                  done = true;
+                }
+                break;
+              }
+              case 9: {
+
+                velocity_ = input.readDouble();
+                break;
+              }
+              case 18: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                direction_ = s;
+                break;
+              }
+              case 25: {
+
+                acceleration_ = input.readDouble();
+                break;
+              }
+              case 33: {
+
+                distance_ = input.readDouble();
+                break;
+              }
+              case 41: {
+
+                edgeDistance_ = input.readDouble();
+                break;
+              }
+              case 50: {
+                java.lang.String s = input.readStringRequireUtf8();
+
+                edgeSide_ = s;
+                break;
+              }
+            }
+          }
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(this);
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(
+              e).setUnfinishedMessage(this);
+        } finally {
+          this.unknownFields = unknownFields.build();
+          makeExtensionsImmutable();
+        }
+      }
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Drive_descriptor;
+      }
+
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Drive_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.class, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.Builder.class);
+      }
+
+      public static final int VELOCITY_FIELD_NUMBER = 1;
+      private double velocity_;
+      /**
+       * <code>double velocity = 1;</code>
+       */
+      public double getVelocity() {
+        return velocity_;
+      }
+
+      public static final int DIRECTION_FIELD_NUMBER = 2;
+      private volatile java.lang.Object direction_;
+      /**
+       * <code>string direction = 2;</code>
+       */
+      public java.lang.String getDirection() {
+        java.lang.Object ref = direction_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          direction_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string direction = 2;</code>
+       */
+      public com.google.protobuf.ByteString
+          getDirectionBytes() {
+        java.lang.Object ref = direction_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          direction_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      public static final int ACCELERATION_FIELD_NUMBER = 3;
+      private double acceleration_;
+      /**
+       * <code>double acceleration = 3;</code>
+       */
+      public double getAcceleration() {
+        return acceleration_;
+      }
+
+      public static final int DISTANCE_FIELD_NUMBER = 4;
+      private double distance_;
+      /**
+       * <code>double distance = 4;</code>
+       */
+      public double getDistance() {
+        return distance_;
+      }
+
+      public static final int EDGE_DISTANCE_FIELD_NUMBER = 5;
+      private double edgeDistance_;
+      /**
+       * <code>double edge_distance = 5;</code>
+       */
+      public double getEdgeDistance() {
+        return edgeDistance_;
+      }
+
+      public static final int EDGE_SIDE_FIELD_NUMBER = 6;
+      private volatile java.lang.Object edgeSide_;
+      /**
+       * <code>string edge_side = 6;</code>
+       */
+      public java.lang.String getEdgeSide() {
+        java.lang.Object ref = edgeSide_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          edgeSide_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string edge_side = 6;</code>
+       */
+      public com.google.protobuf.ByteString
+          getEdgeSideBytes() {
+        java.lang.Object ref = edgeSide_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          edgeSide_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
+      private byte memoizedIsInitialized = -1;
+      public final boolean isInitialized() {
+        byte isInitialized = memoizedIsInitialized;
+        if (isInitialized == 1) return true;
+        if (isInitialized == 0) return false;
+
+        memoizedIsInitialized = 1;
+        return true;
+      }
+
+      public void writeTo(com.google.protobuf.CodedOutputStream output)
+                          throws java.io.IOException {
+        if (velocity_ != 0D) {
+          output.writeDouble(1, velocity_);
+        }
+        if (!getDirectionBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 2, direction_);
+        }
+        if (acceleration_ != 0D) {
+          output.writeDouble(3, acceleration_);
+        }
+        if (distance_ != 0D) {
+          output.writeDouble(4, distance_);
+        }
+        if (edgeDistance_ != 0D) {
+          output.writeDouble(5, edgeDistance_);
+        }
+        if (!getEdgeSideBytes().isEmpty()) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 6, edgeSide_);
+        }
+        unknownFields.writeTo(output);
+      }
+
+      public int getSerializedSize() {
+        int size = memoizedSize;
+        if (size != -1) return size;
+
+        size = 0;
+        if (velocity_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(1, velocity_);
+        }
+        if (!getDirectionBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, direction_);
+        }
+        if (acceleration_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(3, acceleration_);
+        }
+        if (distance_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(4, distance_);
+        }
+        if (edgeDistance_ != 0D) {
+          size += com.google.protobuf.CodedOutputStream
+            .computeDoubleSize(5, edgeDistance_);
+        }
+        if (!getEdgeSideBytes().isEmpty()) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, edgeSide_);
+        }
+        size += unknownFields.getSerializedSize();
+        memoizedSize = size;
+        return size;
+      }
+
+      @java.lang.Override
+      public boolean equals(final java.lang.Object obj) {
+        if (obj == this) {
+         return true;
+        }
+        if (!(obj instanceof com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive)) {
+          return super.equals(obj);
+        }
+        com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive other = (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) obj;
+
+        boolean result = true;
+        result = result && (
+            java.lang.Double.doubleToLongBits(getVelocity())
+            == java.lang.Double.doubleToLongBits(
+                other.getVelocity()));
+        result = result && getDirection()
+            .equals(other.getDirection());
+        result = result && (
+            java.lang.Double.doubleToLongBits(getAcceleration())
+            == java.lang.Double.doubleToLongBits(
+                other.getAcceleration()));
+        result = result && (
+            java.lang.Double.doubleToLongBits(getDistance())
+            == java.lang.Double.doubleToLongBits(
+                other.getDistance()));
+        result = result && (
+            java.lang.Double.doubleToLongBits(getEdgeDistance())
+            == java.lang.Double.doubleToLongBits(
+                other.getEdgeDistance()));
+        result = result && getEdgeSide()
+            .equals(other.getEdgeSide());
+        result = result && unknownFields.equals(other.unknownFields);
+        return result;
+      }
+
+      @java.lang.Override
+      public int hashCode() {
+        if (memoizedHashCode != 0) {
+          return memoizedHashCode;
+        }
+        int hash = 41;
+        hash = (19 * hash) + getDescriptor().hashCode();
+        hash = (37 * hash) + VELOCITY_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getVelocity()));
+        hash = (37 * hash) + DIRECTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDirection().hashCode();
+        hash = (37 * hash) + ACCELERATION_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getAcceleration()));
+        hash = (37 * hash) + DISTANCE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getDistance()));
+        hash = (37 * hash) + EDGE_DISTANCE_FIELD_NUMBER;
+        hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+            java.lang.Double.doubleToLongBits(getEdgeDistance()));
+        hash = (37 * hash) + EDGE_SIDE_FIELD_NUMBER;
+        hash = (53 * hash) + getEdgeSide().hashCode();
+        hash = (29 * hash) + unknownFields.hashCode();
+        memoizedHashCode = hash;
+        return hash;
+      }
+
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parseFrom(
+          java.nio.ByteBuffer data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parseFrom(
+          java.nio.ByteBuffer data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parseFrom(
+          com.google.protobuf.ByteString data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parseFrom(
+          com.google.protobuf.ByteString data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parseFrom(byte[] data)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parseFrom(
+          byte[] data,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return PARSER.parseFrom(data, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parseFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parseFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parseDelimitedFrom(java.io.InputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parseDelimitedFrom(
+          java.io.InputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parseFrom(
+          com.google.protobuf.CodedInputStream input)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input);
+      }
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parseFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        return com.google.protobuf.GeneratedMessageV3
+            .parseWithIOException(PARSER, input, extensionRegistry);
+      }
+
+      public Builder newBuilderForType() { return newBuilder(); }
+      public static Builder newBuilder() {
+        return DEFAULT_INSTANCE.toBuilder();
+      }
+      public static Builder newBuilder(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive prototype) {
+        return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+      }
+      public Builder toBuilder() {
+        return this == DEFAULT_INSTANCE
+            ? new Builder() : new Builder().mergeFrom(this);
+      }
+
+      @java.lang.Override
+      protected Builder newBuilderForType(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        Builder builder = new Builder(parent);
+        return builder;
+      }
+      /**
+       * Protobuf type {@code VcuWrapper.Drive}
+       */
+      public static final class Builder extends
+          com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+          // @@protoc_insertion_point(builder_implements:VcuWrapper.Drive)
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.DriveOrBuilder {
+        public static final com.google.protobuf.Descriptors.Descriptor
+            getDescriptor() {
+          return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Drive_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+            internalGetFieldAccessorTable() {
+          return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Drive_fieldAccessorTable
+              .ensureFieldAccessorsInitialized(
+                  com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.class, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.Builder.class);
+        }
+
+        // Construct using com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.newBuilder()
+        private Builder() {
+          maybeForceBuilderInitialization();
+        }
+
+        private Builder(
+            com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          super(parent);
+          maybeForceBuilderInitialization();
+        }
+        private void maybeForceBuilderInitialization() {
+          if (com.google.protobuf.GeneratedMessageV3
+                  .alwaysUseFieldBuilders) {
+          }
+        }
+        public Builder clear() {
+          super.clear();
+          velocity_ = 0D;
+
+          direction_ = "";
+
+          acceleration_ = 0D;
+
+          distance_ = 0D;
+
+          edgeDistance_ = 0D;
+
+          edgeSide_ = "";
+
+          return this;
+        }
+
+        public com.google.protobuf.Descriptors.Descriptor
+            getDescriptorForType() {
+          return com.addrobots.protobuf.VehicleMsg.internal_static_VcuWrapper_Drive_descriptor;
+        }
+
+        public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive getDefaultInstanceForType() {
+          return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.getDefaultInstance();
+        }
+
+        public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive build() {
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive result = buildPartial();
+          if (!result.isInitialized()) {
+            throw newUninitializedMessageException(result);
+          }
+          return result;
+        }
+
+        public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive buildPartial() {
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive result = new com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive(this);
+          result.velocity_ = velocity_;
+          result.direction_ = direction_;
+          result.acceleration_ = acceleration_;
+          result.distance_ = distance_;
+          result.edgeDistance_ = edgeDistance_;
+          result.edgeSide_ = edgeSide_;
+          onBuilt();
+          return result;
+        }
+
+        public Builder clone() {
+          return (Builder) super.clone();
+        }
+        public Builder setField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.setField(field, value);
+        }
+        public Builder clearField(
+            com.google.protobuf.Descriptors.FieldDescriptor field) {
+          return (Builder) super.clearField(field);
+        }
+        public Builder clearOneof(
+            com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+          return (Builder) super.clearOneof(oneof);
+        }
+        public Builder setRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            int index, java.lang.Object value) {
+          return (Builder) super.setRepeatedField(field, index, value);
+        }
+        public Builder addRepeatedField(
+            com.google.protobuf.Descriptors.FieldDescriptor field,
+            java.lang.Object value) {
+          return (Builder) super.addRepeatedField(field, value);
+        }
+        public Builder mergeFrom(com.google.protobuf.Message other) {
+          if (other instanceof com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) {
+            return mergeFrom((com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive)other);
+          } else {
+            super.mergeFrom(other);
+            return this;
+          }
+        }
+
+        public Builder mergeFrom(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive other) {
+          if (other == com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.getDefaultInstance()) return this;
+          if (other.getVelocity() != 0D) {
+            setVelocity(other.getVelocity());
+          }
+          if (!other.getDirection().isEmpty()) {
+            direction_ = other.direction_;
+            onChanged();
+          }
+          if (other.getAcceleration() != 0D) {
+            setAcceleration(other.getAcceleration());
+          }
+          if (other.getDistance() != 0D) {
+            setDistance(other.getDistance());
+          }
+          if (other.getEdgeDistance() != 0D) {
+            setEdgeDistance(other.getEdgeDistance());
+          }
+          if (!other.getEdgeSide().isEmpty()) {
+            edgeSide_ = other.edgeSide_;
+            onChanged();
+          }
+          this.mergeUnknownFields(other.unknownFields);
+          onChanged();
+          return this;
+        }
+
+        public final boolean isInitialized() {
+          return true;
+        }
+
+        public Builder mergeFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws java.io.IOException {
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive parsedMessage = null;
+          try {
+            parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+          } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+            parsedMessage = (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) e.getUnfinishedMessage();
+            throw e.unwrapIOException();
+          } finally {
+            if (parsedMessage != null) {
+              mergeFrom(parsedMessage);
+            }
+          }
+          return this;
+        }
+
+        private double velocity_ ;
+        /**
+         * <code>double velocity = 1;</code>
+         */
+        public double getVelocity() {
+          return velocity_;
+        }
+        /**
+         * <code>double velocity = 1;</code>
+         */
+        public Builder setVelocity(double value) {
+          
+          velocity_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double velocity = 1;</code>
+         */
+        public Builder clearVelocity() {
+          
+          velocity_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object direction_ = "";
+        /**
+         * <code>string direction = 2;</code>
+         */
+        public java.lang.String getDirection() {
+          java.lang.Object ref = direction_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            direction_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string direction = 2;</code>
+         */
+        public com.google.protobuf.ByteString
+            getDirectionBytes() {
+          java.lang.Object ref = direction_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            direction_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string direction = 2;</code>
+         */
+        public Builder setDirection(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          direction_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string direction = 2;</code>
+         */
+        public Builder clearDirection() {
+          
+          direction_ = getDefaultInstance().getDirection();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string direction = 2;</code>
+         */
+        public Builder setDirectionBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          direction_ = value;
+          onChanged();
+          return this;
+        }
+
+        private double acceleration_ ;
+        /**
+         * <code>double acceleration = 3;</code>
+         */
+        public double getAcceleration() {
+          return acceleration_;
+        }
+        /**
+         * <code>double acceleration = 3;</code>
+         */
+        public Builder setAcceleration(double value) {
+          
+          acceleration_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double acceleration = 3;</code>
+         */
+        public Builder clearAcceleration() {
+          
+          acceleration_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double distance_ ;
+        /**
+         * <code>double distance = 4;</code>
+         */
+        public double getDistance() {
+          return distance_;
+        }
+        /**
+         * <code>double distance = 4;</code>
+         */
+        public Builder setDistance(double value) {
+          
+          distance_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double distance = 4;</code>
+         */
+        public Builder clearDistance() {
+          
+          distance_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private double edgeDistance_ ;
+        /**
+         * <code>double edge_distance = 5;</code>
+         */
+        public double getEdgeDistance() {
+          return edgeDistance_;
+        }
+        /**
+         * <code>double edge_distance = 5;</code>
+         */
+        public Builder setEdgeDistance(double value) {
+          
+          edgeDistance_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>double edge_distance = 5;</code>
+         */
+        public Builder clearEdgeDistance() {
+          
+          edgeDistance_ = 0D;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object edgeSide_ = "";
+        /**
+         * <code>string edge_side = 6;</code>
+         */
+        public java.lang.String getEdgeSide() {
+          java.lang.Object ref = edgeSide_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            edgeSide_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string edge_side = 6;</code>
+         */
+        public com.google.protobuf.ByteString
+            getEdgeSideBytes() {
+          java.lang.Object ref = edgeSide_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            edgeSide_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string edge_side = 6;</code>
+         */
+        public Builder setEdgeSide(
+            java.lang.String value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  
+          edgeSide_ = value;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string edge_side = 6;</code>
+         */
+        public Builder clearEdgeSide() {
+          
+          edgeSide_ = getDefaultInstance().getEdgeSide();
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string edge_side = 6;</code>
+         */
+        public Builder setEdgeSideBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+          
+          edgeSide_ = value;
+          onChanged();
+          return this;
+        }
+        public final Builder setUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.setUnknownFieldsProto3(unknownFields);
+        }
+
+        public final Builder mergeUnknownFields(
+            final com.google.protobuf.UnknownFieldSet unknownFields) {
+          return super.mergeUnknownFields(unknownFields);
+        }
+
+
+        // @@protoc_insertion_point(builder_scope:VcuWrapper.Drive)
+      }
+
+      // @@protoc_insertion_point(class_scope:VcuWrapper.Drive)
+      private static final com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive DEFAULT_INSTANCE;
+      static {
+        DEFAULT_INSTANCE = new com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive();
+      }
+
+      public static com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive getDefaultInstance() {
+        return DEFAULT_INSTANCE;
+      }
+
+      private static final com.google.protobuf.Parser<Drive>
+          PARSER = new com.google.protobuf.AbstractParser<Drive>() {
+        public Drive parsePartialFrom(
+            com.google.protobuf.CodedInputStream input,
+            com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+            throws com.google.protobuf.InvalidProtocolBufferException {
+          return new Drive(input, extensionRegistry);
+        }
+      };
+
+      public static com.google.protobuf.Parser<Drive> parser() {
+        return PARSER;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Parser<Drive> getParserForType() {
+        return PARSER;
+      }
+
+      public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive getDefaultInstanceForType() {
+        return DEFAULT_INSTANCE;
+      }
+
     }
 
     private int msgCase_ = 0;
@@ -2316,80 +2316,80 @@ public final class VehicleMsg {
 
     public static final int DRIVE_FIELD_NUMBER = 1;
     /**
-     * <code>.Drive drive = 1;</code>
+     * <code>.VcuWrapper.Drive drive = 1;</code>
      */
     public boolean hasDrive() {
       return msgCase_ == 1;
     }
     /**
-     * <code>.Drive drive = 1;</code>
+     * <code>.VcuWrapper.Drive drive = 1;</code>
      */
-    public com.addrobots.protobuf.VehicleMsg.Drive getDrive() {
+    public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive getDrive() {
       if (msgCase_ == 1) {
-         return (com.addrobots.protobuf.VehicleMsg.Drive) msg_;
+         return (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) msg_;
       }
-      return com.addrobots.protobuf.VehicleMsg.Drive.getDefaultInstance();
+      return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.getDefaultInstance();
     }
     /**
-     * <code>.Drive drive = 1;</code>
+     * <code>.VcuWrapper.Drive drive = 1;</code>
      */
-    public com.addrobots.protobuf.VehicleMsg.DriveOrBuilder getDriveOrBuilder() {
+    public com.addrobots.protobuf.VehicleMsg.VcuWrapper.DriveOrBuilder getDriveOrBuilder() {
       if (msgCase_ == 1) {
-         return (com.addrobots.protobuf.VehicleMsg.Drive) msg_;
+         return (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) msg_;
       }
-      return com.addrobots.protobuf.VehicleMsg.Drive.getDefaultInstance();
+      return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.getDefaultInstance();
     }
 
     public static final int ORBIT_FIELD_NUMBER = 2;
     /**
-     * <code>.Orbit orbit = 2;</code>
+     * <code>.VcuWrapper.Orbit orbit = 2;</code>
      */
     public boolean hasOrbit() {
       return msgCase_ == 2;
     }
     /**
-     * <code>.Orbit orbit = 2;</code>
+     * <code>.VcuWrapper.Orbit orbit = 2;</code>
      */
-    public com.addrobots.protobuf.VehicleMsg.Orbit getOrbit() {
+    public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit getOrbit() {
       if (msgCase_ == 2) {
-         return (com.addrobots.protobuf.VehicleMsg.Orbit) msg_;
+         return (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) msg_;
       }
-      return com.addrobots.protobuf.VehicleMsg.Orbit.getDefaultInstance();
+      return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.getDefaultInstance();
     }
     /**
-     * <code>.Orbit orbit = 2;</code>
+     * <code>.VcuWrapper.Orbit orbit = 2;</code>
      */
-    public com.addrobots.protobuf.VehicleMsg.OrbitOrBuilder getOrbitOrBuilder() {
+    public com.addrobots.protobuf.VehicleMsg.VcuWrapper.OrbitOrBuilder getOrbitOrBuilder() {
       if (msgCase_ == 2) {
-         return (com.addrobots.protobuf.VehicleMsg.Orbit) msg_;
+         return (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) msg_;
       }
-      return com.addrobots.protobuf.VehicleMsg.Orbit.getDefaultInstance();
+      return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.getDefaultInstance();
     }
 
     public static final int HALT_FIELD_NUMBER = 3;
     /**
-     * <code>.Halt halt = 3;</code>
+     * <code>.VcuWrapper.Halt halt = 3;</code>
      */
     public boolean hasHalt() {
       return msgCase_ == 3;
     }
     /**
-     * <code>.Halt halt = 3;</code>
+     * <code>.VcuWrapper.Halt halt = 3;</code>
      */
-    public com.addrobots.protobuf.VehicleMsg.Halt getHalt() {
+    public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt getHalt() {
       if (msgCase_ == 3) {
-         return (com.addrobots.protobuf.VehicleMsg.Halt) msg_;
+         return (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) msg_;
       }
-      return com.addrobots.protobuf.VehicleMsg.Halt.getDefaultInstance();
+      return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.getDefaultInstance();
     }
     /**
-     * <code>.Halt halt = 3;</code>
+     * <code>.VcuWrapper.Halt halt = 3;</code>
      */
-    public com.addrobots.protobuf.VehicleMsg.HaltOrBuilder getHaltOrBuilder() {
+    public com.addrobots.protobuf.VehicleMsg.VcuWrapper.HaltOrBuilder getHaltOrBuilder() {
       if (msgCase_ == 3) {
-         return (com.addrobots.protobuf.VehicleMsg.Halt) msg_;
+         return (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) msg_;
       }
-      return com.addrobots.protobuf.VehicleMsg.Halt.getDefaultInstance();
+      return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2405,13 +2405,13 @@ public final class VehicleMsg {
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (msgCase_ == 1) {
-        output.writeMessage(1, (com.addrobots.protobuf.VehicleMsg.Drive) msg_);
+        output.writeMessage(1, (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) msg_);
       }
       if (msgCase_ == 2) {
-        output.writeMessage(2, (com.addrobots.protobuf.VehicleMsg.Orbit) msg_);
+        output.writeMessage(2, (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) msg_);
       }
       if (msgCase_ == 3) {
-        output.writeMessage(3, (com.addrobots.protobuf.VehicleMsg.Halt) msg_);
+        output.writeMessage(3, (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) msg_);
       }
       unknownFields.writeTo(output);
     }
@@ -2423,15 +2423,15 @@ public final class VehicleMsg {
       size = 0;
       if (msgCase_ == 1) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, (com.addrobots.protobuf.VehicleMsg.Drive) msg_);
+          .computeMessageSize(1, (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) msg_);
       }
       if (msgCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.addrobots.protobuf.VehicleMsg.Orbit) msg_);
+          .computeMessageSize(2, (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) msg_);
       }
       if (msgCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.addrobots.protobuf.VehicleMsg.Halt) msg_);
+          .computeMessageSize(3, (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) msg_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -2771,33 +2771,33 @@ public final class VehicleMsg {
 
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.addrobots.protobuf.VehicleMsg.Drive, com.addrobots.protobuf.VehicleMsg.Drive.Builder, com.addrobots.protobuf.VehicleMsg.DriveOrBuilder> driveBuilder_;
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.Builder, com.addrobots.protobuf.VehicleMsg.VcuWrapper.DriveOrBuilder> driveBuilder_;
       /**
-       * <code>.Drive drive = 1;</code>
+       * <code>.VcuWrapper.Drive drive = 1;</code>
        */
       public boolean hasDrive() {
         return msgCase_ == 1;
       }
       /**
-       * <code>.Drive drive = 1;</code>
+       * <code>.VcuWrapper.Drive drive = 1;</code>
        */
-      public com.addrobots.protobuf.VehicleMsg.Drive getDrive() {
+      public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive getDrive() {
         if (driveBuilder_ == null) {
           if (msgCase_ == 1) {
-            return (com.addrobots.protobuf.VehicleMsg.Drive) msg_;
+            return (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) msg_;
           }
-          return com.addrobots.protobuf.VehicleMsg.Drive.getDefaultInstance();
+          return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.getDefaultInstance();
         } else {
           if (msgCase_ == 1) {
             return driveBuilder_.getMessage();
           }
-          return com.addrobots.protobuf.VehicleMsg.Drive.getDefaultInstance();
+          return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.getDefaultInstance();
         }
       }
       /**
-       * <code>.Drive drive = 1;</code>
+       * <code>.VcuWrapper.Drive drive = 1;</code>
        */
-      public Builder setDrive(com.addrobots.protobuf.VehicleMsg.Drive value) {
+      public Builder setDrive(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive value) {
         if (driveBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2811,10 +2811,10 @@ public final class VehicleMsg {
         return this;
       }
       /**
-       * <code>.Drive drive = 1;</code>
+       * <code>.VcuWrapper.Drive drive = 1;</code>
        */
       public Builder setDrive(
-          com.addrobots.protobuf.VehicleMsg.Drive.Builder builderForValue) {
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.Builder builderForValue) {
         if (driveBuilder_ == null) {
           msg_ = builderForValue.build();
           onChanged();
@@ -2825,13 +2825,13 @@ public final class VehicleMsg {
         return this;
       }
       /**
-       * <code>.Drive drive = 1;</code>
+       * <code>.VcuWrapper.Drive drive = 1;</code>
        */
-      public Builder mergeDrive(com.addrobots.protobuf.VehicleMsg.Drive value) {
+      public Builder mergeDrive(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive value) {
         if (driveBuilder_ == null) {
           if (msgCase_ == 1 &&
-              msg_ != com.addrobots.protobuf.VehicleMsg.Drive.getDefaultInstance()) {
-            msg_ = com.addrobots.protobuf.VehicleMsg.Drive.newBuilder((com.addrobots.protobuf.VehicleMsg.Drive) msg_)
+              msg_ != com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.getDefaultInstance()) {
+            msg_ = com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.newBuilder((com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) msg_)
                 .mergeFrom(value).buildPartial();
           } else {
             msg_ = value;
@@ -2847,7 +2847,7 @@ public final class VehicleMsg {
         return this;
       }
       /**
-       * <code>.Drive drive = 1;</code>
+       * <code>.VcuWrapper.Drive drive = 1;</code>
        */
       public Builder clearDrive() {
         if (driveBuilder_ == null) {
@@ -2866,37 +2866,37 @@ public final class VehicleMsg {
         return this;
       }
       /**
-       * <code>.Drive drive = 1;</code>
+       * <code>.VcuWrapper.Drive drive = 1;</code>
        */
-      public com.addrobots.protobuf.VehicleMsg.Drive.Builder getDriveBuilder() {
+      public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.Builder getDriveBuilder() {
         return getDriveFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Drive drive = 1;</code>
+       * <code>.VcuWrapper.Drive drive = 1;</code>
        */
-      public com.addrobots.protobuf.VehicleMsg.DriveOrBuilder getDriveOrBuilder() {
+      public com.addrobots.protobuf.VehicleMsg.VcuWrapper.DriveOrBuilder getDriveOrBuilder() {
         if ((msgCase_ == 1) && (driveBuilder_ != null)) {
           return driveBuilder_.getMessageOrBuilder();
         } else {
           if (msgCase_ == 1) {
-            return (com.addrobots.protobuf.VehicleMsg.Drive) msg_;
+            return (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) msg_;
           }
-          return com.addrobots.protobuf.VehicleMsg.Drive.getDefaultInstance();
+          return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.getDefaultInstance();
         }
       }
       /**
-       * <code>.Drive drive = 1;</code>
+       * <code>.VcuWrapper.Drive drive = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.addrobots.protobuf.VehicleMsg.Drive, com.addrobots.protobuf.VehicleMsg.Drive.Builder, com.addrobots.protobuf.VehicleMsg.DriveOrBuilder> 
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.Builder, com.addrobots.protobuf.VehicleMsg.VcuWrapper.DriveOrBuilder> 
           getDriveFieldBuilder() {
         if (driveBuilder_ == null) {
           if (!(msgCase_ == 1)) {
-            msg_ = com.addrobots.protobuf.VehicleMsg.Drive.getDefaultInstance();
+            msg_ = com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.getDefaultInstance();
           }
           driveBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.addrobots.protobuf.VehicleMsg.Drive, com.addrobots.protobuf.VehicleMsg.Drive.Builder, com.addrobots.protobuf.VehicleMsg.DriveOrBuilder>(
-                  (com.addrobots.protobuf.VehicleMsg.Drive) msg_,
+              com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive.Builder, com.addrobots.protobuf.VehicleMsg.VcuWrapper.DriveOrBuilder>(
+                  (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Drive) msg_,
                   getParentForChildren(),
                   isClean());
           msg_ = null;
@@ -2907,33 +2907,33 @@ public final class VehicleMsg {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.addrobots.protobuf.VehicleMsg.Orbit, com.addrobots.protobuf.VehicleMsg.Orbit.Builder, com.addrobots.protobuf.VehicleMsg.OrbitOrBuilder> orbitBuilder_;
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.Builder, com.addrobots.protobuf.VehicleMsg.VcuWrapper.OrbitOrBuilder> orbitBuilder_;
       /**
-       * <code>.Orbit orbit = 2;</code>
+       * <code>.VcuWrapper.Orbit orbit = 2;</code>
        */
       public boolean hasOrbit() {
         return msgCase_ == 2;
       }
       /**
-       * <code>.Orbit orbit = 2;</code>
+       * <code>.VcuWrapper.Orbit orbit = 2;</code>
        */
-      public com.addrobots.protobuf.VehicleMsg.Orbit getOrbit() {
+      public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit getOrbit() {
         if (orbitBuilder_ == null) {
           if (msgCase_ == 2) {
-            return (com.addrobots.protobuf.VehicleMsg.Orbit) msg_;
+            return (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) msg_;
           }
-          return com.addrobots.protobuf.VehicleMsg.Orbit.getDefaultInstance();
+          return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.getDefaultInstance();
         } else {
           if (msgCase_ == 2) {
             return orbitBuilder_.getMessage();
           }
-          return com.addrobots.protobuf.VehicleMsg.Orbit.getDefaultInstance();
+          return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.getDefaultInstance();
         }
       }
       /**
-       * <code>.Orbit orbit = 2;</code>
+       * <code>.VcuWrapper.Orbit orbit = 2;</code>
        */
-      public Builder setOrbit(com.addrobots.protobuf.VehicleMsg.Orbit value) {
+      public Builder setOrbit(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit value) {
         if (orbitBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -2947,10 +2947,10 @@ public final class VehicleMsg {
         return this;
       }
       /**
-       * <code>.Orbit orbit = 2;</code>
+       * <code>.VcuWrapper.Orbit orbit = 2;</code>
        */
       public Builder setOrbit(
-          com.addrobots.protobuf.VehicleMsg.Orbit.Builder builderForValue) {
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.Builder builderForValue) {
         if (orbitBuilder_ == null) {
           msg_ = builderForValue.build();
           onChanged();
@@ -2961,13 +2961,13 @@ public final class VehicleMsg {
         return this;
       }
       /**
-       * <code>.Orbit orbit = 2;</code>
+       * <code>.VcuWrapper.Orbit orbit = 2;</code>
        */
-      public Builder mergeOrbit(com.addrobots.protobuf.VehicleMsg.Orbit value) {
+      public Builder mergeOrbit(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit value) {
         if (orbitBuilder_ == null) {
           if (msgCase_ == 2 &&
-              msg_ != com.addrobots.protobuf.VehicleMsg.Orbit.getDefaultInstance()) {
-            msg_ = com.addrobots.protobuf.VehicleMsg.Orbit.newBuilder((com.addrobots.protobuf.VehicleMsg.Orbit) msg_)
+              msg_ != com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.getDefaultInstance()) {
+            msg_ = com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.newBuilder((com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) msg_)
                 .mergeFrom(value).buildPartial();
           } else {
             msg_ = value;
@@ -2983,7 +2983,7 @@ public final class VehicleMsg {
         return this;
       }
       /**
-       * <code>.Orbit orbit = 2;</code>
+       * <code>.VcuWrapper.Orbit orbit = 2;</code>
        */
       public Builder clearOrbit() {
         if (orbitBuilder_ == null) {
@@ -3002,37 +3002,37 @@ public final class VehicleMsg {
         return this;
       }
       /**
-       * <code>.Orbit orbit = 2;</code>
+       * <code>.VcuWrapper.Orbit orbit = 2;</code>
        */
-      public com.addrobots.protobuf.VehicleMsg.Orbit.Builder getOrbitBuilder() {
+      public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.Builder getOrbitBuilder() {
         return getOrbitFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Orbit orbit = 2;</code>
+       * <code>.VcuWrapper.Orbit orbit = 2;</code>
        */
-      public com.addrobots.protobuf.VehicleMsg.OrbitOrBuilder getOrbitOrBuilder() {
+      public com.addrobots.protobuf.VehicleMsg.VcuWrapper.OrbitOrBuilder getOrbitOrBuilder() {
         if ((msgCase_ == 2) && (orbitBuilder_ != null)) {
           return orbitBuilder_.getMessageOrBuilder();
         } else {
           if (msgCase_ == 2) {
-            return (com.addrobots.protobuf.VehicleMsg.Orbit) msg_;
+            return (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) msg_;
           }
-          return com.addrobots.protobuf.VehicleMsg.Orbit.getDefaultInstance();
+          return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.getDefaultInstance();
         }
       }
       /**
-       * <code>.Orbit orbit = 2;</code>
+       * <code>.VcuWrapper.Orbit orbit = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.addrobots.protobuf.VehicleMsg.Orbit, com.addrobots.protobuf.VehicleMsg.Orbit.Builder, com.addrobots.protobuf.VehicleMsg.OrbitOrBuilder> 
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.Builder, com.addrobots.protobuf.VehicleMsg.VcuWrapper.OrbitOrBuilder> 
           getOrbitFieldBuilder() {
         if (orbitBuilder_ == null) {
           if (!(msgCase_ == 2)) {
-            msg_ = com.addrobots.protobuf.VehicleMsg.Orbit.getDefaultInstance();
+            msg_ = com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.getDefaultInstance();
           }
           orbitBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.addrobots.protobuf.VehicleMsg.Orbit, com.addrobots.protobuf.VehicleMsg.Orbit.Builder, com.addrobots.protobuf.VehicleMsg.OrbitOrBuilder>(
-                  (com.addrobots.protobuf.VehicleMsg.Orbit) msg_,
+              com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit.Builder, com.addrobots.protobuf.VehicleMsg.VcuWrapper.OrbitOrBuilder>(
+                  (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Orbit) msg_,
                   getParentForChildren(),
                   isClean());
           msg_ = null;
@@ -3043,33 +3043,33 @@ public final class VehicleMsg {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.addrobots.protobuf.VehicleMsg.Halt, com.addrobots.protobuf.VehicleMsg.Halt.Builder, com.addrobots.protobuf.VehicleMsg.HaltOrBuilder> haltBuilder_;
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.Builder, com.addrobots.protobuf.VehicleMsg.VcuWrapper.HaltOrBuilder> haltBuilder_;
       /**
-       * <code>.Halt halt = 3;</code>
+       * <code>.VcuWrapper.Halt halt = 3;</code>
        */
       public boolean hasHalt() {
         return msgCase_ == 3;
       }
       /**
-       * <code>.Halt halt = 3;</code>
+       * <code>.VcuWrapper.Halt halt = 3;</code>
        */
-      public com.addrobots.protobuf.VehicleMsg.Halt getHalt() {
+      public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt getHalt() {
         if (haltBuilder_ == null) {
           if (msgCase_ == 3) {
-            return (com.addrobots.protobuf.VehicleMsg.Halt) msg_;
+            return (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) msg_;
           }
-          return com.addrobots.protobuf.VehicleMsg.Halt.getDefaultInstance();
+          return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.getDefaultInstance();
         } else {
           if (msgCase_ == 3) {
             return haltBuilder_.getMessage();
           }
-          return com.addrobots.protobuf.VehicleMsg.Halt.getDefaultInstance();
+          return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.getDefaultInstance();
         }
       }
       /**
-       * <code>.Halt halt = 3;</code>
+       * <code>.VcuWrapper.Halt halt = 3;</code>
        */
-      public Builder setHalt(com.addrobots.protobuf.VehicleMsg.Halt value) {
+      public Builder setHalt(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt value) {
         if (haltBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -3083,10 +3083,10 @@ public final class VehicleMsg {
         return this;
       }
       /**
-       * <code>.Halt halt = 3;</code>
+       * <code>.VcuWrapper.Halt halt = 3;</code>
        */
       public Builder setHalt(
-          com.addrobots.protobuf.VehicleMsg.Halt.Builder builderForValue) {
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.Builder builderForValue) {
         if (haltBuilder_ == null) {
           msg_ = builderForValue.build();
           onChanged();
@@ -3097,13 +3097,13 @@ public final class VehicleMsg {
         return this;
       }
       /**
-       * <code>.Halt halt = 3;</code>
+       * <code>.VcuWrapper.Halt halt = 3;</code>
        */
-      public Builder mergeHalt(com.addrobots.protobuf.VehicleMsg.Halt value) {
+      public Builder mergeHalt(com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt value) {
         if (haltBuilder_ == null) {
           if (msgCase_ == 3 &&
-              msg_ != com.addrobots.protobuf.VehicleMsg.Halt.getDefaultInstance()) {
-            msg_ = com.addrobots.protobuf.VehicleMsg.Halt.newBuilder((com.addrobots.protobuf.VehicleMsg.Halt) msg_)
+              msg_ != com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.getDefaultInstance()) {
+            msg_ = com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.newBuilder((com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) msg_)
                 .mergeFrom(value).buildPartial();
           } else {
             msg_ = value;
@@ -3119,7 +3119,7 @@ public final class VehicleMsg {
         return this;
       }
       /**
-       * <code>.Halt halt = 3;</code>
+       * <code>.VcuWrapper.Halt halt = 3;</code>
        */
       public Builder clearHalt() {
         if (haltBuilder_ == null) {
@@ -3138,37 +3138,37 @@ public final class VehicleMsg {
         return this;
       }
       /**
-       * <code>.Halt halt = 3;</code>
+       * <code>.VcuWrapper.Halt halt = 3;</code>
        */
-      public com.addrobots.protobuf.VehicleMsg.Halt.Builder getHaltBuilder() {
+      public com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.Builder getHaltBuilder() {
         return getHaltFieldBuilder().getBuilder();
       }
       /**
-       * <code>.Halt halt = 3;</code>
+       * <code>.VcuWrapper.Halt halt = 3;</code>
        */
-      public com.addrobots.protobuf.VehicleMsg.HaltOrBuilder getHaltOrBuilder() {
+      public com.addrobots.protobuf.VehicleMsg.VcuWrapper.HaltOrBuilder getHaltOrBuilder() {
         if ((msgCase_ == 3) && (haltBuilder_ != null)) {
           return haltBuilder_.getMessageOrBuilder();
         } else {
           if (msgCase_ == 3) {
-            return (com.addrobots.protobuf.VehicleMsg.Halt) msg_;
+            return (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) msg_;
           }
-          return com.addrobots.protobuf.VehicleMsg.Halt.getDefaultInstance();
+          return com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.getDefaultInstance();
         }
       }
       /**
-       * <code>.Halt halt = 3;</code>
+       * <code>.VcuWrapper.Halt halt = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.addrobots.protobuf.VehicleMsg.Halt, com.addrobots.protobuf.VehicleMsg.Halt.Builder, com.addrobots.protobuf.VehicleMsg.HaltOrBuilder> 
+          com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.Builder, com.addrobots.protobuf.VehicleMsg.VcuWrapper.HaltOrBuilder> 
           getHaltFieldBuilder() {
         if (haltBuilder_ == null) {
           if (!(msgCase_ == 3)) {
-            msg_ = com.addrobots.protobuf.VehicleMsg.Halt.getDefaultInstance();
+            msg_ = com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.getDefaultInstance();
           }
           haltBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.addrobots.protobuf.VehicleMsg.Halt, com.addrobots.protobuf.VehicleMsg.Halt.Builder, com.addrobots.protobuf.VehicleMsg.HaltOrBuilder>(
-                  (com.addrobots.protobuf.VehicleMsg.Halt) msg_,
+              com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt, com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt.Builder, com.addrobots.protobuf.VehicleMsg.VcuWrapper.HaltOrBuilder>(
+                  (com.addrobots.protobuf.VehicleMsg.VcuWrapper.Halt) msg_,
                   getParentForChildren(),
                   isClean());
           msg_ = null;
@@ -3227,25 +3227,25 @@ public final class VehicleMsg {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Drive_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Drive_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Orbit_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Orbit_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_Halt_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_Halt_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_VcuWrapper_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_VcuWrapper_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VcuWrapper_Halt_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_VcuWrapper_Halt_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VcuWrapper_Orbit_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_VcuWrapper_Orbit_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_VcuWrapper_Drive_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_VcuWrapper_Drive_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -3255,16 +3255,17 @@ public final class VehicleMsg {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\020VehicleMsg.proto\"|\n\005Drive\022\020\n\010velocity\030" +
-      "\001 \001(\001\022\021\n\tdirection\030\002 \001(\t\022\024\n\014acceleration" +
-      "\030\003 \001(\001\022\020\n\010distance\030\004 \001(\001\022\024\n\014edgeDistance" +
-      "\030\005 \001(\001\022\020\n\010edgeSide\030\006 \001(\t\"S\n\005Orbit\022\020\n\010vel" +
-      "ocity\030\001 \001(\001\022\021\n\tdirection\030\002 \001(\t\022\024\n\014accele" +
-      "ration\030\003 \001(\001\022\017\n\007degrees\030\004 \001(\001\"\034\n\004Halt\022\024\n" +
-      "\014acceleration\030\001 \001(\001\"\\\n\nVcuWrapper\022\027\n\005dri" +
-      "ve\030\001 \001(\0132\006.DriveH\000\022\027\n\005orbit\030\002 \001(\0132\006.Orbi" +
-      "tH\000\022\025\n\004halt\030\003 \001(\0132\005.HaltH\000B\005\n\003msgB$\n\026com" +
-      ".addrobots.protobufB\nVehicleMsgb\006proto3"
+      "\n\020VehicleMsg.proto\"\360\002\n\nVcuWrapper\022\"\n\005dri" +
+      "ve\030\001 \001(\0132\021.VcuWrapper.DriveH\000\022\"\n\005orbit\030\002" +
+      " \001(\0132\021.VcuWrapper.OrbitH\000\022 \n\004halt\030\003 \001(\0132" +
+      "\020.VcuWrapper.HaltH\000\032\034\n\004Halt\022\024\n\014accelerat" +
+      "ion\030\001 \001(\001\032S\n\005Orbit\022\020\n\010velocity\030\001 \001(\001\022\021\n\t" +
+      "direction\030\002 \001(\t\022\024\n\014acceleration\030\003 \001(\001\022\017\n" +
+      "\007degrees\030\004 \001(\001\032~\n\005Drive\022\020\n\010velocity\030\001 \001(" +
+      "\001\022\021\n\tdirection\030\002 \001(\t\022\024\n\014acceleration\030\003 \001" +
+      "(\001\022\020\n\010distance\030\004 \001(\001\022\025\n\redge_distance\030\005 " +
+      "\001(\001\022\021\n\tedge_side\030\006 \001(\tB\005\n\003msgB$\n\026com.add" +
+      "robots.protobufB\nVehicleMsgb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -3278,30 +3279,30 @@ public final class VehicleMsg {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_Drive_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_Drive_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Drive_descriptor,
-        new java.lang.String[] { "Velocity", "Direction", "Acceleration", "Distance", "EdgeDistance", "EdgeSide", });
-    internal_static_Orbit_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_Orbit_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Orbit_descriptor,
-        new java.lang.String[] { "Velocity", "Direction", "Acceleration", "Degrees", });
-    internal_static_Halt_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_Halt_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_Halt_descriptor,
-        new java.lang.String[] { "Acceleration", });
     internal_static_VcuWrapper_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_VcuWrapper_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_VcuWrapper_descriptor,
         new java.lang.String[] { "Drive", "Orbit", "Halt", "Msg", });
+    internal_static_VcuWrapper_Halt_descriptor =
+      internal_static_VcuWrapper_descriptor.getNestedTypes().get(0);
+    internal_static_VcuWrapper_Halt_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_VcuWrapper_Halt_descriptor,
+        new java.lang.String[] { "Acceleration", });
+    internal_static_VcuWrapper_Orbit_descriptor =
+      internal_static_VcuWrapper_descriptor.getNestedTypes().get(1);
+    internal_static_VcuWrapper_Orbit_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_VcuWrapper_Orbit_descriptor,
+        new java.lang.String[] { "Velocity", "Direction", "Acceleration", "Degrees", });
+    internal_static_VcuWrapper_Drive_descriptor =
+      internal_static_VcuWrapper_descriptor.getNestedTypes().get(2);
+    internal_static_VcuWrapper_Drive_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_VcuWrapper_Drive_descriptor,
+        new java.lang.String[] { "Velocity", "Direction", "Acceleration", "Distance", "EdgeDistance", "EdgeSide", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
