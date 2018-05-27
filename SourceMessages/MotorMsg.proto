@@ -1,10 +1,10 @@
 syntax = "proto3";
 
 option java_package = "com.addrobots.protobuf";
-option java_outer_classname = "MotorMsg";
+option java_outer_classname = "Motor";
 
 // This message is the outside wrapper that contains one or more motor messages (data or cmd)
-message McuWrapper {
+message MotorMsg {
 
 	enum Unit {
 		UNKNOWN_UNIT = 0;
@@ -21,15 +21,15 @@ message McuWrapper {
 	}
 
 	// This message contains one or more motor data samples
-	message MotorData {
-		enum DataAction {
+	message Data {
+		enum Action {
 			UKNONWN_ACTION = 0;
 			GET = 1;
 			RESULT = 2;
 		}
 
-		message DataParam {
-			enum MotorDataId {
+		message Param {
+			enum Id {
 				UNKNOWN_ID = 0;
 				UUID = 1;
 				VERSION = 2;
@@ -43,18 +43,18 @@ message McuWrapper {
 				CUR_VOLT = 14;
 			}
 
-			MotorDataId id = 1;
+			Id id = 1;
 			double value = 2;
 			Unit unit = 3;
 		}
 
-		DataAction action = 1;
-		repeated DataParam params = 2;
+		Action action = 1;
+		repeated Param params = 2;
 	}
 
 	// The message contains one or more motor command tuples
-	message MotorCmd {
-		enum MotorAction {
+	message Cmd {
+		enum Action {
 			UNKNOWN = 0;
 			BRAKE = 1;
 			FREEWHEEL = 2;
@@ -62,8 +62,8 @@ message McuWrapper {
 			GOTO_POS = 4;
 		}
 
-		message CmdParam {
-			enum MotorCmdParamId {
+		message Param {
+			enum Id {
 				UNKNOWN_PARAM = 0;
 				CLOCKWISE = 1;			// Boolean
 				POSITION = 2; 			// Degree
@@ -78,17 +78,17 @@ message McuWrapper {
 				MIN_VOLTAGE_LIMIT = 11;	// Volt
 				MAX_VOLTAGE_LIMIT = 12;	// Volt
 			}
-			MotorCmdParamId id = 1;
+			Id id = 1;
 			double value = 2;
 			Unit unit = 3;
 		}
 
-		MotorAction action = 1;
-		repeated CmdParam params = 2;
+		Action action = 1;
+		repeated Param params = 2;
 	}
 	string uuid = 1;
 	oneof content {
-		MotorData motor_data = 2;
-		MotorCmd motor_cmd = 3;
+		Data motor_data = 2;
+		Cmd motor_cmd = 3;
 	}
 }

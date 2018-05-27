@@ -3,8 +3,8 @@
 
 package com.addrobots.protobuf;
 
-public final class MotorMsg {
-  private MotorMsg() {}
+public final class Motor {
+  private Motor() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -14,8 +14,8 @@ public final class MotorMsg {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface McuWrapperOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:McuWrapper)
+  public interface MotorMsgOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:MotorMsg)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -29,50 +29,50 @@ public final class MotorMsg {
         getUuidBytes();
 
     /**
-     * <code>.McuWrapper.MotorData motor_data = 2;</code>
+     * <code>.MotorMsg.Data motor_data = 2;</code>
      */
     boolean hasMotorData();
     /**
-     * <code>.McuWrapper.MotorData motor_data = 2;</code>
+     * <code>.MotorMsg.Data motor_data = 2;</code>
      */
-    com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData getMotorData();
+    com.addrobots.protobuf.Motor.MotorMsg.Data getMotorData();
     /**
-     * <code>.McuWrapper.MotorData motor_data = 2;</code>
+     * <code>.MotorMsg.Data motor_data = 2;</code>
      */
-    com.addrobots.protobuf.MotorMsg.McuWrapper.MotorDataOrBuilder getMotorDataOrBuilder();
+    com.addrobots.protobuf.Motor.MotorMsg.DataOrBuilder getMotorDataOrBuilder();
 
     /**
-     * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+     * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
      */
     boolean hasMotorCmd();
     /**
-     * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+     * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
      */
-    com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd getMotorCmd();
+    com.addrobots.protobuf.Motor.MotorMsg.Cmd getMotorCmd();
     /**
-     * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+     * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
      */
-    com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmdOrBuilder getMotorCmdOrBuilder();
+    com.addrobots.protobuf.Motor.MotorMsg.CmdOrBuilder getMotorCmdOrBuilder();
 
-    public com.addrobots.protobuf.MotorMsg.McuWrapper.ContentCase getContentCase();
+    public com.addrobots.protobuf.Motor.MotorMsg.ContentCase getContentCase();
   }
   /**
    * <pre>
    * This message is the outside wrapper that contains one or more motor messages (data or cmd)
    * </pre>
    *
-   * Protobuf type {@code McuWrapper}
+   * Protobuf type {@code MotorMsg}
    */
-  public  static final class McuWrapper extends
+  public  static final class MotorMsg extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:McuWrapper)
-      McuWrapperOrBuilder {
+      // @@protoc_insertion_point(message_implements:MotorMsg)
+      MotorMsgOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use McuWrapper.newBuilder() to construct.
-    private McuWrapper(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use MotorMsg.newBuilder() to construct.
+    private MotorMsg(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private McuWrapper() {
+    private MotorMsg() {
       uuid_ = "";
     }
 
@@ -81,7 +81,7 @@ public final class MotorMsg {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private McuWrapper(
+    private MotorMsg(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -114,28 +114,28 @@ public final class MotorMsg {
               break;
             }
             case 18: {
-              com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.Builder subBuilder = null;
+              com.addrobots.protobuf.Motor.MotorMsg.Data.Builder subBuilder = null;
               if (contentCase_ == 2) {
-                subBuilder = ((com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) content_).toBuilder();
+                subBuilder = ((com.addrobots.protobuf.Motor.MotorMsg.Data) content_).toBuilder();
               }
               content_ =
-                  input.readMessage(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.parser(), extensionRegistry);
+                  input.readMessage(com.addrobots.protobuf.Motor.MotorMsg.Data.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) content_);
+                subBuilder.mergeFrom((com.addrobots.protobuf.Motor.MotorMsg.Data) content_);
                 content_ = subBuilder.buildPartial();
               }
               contentCase_ = 2;
               break;
             }
             case 26: {
-              com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.Builder subBuilder = null;
+              com.addrobots.protobuf.Motor.MotorMsg.Cmd.Builder subBuilder = null;
               if (contentCase_ == 3) {
-                subBuilder = ((com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) content_).toBuilder();
+                subBuilder = ((com.addrobots.protobuf.Motor.MotorMsg.Cmd) content_).toBuilder();
               }
               content_ =
-                  input.readMessage(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.parser(), extensionRegistry);
+                  input.readMessage(com.addrobots.protobuf.Motor.MotorMsg.Cmd.parser(), extensionRegistry);
               if (subBuilder != null) {
-                subBuilder.mergeFrom((com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) content_);
+                subBuilder.mergeFrom((com.addrobots.protobuf.Motor.MotorMsg.Cmd) content_);
                 content_ = subBuilder.buildPartial();
               }
               contentCase_ = 3;
@@ -155,18 +155,18 @@ public final class MotorMsg {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_descriptor;
+      return com.addrobots.protobuf.Motor.internal_static_MotorMsg_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_fieldAccessorTable
+      return com.addrobots.protobuf.Motor.internal_static_MotorMsg_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.addrobots.protobuf.MotorMsg.McuWrapper.class, com.addrobots.protobuf.MotorMsg.McuWrapper.Builder.class);
+              com.addrobots.protobuf.Motor.MotorMsg.class, com.addrobots.protobuf.Motor.MotorMsg.Builder.class);
     }
 
     /**
-     * Protobuf enum {@code McuWrapper.Unit}
+     * Protobuf enum {@code MotorMsg.Unit}
      */
     public enum Unit
         implements com.google.protobuf.ProtocolMessageEnum {
@@ -318,7 +318,7 @@ public final class MotorMsg {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return com.addrobots.protobuf.MotorMsg.McuWrapper.getDescriptor().getEnumTypes().get(0);
+        return com.addrobots.protobuf.Motor.MotorMsg.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Unit[] VALUES = values();
@@ -341,44 +341,44 @@ public final class MotorMsg {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:McuWrapper.Unit)
+      // @@protoc_insertion_point(enum_scope:MotorMsg.Unit)
     }
 
-    public interface MotorDataOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:McuWrapper.MotorData)
+    public interface DataOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:MotorMsg.Data)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>.McuWrapper.MotorData.DataAction action = 1;</code>
+       * <code>.MotorMsg.Data.Action action = 1;</code>
        */
       int getActionValue();
       /**
-       * <code>.McuWrapper.MotorData.DataAction action = 1;</code>
+       * <code>.MotorMsg.Data.Action action = 1;</code>
        */
-      com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataAction getAction();
+      com.addrobots.protobuf.Motor.MotorMsg.Data.Action getAction();
 
       /**
-       * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+       * <code>repeated .MotorMsg.Data.Param params = 2;</code>
        */
-      java.util.List<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam> 
+      java.util.List<com.addrobots.protobuf.Motor.MotorMsg.Data.Param> 
           getParamsList();
       /**
-       * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+       * <code>repeated .MotorMsg.Data.Param params = 2;</code>
        */
-      com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam getParams(int index);
+      com.addrobots.protobuf.Motor.MotorMsg.Data.Param getParams(int index);
       /**
-       * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+       * <code>repeated .MotorMsg.Data.Param params = 2;</code>
        */
       int getParamsCount();
       /**
-       * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+       * <code>repeated .MotorMsg.Data.Param params = 2;</code>
        */
-      java.util.List<? extends com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParamOrBuilder> 
+      java.util.List<? extends com.addrobots.protobuf.Motor.MotorMsg.Data.ParamOrBuilder> 
           getParamsOrBuilderList();
       /**
-       * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+       * <code>repeated .MotorMsg.Data.Param params = 2;</code>
        */
-      com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParamOrBuilder getParamsOrBuilder(
+      com.addrobots.protobuf.Motor.MotorMsg.Data.ParamOrBuilder getParamsOrBuilder(
           int index);
     }
     /**
@@ -386,18 +386,18 @@ public final class MotorMsg {
      * This message contains one or more motor data samples
      * </pre>
      *
-     * Protobuf type {@code McuWrapper.MotorData}
+     * Protobuf type {@code MotorMsg.Data}
      */
-    public  static final class MotorData extends
+    public  static final class Data extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:McuWrapper.MotorData)
-        MotorDataOrBuilder {
+        // @@protoc_insertion_point(message_implements:MotorMsg.Data)
+        DataOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use MotorData.newBuilder() to construct.
-      private MotorData(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use Data.newBuilder() to construct.
+      private Data(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private MotorData() {
+      private Data() {
         action_ = 0;
         params_ = java.util.Collections.emptyList();
       }
@@ -407,7 +407,7 @@ public final class MotorMsg {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private MotorData(
+      private Data(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -441,11 +441,11 @@ public final class MotorMsg {
               }
               case 18: {
                 if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                  params_ = new java.util.ArrayList<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam>();
+                  params_ = new java.util.ArrayList<com.addrobots.protobuf.Motor.MotorMsg.Data.Param>();
                   mutable_bitField0_ |= 0x00000002;
                 }
                 params_.add(
-                    input.readMessage(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.parser(), extensionRegistry));
+                    input.readMessage(com.addrobots.protobuf.Motor.MotorMsg.Data.Param.parser(), extensionRegistry));
                 break;
               }
             }
@@ -465,20 +465,20 @@ public final class MotorMsg {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorData_descriptor;
+        return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Data_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorData_fieldAccessorTable
+        return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Data_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.class, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.Builder.class);
+                com.addrobots.protobuf.Motor.MotorMsg.Data.class, com.addrobots.protobuf.Motor.MotorMsg.Data.Builder.class);
       }
 
       /**
-       * Protobuf enum {@code McuWrapper.MotorData.DataAction}
+       * Protobuf enum {@code MotorMsg.Data.Action}
        */
-      public enum DataAction
+      public enum Action
           implements com.google.protobuf.ProtocolMessageEnum {
         /**
          * <code>UKNONWN_ACTION = 0;</code>
@@ -521,11 +521,11 @@ public final class MotorMsg {
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
-        public static DataAction valueOf(int value) {
+        public static Action valueOf(int value) {
           return forNumber(value);
         }
 
-        public static DataAction forNumber(int value) {
+        public static Action forNumber(int value) {
           switch (value) {
             case 0: return UKNONWN_ACTION;
             case 1: return GET;
@@ -534,15 +534,15 @@ public final class MotorMsg {
           }
         }
 
-        public static com.google.protobuf.Internal.EnumLiteMap<DataAction>
+        public static com.google.protobuf.Internal.EnumLiteMap<Action>
             internalGetValueMap() {
           return internalValueMap;
         }
         private static final com.google.protobuf.Internal.EnumLiteMap<
-            DataAction> internalValueMap =
-              new com.google.protobuf.Internal.EnumLiteMap<DataAction>() {
-                public DataAction findValueByNumber(int number) {
-                  return DataAction.forNumber(number);
+            Action> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Action>() {
+                public Action findValueByNumber(int number) {
+                  return Action.forNumber(number);
                 }
               };
 
@@ -556,12 +556,12 @@ public final class MotorMsg {
         }
         public static final com.google.protobuf.Descriptors.EnumDescriptor
             getDescriptor() {
-          return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.getDescriptor().getEnumTypes().get(0);
+          return com.addrobots.protobuf.Motor.MotorMsg.Data.getDescriptor().getEnumTypes().get(0);
         }
 
-        private static final DataAction[] VALUES = values();
+        private static final Action[] VALUES = values();
 
-        public static DataAction valueOf(
+        public static Action valueOf(
             com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
           if (desc.getType() != getDescriptor()) {
             throw new java.lang.IllegalArgumentException(
@@ -575,25 +575,25 @@ public final class MotorMsg {
 
         private final int value;
 
-        private DataAction(int value) {
+        private Action(int value) {
           this.value = value;
         }
 
-        // @@protoc_insertion_point(enum_scope:McuWrapper.MotorData.DataAction)
+        // @@protoc_insertion_point(enum_scope:MotorMsg.Data.Action)
       }
 
-      public interface DataParamOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:McuWrapper.MotorData.DataParam)
+      public interface ParamOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:MotorMsg.Data.Param)
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>.McuWrapper.MotorData.DataParam.MotorDataId id = 1;</code>
+         * <code>.MotorMsg.Data.Param.Id id = 1;</code>
          */
         int getIdValue();
         /**
-         * <code>.McuWrapper.MotorData.DataParam.MotorDataId id = 1;</code>
+         * <code>.MotorMsg.Data.Param.Id id = 1;</code>
          */
-        com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.MotorDataId getId();
+        com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Id getId();
 
         /**
          * <code>double value = 2;</code>
@@ -601,27 +601,27 @@ public final class MotorMsg {
         double getValue();
 
         /**
-         * <code>.McuWrapper.Unit unit = 3;</code>
+         * <code>.MotorMsg.Unit unit = 3;</code>
          */
         int getUnitValue();
         /**
-         * <code>.McuWrapper.Unit unit = 3;</code>
+         * <code>.MotorMsg.Unit unit = 3;</code>
          */
-        com.addrobots.protobuf.MotorMsg.McuWrapper.Unit getUnit();
+        com.addrobots.protobuf.Motor.MotorMsg.Unit getUnit();
       }
       /**
-       * Protobuf type {@code McuWrapper.MotorData.DataParam}
+       * Protobuf type {@code MotorMsg.Data.Param}
        */
-      public  static final class DataParam extends
+      public  static final class Param extends
           com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:McuWrapper.MotorData.DataParam)
-          DataParamOrBuilder {
+          // @@protoc_insertion_point(message_implements:MotorMsg.Data.Param)
+          ParamOrBuilder {
       private static final long serialVersionUID = 0L;
-        // Use DataParam.newBuilder() to construct.
-        private DataParam(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        // Use Param.newBuilder() to construct.
+        private Param(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
           super(builder);
         }
-        private DataParam() {
+        private Param() {
           id_ = 0;
           value_ = 0D;
           unit_ = 0;
@@ -632,7 +632,7 @@ public final class MotorMsg {
         getUnknownFields() {
           return this.unknownFields;
         }
-        private DataParam(
+        private Param(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
@@ -689,20 +689,20 @@ public final class MotorMsg {
         }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorData_DataParam_descriptor;
+          return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Data_Param_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorData_DataParam_fieldAccessorTable
+          return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Data_Param_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.class, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.Builder.class);
+                  com.addrobots.protobuf.Motor.MotorMsg.Data.Param.class, com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Builder.class);
         }
 
         /**
-         * Protobuf enum {@code McuWrapper.MotorData.DataParam.MotorDataId}
+         * Protobuf enum {@code MotorMsg.Data.Param.Id}
          */
-        public enum MotorDataId
+        public enum Id
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
            * <code>UNKNOWN_ID = 0;</code>
@@ -817,11 +817,11 @@ public final class MotorMsg {
            * @deprecated Use {@link #forNumber(int)} instead.
            */
           @java.lang.Deprecated
-          public static MotorDataId valueOf(int value) {
+          public static Id valueOf(int value) {
             return forNumber(value);
           }
 
-          public static MotorDataId forNumber(int value) {
+          public static Id forNumber(int value) {
             switch (value) {
               case 0: return UNKNOWN_ID;
               case 1: return UUID;
@@ -838,15 +838,15 @@ public final class MotorMsg {
             }
           }
 
-          public static com.google.protobuf.Internal.EnumLiteMap<MotorDataId>
+          public static com.google.protobuf.Internal.EnumLiteMap<Id>
               internalGetValueMap() {
             return internalValueMap;
           }
           private static final com.google.protobuf.Internal.EnumLiteMap<
-              MotorDataId> internalValueMap =
-                new com.google.protobuf.Internal.EnumLiteMap<MotorDataId>() {
-                  public MotorDataId findValueByNumber(int number) {
-                    return MotorDataId.forNumber(number);
+              Id> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<Id>() {
+                  public Id findValueByNumber(int number) {
+                    return Id.forNumber(number);
                   }
                 };
 
@@ -860,12 +860,12 @@ public final class MotorMsg {
           }
           public static final com.google.protobuf.Descriptors.EnumDescriptor
               getDescriptor() {
-            return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.getDescriptor().getEnumTypes().get(0);
+            return com.addrobots.protobuf.Motor.MotorMsg.Data.Param.getDescriptor().getEnumTypes().get(0);
           }
 
-          private static final MotorDataId[] VALUES = values();
+          private static final Id[] VALUES = values();
 
-          public static MotorDataId valueOf(
+          public static Id valueOf(
               com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
             if (desc.getType() != getDescriptor()) {
               throw new java.lang.IllegalArgumentException(
@@ -879,27 +879,27 @@ public final class MotorMsg {
 
           private final int value;
 
-          private MotorDataId(int value) {
+          private Id(int value) {
             this.value = value;
           }
 
-          // @@protoc_insertion_point(enum_scope:McuWrapper.MotorData.DataParam.MotorDataId)
+          // @@protoc_insertion_point(enum_scope:MotorMsg.Data.Param.Id)
         }
 
         public static final int ID_FIELD_NUMBER = 1;
         private int id_;
         /**
-         * <code>.McuWrapper.MotorData.DataParam.MotorDataId id = 1;</code>
+         * <code>.MotorMsg.Data.Param.Id id = 1;</code>
          */
         public int getIdValue() {
           return id_;
         }
         /**
-         * <code>.McuWrapper.MotorData.DataParam.MotorDataId id = 1;</code>
+         * <code>.MotorMsg.Data.Param.Id id = 1;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.MotorDataId getId() {
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.MotorDataId result = com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.MotorDataId.valueOf(id_);
-          return result == null ? com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.MotorDataId.UNRECOGNIZED : result;
+        public com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Id getId() {
+          com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Id result = com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Id.valueOf(id_);
+          return result == null ? com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Id.UNRECOGNIZED : result;
         }
 
         public static final int VALUE_FIELD_NUMBER = 2;
@@ -914,17 +914,17 @@ public final class MotorMsg {
         public static final int UNIT_FIELD_NUMBER = 3;
         private int unit_;
         /**
-         * <code>.McuWrapper.Unit unit = 3;</code>
+         * <code>.MotorMsg.Unit unit = 3;</code>
          */
         public int getUnitValue() {
           return unit_;
         }
         /**
-         * <code>.McuWrapper.Unit unit = 3;</code>
+         * <code>.MotorMsg.Unit unit = 3;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.Unit getUnit() {
-          com.addrobots.protobuf.MotorMsg.McuWrapper.Unit result = com.addrobots.protobuf.MotorMsg.McuWrapper.Unit.valueOf(unit_);
-          return result == null ? com.addrobots.protobuf.MotorMsg.McuWrapper.Unit.UNRECOGNIZED : result;
+        public com.addrobots.protobuf.Motor.MotorMsg.Unit getUnit() {
+          com.addrobots.protobuf.Motor.MotorMsg.Unit result = com.addrobots.protobuf.Motor.MotorMsg.Unit.valueOf(unit_);
+          return result == null ? com.addrobots.protobuf.Motor.MotorMsg.Unit.UNRECOGNIZED : result;
         }
 
         private byte memoizedIsInitialized = -1;
@@ -939,13 +939,13 @@ public final class MotorMsg {
 
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (id_ != com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.MotorDataId.UNKNOWN_ID.getNumber()) {
+          if (id_ != com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Id.UNKNOWN_ID.getNumber()) {
             output.writeEnum(1, id_);
           }
           if (value_ != 0D) {
             output.writeDouble(2, value_);
           }
-          if (unit_ != com.addrobots.protobuf.MotorMsg.McuWrapper.Unit.UNKNOWN_UNIT.getNumber()) {
+          if (unit_ != com.addrobots.protobuf.Motor.MotorMsg.Unit.UNKNOWN_UNIT.getNumber()) {
             output.writeEnum(3, unit_);
           }
           unknownFields.writeTo(output);
@@ -956,7 +956,7 @@ public final class MotorMsg {
           if (size != -1) return size;
 
           size = 0;
-          if (id_ != com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.MotorDataId.UNKNOWN_ID.getNumber()) {
+          if (id_ != com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Id.UNKNOWN_ID.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(1, id_);
           }
@@ -964,7 +964,7 @@ public final class MotorMsg {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(2, value_);
           }
-          if (unit_ != com.addrobots.protobuf.MotorMsg.McuWrapper.Unit.UNKNOWN_UNIT.getNumber()) {
+          if (unit_ != com.addrobots.protobuf.Motor.MotorMsg.Unit.UNKNOWN_UNIT.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(3, unit_);
           }
@@ -978,10 +978,10 @@ public final class MotorMsg {
           if (obj == this) {
            return true;
           }
-          if (!(obj instanceof com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam)) {
+          if (!(obj instanceof com.addrobots.protobuf.Motor.MotorMsg.Data.Param)) {
             return super.equals(obj);
           }
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam other = (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam) obj;
+          com.addrobots.protobuf.Motor.MotorMsg.Data.Param other = (com.addrobots.protobuf.Motor.MotorMsg.Data.Param) obj;
 
           boolean result = true;
           result = result && id_ == other.id_;
@@ -1013,69 +1013,69 @@ public final class MotorMsg {
           return hash;
         }
 
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parseFrom(byte[] data)
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parseFrom(java.io.InputStream input)
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param parseFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parseDelimitedFrom(java.io.InputStream input)
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parseDelimitedFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -1087,7 +1087,7 @@ public final class MotorMsg {
         public static Builder newBuilder() {
           return DEFAULT_INSTANCE.toBuilder();
         }
-        public static Builder newBuilder(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam prototype) {
+        public static Builder newBuilder(com.addrobots.protobuf.Motor.MotorMsg.Data.Param prototype) {
           return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
         }
         public Builder toBuilder() {
@@ -1102,25 +1102,25 @@ public final class MotorMsg {
           return builder;
         }
         /**
-         * Protobuf type {@code McuWrapper.MotorData.DataParam}
+         * Protobuf type {@code MotorMsg.Data.Param}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:McuWrapper.MotorData.DataParam)
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParamOrBuilder {
+            // @@protoc_insertion_point(builder_implements:MotorMsg.Data.Param)
+            com.addrobots.protobuf.Motor.MotorMsg.Data.ParamOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorData_DataParam_descriptor;
+            return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Data_Param_descriptor;
           }
 
           protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorData_DataParam_fieldAccessorTable
+            return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Data_Param_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.class, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.Builder.class);
+                    com.addrobots.protobuf.Motor.MotorMsg.Data.Param.class, com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Builder.class);
           }
 
-          // Construct using com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.newBuilder()
+          // Construct using com.addrobots.protobuf.Motor.MotorMsg.Data.Param.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -1148,23 +1148,23 @@ public final class MotorMsg {
 
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorData_DataParam_descriptor;
+            return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Data_Param_descriptor;
           }
 
-          public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam getDefaultInstanceForType() {
-            return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.getDefaultInstance();
+          public com.addrobots.protobuf.Motor.MotorMsg.Data.Param getDefaultInstanceForType() {
+            return com.addrobots.protobuf.Motor.MotorMsg.Data.Param.getDefaultInstance();
           }
 
-          public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam build() {
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam result = buildPartial();
+          public com.addrobots.protobuf.Motor.MotorMsg.Data.Param build() {
+            com.addrobots.protobuf.Motor.MotorMsg.Data.Param result = buildPartial();
             if (!result.isInitialized()) {
               throw newUninitializedMessageException(result);
             }
             return result;
           }
 
-          public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam buildPartial() {
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam result = new com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam(this);
+          public com.addrobots.protobuf.Motor.MotorMsg.Data.Param buildPartial() {
+            com.addrobots.protobuf.Motor.MotorMsg.Data.Param result = new com.addrobots.protobuf.Motor.MotorMsg.Data.Param(this);
             result.id_ = id_;
             result.value_ = value_;
             result.unit_ = unit_;
@@ -1199,16 +1199,16 @@ public final class MotorMsg {
             return (Builder) super.addRepeatedField(field, value);
           }
           public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam) {
-              return mergeFrom((com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam)other);
+            if (other instanceof com.addrobots.protobuf.Motor.MotorMsg.Data.Param) {
+              return mergeFrom((com.addrobots.protobuf.Motor.MotorMsg.Data.Param)other);
             } else {
               super.mergeFrom(other);
               return this;
             }
           }
 
-          public Builder mergeFrom(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam other) {
-            if (other == com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.getDefaultInstance()) return this;
+          public Builder mergeFrom(com.addrobots.protobuf.Motor.MotorMsg.Data.Param other) {
+            if (other == com.addrobots.protobuf.Motor.MotorMsg.Data.Param.getDefaultInstance()) return this;
             if (other.id_ != 0) {
               setIdValue(other.getIdValue());
             }
@@ -1231,11 +1231,11 @@ public final class MotorMsg {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam parsedMessage = null;
+            com.addrobots.protobuf.Motor.MotorMsg.Data.Param parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              parsedMessage = (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam) e.getUnfinishedMessage();
+              parsedMessage = (com.addrobots.protobuf.Motor.MotorMsg.Data.Param) e.getUnfinishedMessage();
               throw e.unwrapIOException();
             } finally {
               if (parsedMessage != null) {
@@ -1247,13 +1247,13 @@ public final class MotorMsg {
 
           private int id_ = 0;
           /**
-           * <code>.McuWrapper.MotorData.DataParam.MotorDataId id = 1;</code>
+           * <code>.MotorMsg.Data.Param.Id id = 1;</code>
            */
           public int getIdValue() {
             return id_;
           }
           /**
-           * <code>.McuWrapper.MotorData.DataParam.MotorDataId id = 1;</code>
+           * <code>.MotorMsg.Data.Param.Id id = 1;</code>
            */
           public Builder setIdValue(int value) {
             id_ = value;
@@ -1261,16 +1261,16 @@ public final class MotorMsg {
             return this;
           }
           /**
-           * <code>.McuWrapper.MotorData.DataParam.MotorDataId id = 1;</code>
+           * <code>.MotorMsg.Data.Param.Id id = 1;</code>
            */
-          public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.MotorDataId getId() {
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.MotorDataId result = com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.MotorDataId.valueOf(id_);
-            return result == null ? com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.MotorDataId.UNRECOGNIZED : result;
+          public com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Id getId() {
+            com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Id result = com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Id.valueOf(id_);
+            return result == null ? com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Id.UNRECOGNIZED : result;
           }
           /**
-           * <code>.McuWrapper.MotorData.DataParam.MotorDataId id = 1;</code>
+           * <code>.MotorMsg.Data.Param.Id id = 1;</code>
            */
-          public Builder setId(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.MotorDataId value) {
+          public Builder setId(com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Id value) {
             if (value == null) {
               throw new NullPointerException();
             }
@@ -1280,7 +1280,7 @@ public final class MotorMsg {
             return this;
           }
           /**
-           * <code>.McuWrapper.MotorData.DataParam.MotorDataId id = 1;</code>
+           * <code>.MotorMsg.Data.Param.Id id = 1;</code>
            */
           public Builder clearId() {
             
@@ -1317,13 +1317,13 @@ public final class MotorMsg {
 
           private int unit_ = 0;
           /**
-           * <code>.McuWrapper.Unit unit = 3;</code>
+           * <code>.MotorMsg.Unit unit = 3;</code>
            */
           public int getUnitValue() {
             return unit_;
           }
           /**
-           * <code>.McuWrapper.Unit unit = 3;</code>
+           * <code>.MotorMsg.Unit unit = 3;</code>
            */
           public Builder setUnitValue(int value) {
             unit_ = value;
@@ -1331,16 +1331,16 @@ public final class MotorMsg {
             return this;
           }
           /**
-           * <code>.McuWrapper.Unit unit = 3;</code>
+           * <code>.MotorMsg.Unit unit = 3;</code>
            */
-          public com.addrobots.protobuf.MotorMsg.McuWrapper.Unit getUnit() {
-            com.addrobots.protobuf.MotorMsg.McuWrapper.Unit result = com.addrobots.protobuf.MotorMsg.McuWrapper.Unit.valueOf(unit_);
-            return result == null ? com.addrobots.protobuf.MotorMsg.McuWrapper.Unit.UNRECOGNIZED : result;
+          public com.addrobots.protobuf.Motor.MotorMsg.Unit getUnit() {
+            com.addrobots.protobuf.Motor.MotorMsg.Unit result = com.addrobots.protobuf.Motor.MotorMsg.Unit.valueOf(unit_);
+            return result == null ? com.addrobots.protobuf.Motor.MotorMsg.Unit.UNRECOGNIZED : result;
           }
           /**
-           * <code>.McuWrapper.Unit unit = 3;</code>
+           * <code>.MotorMsg.Unit unit = 3;</code>
            */
-          public Builder setUnit(com.addrobots.protobuf.MotorMsg.McuWrapper.Unit value) {
+          public Builder setUnit(com.addrobots.protobuf.Motor.MotorMsg.Unit value) {
             if (value == null) {
               throw new NullPointerException();
             }
@@ -1350,7 +1350,7 @@ public final class MotorMsg {
             return this;
           }
           /**
-           * <code>.McuWrapper.Unit unit = 3;</code>
+           * <code>.MotorMsg.Unit unit = 3;</code>
            */
           public Builder clearUnit() {
             
@@ -1369,39 +1369,39 @@ public final class MotorMsg {
           }
 
 
-          // @@protoc_insertion_point(builder_scope:McuWrapper.MotorData.DataParam)
+          // @@protoc_insertion_point(builder_scope:MotorMsg.Data.Param)
         }
 
-        // @@protoc_insertion_point(class_scope:McuWrapper.MotorData.DataParam)
-        private static final com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam DEFAULT_INSTANCE;
+        // @@protoc_insertion_point(class_scope:MotorMsg.Data.Param)
+        private static final com.addrobots.protobuf.Motor.MotorMsg.Data.Param DEFAULT_INSTANCE;
         static {
-          DEFAULT_INSTANCE = new com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam();
+          DEFAULT_INSTANCE = new com.addrobots.protobuf.Motor.MotorMsg.Data.Param();
         }
 
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam getDefaultInstance() {
+        public static com.addrobots.protobuf.Motor.MotorMsg.Data.Param getDefaultInstance() {
           return DEFAULT_INSTANCE;
         }
 
-        private static final com.google.protobuf.Parser<DataParam>
-            PARSER = new com.google.protobuf.AbstractParser<DataParam>() {
-          public DataParam parsePartialFrom(
+        private static final com.google.protobuf.Parser<Param>
+            PARSER = new com.google.protobuf.AbstractParser<Param>() {
+          public Param parsePartialFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new DataParam(input, extensionRegistry);
+            return new Param(input, extensionRegistry);
           }
         };
 
-        public static com.google.protobuf.Parser<DataParam> parser() {
+        public static com.google.protobuf.Parser<Param> parser() {
           return PARSER;
         }
 
         @java.lang.Override
-        public com.google.protobuf.Parser<DataParam> getParserForType() {
+        public com.google.protobuf.Parser<Param> getParserForType() {
           return PARSER;
         }
 
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam getDefaultInstanceForType() {
+        public com.addrobots.protobuf.Motor.MotorMsg.Data.Param getDefaultInstanceForType() {
           return DEFAULT_INSTANCE;
         }
 
@@ -1411,50 +1411,50 @@ public final class MotorMsg {
       public static final int ACTION_FIELD_NUMBER = 1;
       private int action_;
       /**
-       * <code>.McuWrapper.MotorData.DataAction action = 1;</code>
+       * <code>.MotorMsg.Data.Action action = 1;</code>
        */
       public int getActionValue() {
         return action_;
       }
       /**
-       * <code>.McuWrapper.MotorData.DataAction action = 1;</code>
+       * <code>.MotorMsg.Data.Action action = 1;</code>
        */
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataAction getAction() {
-        com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataAction result = com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataAction.valueOf(action_);
-        return result == null ? com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataAction.UNRECOGNIZED : result;
+      public com.addrobots.protobuf.Motor.MotorMsg.Data.Action getAction() {
+        com.addrobots.protobuf.Motor.MotorMsg.Data.Action result = com.addrobots.protobuf.Motor.MotorMsg.Data.Action.valueOf(action_);
+        return result == null ? com.addrobots.protobuf.Motor.MotorMsg.Data.Action.UNRECOGNIZED : result;
       }
 
       public static final int PARAMS_FIELD_NUMBER = 2;
-      private java.util.List<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam> params_;
+      private java.util.List<com.addrobots.protobuf.Motor.MotorMsg.Data.Param> params_;
       /**
-       * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+       * <code>repeated .MotorMsg.Data.Param params = 2;</code>
        */
-      public java.util.List<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam> getParamsList() {
+      public java.util.List<com.addrobots.protobuf.Motor.MotorMsg.Data.Param> getParamsList() {
         return params_;
       }
       /**
-       * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+       * <code>repeated .MotorMsg.Data.Param params = 2;</code>
        */
-      public java.util.List<? extends com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParamOrBuilder> 
+      public java.util.List<? extends com.addrobots.protobuf.Motor.MotorMsg.Data.ParamOrBuilder> 
           getParamsOrBuilderList() {
         return params_;
       }
       /**
-       * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+       * <code>repeated .MotorMsg.Data.Param params = 2;</code>
        */
       public int getParamsCount() {
         return params_.size();
       }
       /**
-       * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+       * <code>repeated .MotorMsg.Data.Param params = 2;</code>
        */
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam getParams(int index) {
+      public com.addrobots.protobuf.Motor.MotorMsg.Data.Param getParams(int index) {
         return params_.get(index);
       }
       /**
-       * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+       * <code>repeated .MotorMsg.Data.Param params = 2;</code>
        */
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParamOrBuilder getParamsOrBuilder(
+      public com.addrobots.protobuf.Motor.MotorMsg.Data.ParamOrBuilder getParamsOrBuilder(
           int index) {
         return params_.get(index);
       }
@@ -1471,7 +1471,7 @@ public final class MotorMsg {
 
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (action_ != com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataAction.UKNONWN_ACTION.getNumber()) {
+        if (action_ != com.addrobots.protobuf.Motor.MotorMsg.Data.Action.UKNONWN_ACTION.getNumber()) {
           output.writeEnum(1, action_);
         }
         for (int i = 0; i < params_.size(); i++) {
@@ -1485,7 +1485,7 @@ public final class MotorMsg {
         if (size != -1) return size;
 
         size = 0;
-        if (action_ != com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataAction.UKNONWN_ACTION.getNumber()) {
+        if (action_ != com.addrobots.protobuf.Motor.MotorMsg.Data.Action.UKNONWN_ACTION.getNumber()) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(1, action_);
         }
@@ -1503,10 +1503,10 @@ public final class MotorMsg {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData)) {
+        if (!(obj instanceof com.addrobots.protobuf.Motor.MotorMsg.Data)) {
           return super.equals(obj);
         }
-        com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData other = (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) obj;
+        com.addrobots.protobuf.Motor.MotorMsg.Data other = (com.addrobots.protobuf.Motor.MotorMsg.Data) obj;
 
         boolean result = true;
         result = result && action_ == other.action_;
@@ -1534,69 +1534,69 @@ public final class MotorMsg {
         return hash;
       }
 
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parseFrom(byte[] data)
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parseFrom(java.io.InputStream input)
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parseDelimitedFrom(java.io.InputStream input)
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parseDelimitedFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -1608,7 +1608,7 @@ public final class MotorMsg {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData prototype) {
+      public static Builder newBuilder(com.addrobots.protobuf.Motor.MotorMsg.Data prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() {
@@ -1627,25 +1627,25 @@ public final class MotorMsg {
        * This message contains one or more motor data samples
        * </pre>
        *
-       * Protobuf type {@code McuWrapper.MotorData}
+       * Protobuf type {@code MotorMsg.Data}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:McuWrapper.MotorData)
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorDataOrBuilder {
+          // @@protoc_insertion_point(builder_implements:MotorMsg.Data)
+          com.addrobots.protobuf.Motor.MotorMsg.DataOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorData_descriptor;
+          return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Data_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorData_fieldAccessorTable
+          return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Data_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.class, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.Builder.class);
+                  com.addrobots.protobuf.Motor.MotorMsg.Data.class, com.addrobots.protobuf.Motor.MotorMsg.Data.Builder.class);
         }
 
-        // Construct using com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.newBuilder()
+        // Construct using com.addrobots.protobuf.Motor.MotorMsg.Data.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -1676,23 +1676,23 @@ public final class MotorMsg {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorData_descriptor;
+          return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Data_descriptor;
         }
 
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData getDefaultInstanceForType() {
-          return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.getDefaultInstance();
+        public com.addrobots.protobuf.Motor.MotorMsg.Data getDefaultInstanceForType() {
+          return com.addrobots.protobuf.Motor.MotorMsg.Data.getDefaultInstance();
         }
 
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData build() {
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData result = buildPartial();
+        public com.addrobots.protobuf.Motor.MotorMsg.Data build() {
+          com.addrobots.protobuf.Motor.MotorMsg.Data result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData buildPartial() {
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData result = new com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData(this);
+        public com.addrobots.protobuf.Motor.MotorMsg.Data buildPartial() {
+          com.addrobots.protobuf.Motor.MotorMsg.Data result = new com.addrobots.protobuf.Motor.MotorMsg.Data(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           result.action_ = action_;
@@ -1737,16 +1737,16 @@ public final class MotorMsg {
           return (Builder) super.addRepeatedField(field, value);
         }
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) {
-            return mergeFrom((com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData)other);
+          if (other instanceof com.addrobots.protobuf.Motor.MotorMsg.Data) {
+            return mergeFrom((com.addrobots.protobuf.Motor.MotorMsg.Data)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData other) {
-          if (other == com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.getDefaultInstance()) return this;
+        public Builder mergeFrom(com.addrobots.protobuf.Motor.MotorMsg.Data other) {
+          if (other == com.addrobots.protobuf.Motor.MotorMsg.Data.getDefaultInstance()) return this;
           if (other.action_ != 0) {
             setActionValue(other.getActionValue());
           }
@@ -1789,11 +1789,11 @@ public final class MotorMsg {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData parsedMessage = null;
+          com.addrobots.protobuf.Motor.MotorMsg.Data parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) e.getUnfinishedMessage();
+            parsedMessage = (com.addrobots.protobuf.Motor.MotorMsg.Data) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -1806,13 +1806,13 @@ public final class MotorMsg {
 
         private int action_ = 0;
         /**
-         * <code>.McuWrapper.MotorData.DataAction action = 1;</code>
+         * <code>.MotorMsg.Data.Action action = 1;</code>
          */
         public int getActionValue() {
           return action_;
         }
         /**
-         * <code>.McuWrapper.MotorData.DataAction action = 1;</code>
+         * <code>.MotorMsg.Data.Action action = 1;</code>
          */
         public Builder setActionValue(int value) {
           action_ = value;
@@ -1820,16 +1820,16 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>.McuWrapper.MotorData.DataAction action = 1;</code>
+         * <code>.MotorMsg.Data.Action action = 1;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataAction getAction() {
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataAction result = com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataAction.valueOf(action_);
-          return result == null ? com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataAction.UNRECOGNIZED : result;
+        public com.addrobots.protobuf.Motor.MotorMsg.Data.Action getAction() {
+          com.addrobots.protobuf.Motor.MotorMsg.Data.Action result = com.addrobots.protobuf.Motor.MotorMsg.Data.Action.valueOf(action_);
+          return result == null ? com.addrobots.protobuf.Motor.MotorMsg.Data.Action.UNRECOGNIZED : result;
         }
         /**
-         * <code>.McuWrapper.MotorData.DataAction action = 1;</code>
+         * <code>.MotorMsg.Data.Action action = 1;</code>
          */
-        public Builder setAction(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataAction value) {
+        public Builder setAction(com.addrobots.protobuf.Motor.MotorMsg.Data.Action value) {
           if (value == null) {
             throw new NullPointerException();
           }
@@ -1839,7 +1839,7 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>.McuWrapper.MotorData.DataAction action = 1;</code>
+         * <code>.MotorMsg.Data.Action action = 1;</code>
          */
         public Builder clearAction() {
           
@@ -1848,22 +1848,22 @@ public final class MotorMsg {
           return this;
         }
 
-        private java.util.List<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam> params_ =
+        private java.util.List<com.addrobots.protobuf.Motor.MotorMsg.Data.Param> params_ =
           java.util.Collections.emptyList();
         private void ensureParamsIsMutable() {
           if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-            params_ = new java.util.ArrayList<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam>(params_);
+            params_ = new java.util.ArrayList<com.addrobots.protobuf.Motor.MotorMsg.Data.Param>(params_);
             bitField0_ |= 0x00000002;
            }
         }
 
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.Builder, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParamOrBuilder> paramsBuilder_;
+            com.addrobots.protobuf.Motor.MotorMsg.Data.Param, com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Builder, com.addrobots.protobuf.Motor.MotorMsg.Data.ParamOrBuilder> paramsBuilder_;
 
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
-        public java.util.List<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam> getParamsList() {
+        public java.util.List<com.addrobots.protobuf.Motor.MotorMsg.Data.Param> getParamsList() {
           if (paramsBuilder_ == null) {
             return java.util.Collections.unmodifiableList(params_);
           } else {
@@ -1871,7 +1871,7 @@ public final class MotorMsg {
           }
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
         public int getParamsCount() {
           if (paramsBuilder_ == null) {
@@ -1881,9 +1881,9 @@ public final class MotorMsg {
           }
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam getParams(int index) {
+        public com.addrobots.protobuf.Motor.MotorMsg.Data.Param getParams(int index) {
           if (paramsBuilder_ == null) {
             return params_.get(index);
           } else {
@@ -1891,10 +1891,10 @@ public final class MotorMsg {
           }
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
         public Builder setParams(
-            int index, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam value) {
+            int index, com.addrobots.protobuf.Motor.MotorMsg.Data.Param value) {
           if (paramsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -1908,10 +1908,10 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
         public Builder setParams(
-            int index, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.Builder builderForValue) {
+            int index, com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Builder builderForValue) {
           if (paramsBuilder_ == null) {
             ensureParamsIsMutable();
             params_.set(index, builderForValue.build());
@@ -1922,9 +1922,9 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
-        public Builder addParams(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam value) {
+        public Builder addParams(com.addrobots.protobuf.Motor.MotorMsg.Data.Param value) {
           if (paramsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -1938,10 +1938,10 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
         public Builder addParams(
-            int index, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam value) {
+            int index, com.addrobots.protobuf.Motor.MotorMsg.Data.Param value) {
           if (paramsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -1955,10 +1955,10 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
         public Builder addParams(
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.Builder builderForValue) {
+            com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Builder builderForValue) {
           if (paramsBuilder_ == null) {
             ensureParamsIsMutable();
             params_.add(builderForValue.build());
@@ -1969,10 +1969,10 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
         public Builder addParams(
-            int index, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.Builder builderForValue) {
+            int index, com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Builder builderForValue) {
           if (paramsBuilder_ == null) {
             ensureParamsIsMutable();
             params_.add(index, builderForValue.build());
@@ -1983,10 +1983,10 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
         public Builder addAllParams(
-            java.lang.Iterable<? extends com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam> values) {
+            java.lang.Iterable<? extends com.addrobots.protobuf.Motor.MotorMsg.Data.Param> values) {
           if (paramsBuilder_ == null) {
             ensureParamsIsMutable();
             com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -1998,7 +1998,7 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
         public Builder clearParams() {
           if (paramsBuilder_ == null) {
@@ -2011,7 +2011,7 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
         public Builder removeParams(int index) {
           if (paramsBuilder_ == null) {
@@ -2024,16 +2024,16 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.Builder getParamsBuilder(
+        public com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Builder getParamsBuilder(
             int index) {
           return getParamsFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParamOrBuilder getParamsOrBuilder(
+        public com.addrobots.protobuf.Motor.MotorMsg.Data.ParamOrBuilder getParamsOrBuilder(
             int index) {
           if (paramsBuilder_ == null) {
             return params_.get(index);  } else {
@@ -2041,9 +2041,9 @@ public final class MotorMsg {
           }
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
-        public java.util.List<? extends com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParamOrBuilder> 
+        public java.util.List<? extends com.addrobots.protobuf.Motor.MotorMsg.Data.ParamOrBuilder> 
              getParamsOrBuilderList() {
           if (paramsBuilder_ != null) {
             return paramsBuilder_.getMessageOrBuilderList();
@@ -2052,33 +2052,33 @@ public final class MotorMsg {
           }
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.Builder addParamsBuilder() {
+        public com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Builder addParamsBuilder() {
           return getParamsFieldBuilder().addBuilder(
-              com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.getDefaultInstance());
+              com.addrobots.protobuf.Motor.MotorMsg.Data.Param.getDefaultInstance());
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.Builder addParamsBuilder(
+        public com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Builder addParamsBuilder(
             int index) {
           return getParamsFieldBuilder().addBuilder(
-              index, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.getDefaultInstance());
+              index, com.addrobots.protobuf.Motor.MotorMsg.Data.Param.getDefaultInstance());
         }
         /**
-         * <code>repeated .McuWrapper.MotorData.DataParam params = 2;</code>
+         * <code>repeated .MotorMsg.Data.Param params = 2;</code>
          */
-        public java.util.List<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.Builder> 
+        public java.util.List<com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Builder> 
              getParamsBuilderList() {
           return getParamsFieldBuilder().getBuilderList();
         }
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.Builder, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParamOrBuilder> 
+            com.addrobots.protobuf.Motor.MotorMsg.Data.Param, com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Builder, com.addrobots.protobuf.Motor.MotorMsg.Data.ParamOrBuilder> 
             getParamsFieldBuilder() {
           if (paramsBuilder_ == null) {
             paramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParam.Builder, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.DataParamOrBuilder>(
+                com.addrobots.protobuf.Motor.MotorMsg.Data.Param, com.addrobots.protobuf.Motor.MotorMsg.Data.Param.Builder, com.addrobots.protobuf.Motor.MotorMsg.Data.ParamOrBuilder>(
                     params_,
                     ((bitField0_ & 0x00000002) == 0x00000002),
                     getParentForChildren(),
@@ -2098,79 +2098,79 @@ public final class MotorMsg {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:McuWrapper.MotorData)
+        // @@protoc_insertion_point(builder_scope:MotorMsg.Data)
       }
 
-      // @@protoc_insertion_point(class_scope:McuWrapper.MotorData)
-      private static final com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:MotorMsg.Data)
+      private static final com.addrobots.protobuf.Motor.MotorMsg.Data DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData();
+        DEFAULT_INSTANCE = new com.addrobots.protobuf.Motor.MotorMsg.Data();
       }
 
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData getDefaultInstance() {
+      public static com.addrobots.protobuf.Motor.MotorMsg.Data getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<MotorData>
-          PARSER = new com.google.protobuf.AbstractParser<MotorData>() {
-        public MotorData parsePartialFrom(
+      private static final com.google.protobuf.Parser<Data>
+          PARSER = new com.google.protobuf.AbstractParser<Data>() {
+        public Data parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new MotorData(input, extensionRegistry);
+          return new Data(input, extensionRegistry);
         }
       };
 
-      public static com.google.protobuf.Parser<MotorData> parser() {
+      public static com.google.protobuf.Parser<Data> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<MotorData> getParserForType() {
+      public com.google.protobuf.Parser<Data> getParserForType() {
         return PARSER;
       }
 
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData getDefaultInstanceForType() {
+      public com.addrobots.protobuf.Motor.MotorMsg.Data getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
     }
 
-    public interface MotorCmdOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:McuWrapper.MotorCmd)
+    public interface CmdOrBuilder extends
+        // @@protoc_insertion_point(interface_extends:MotorMsg.Cmd)
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>.McuWrapper.MotorCmd.MotorAction action = 1;</code>
+       * <code>.MotorMsg.Cmd.Action action = 1;</code>
        */
       int getActionValue();
       /**
-       * <code>.McuWrapper.MotorCmd.MotorAction action = 1;</code>
+       * <code>.MotorMsg.Cmd.Action action = 1;</code>
        */
-      com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.MotorAction getAction();
+      com.addrobots.protobuf.Motor.MotorMsg.Cmd.Action getAction();
 
       /**
-       * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+       * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
        */
-      java.util.List<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam> 
+      java.util.List<com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param> 
           getParamsList();
       /**
-       * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+       * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
        */
-      com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam getParams(int index);
+      com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param getParams(int index);
       /**
-       * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+       * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
        */
       int getParamsCount();
       /**
-       * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+       * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
        */
-      java.util.List<? extends com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParamOrBuilder> 
+      java.util.List<? extends com.addrobots.protobuf.Motor.MotorMsg.Cmd.ParamOrBuilder> 
           getParamsOrBuilderList();
       /**
-       * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+       * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
        */
-      com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParamOrBuilder getParamsOrBuilder(
+      com.addrobots.protobuf.Motor.MotorMsg.Cmd.ParamOrBuilder getParamsOrBuilder(
           int index);
     }
     /**
@@ -2178,18 +2178,18 @@ public final class MotorMsg {
      * The message contains one or more motor command tuples
      * </pre>
      *
-     * Protobuf type {@code McuWrapper.MotorCmd}
+     * Protobuf type {@code MotorMsg.Cmd}
      */
-    public  static final class MotorCmd extends
+    public  static final class Cmd extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:McuWrapper.MotorCmd)
-        MotorCmdOrBuilder {
+        // @@protoc_insertion_point(message_implements:MotorMsg.Cmd)
+        CmdOrBuilder {
     private static final long serialVersionUID = 0L;
-      // Use MotorCmd.newBuilder() to construct.
-      private MotorCmd(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      // Use Cmd.newBuilder() to construct.
+      private Cmd(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
         super(builder);
       }
-      private MotorCmd() {
+      private Cmd() {
         action_ = 0;
         params_ = java.util.Collections.emptyList();
       }
@@ -2199,7 +2199,7 @@ public final class MotorMsg {
       getUnknownFields() {
         return this.unknownFields;
       }
-      private MotorCmd(
+      private Cmd(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2233,11 +2233,11 @@ public final class MotorMsg {
               }
               case 18: {
                 if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
-                  params_ = new java.util.ArrayList<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam>();
+                  params_ = new java.util.ArrayList<com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param>();
                   mutable_bitField0_ |= 0x00000002;
                 }
                 params_.add(
-                    input.readMessage(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.parser(), extensionRegistry));
+                    input.readMessage(com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.parser(), extensionRegistry));
                 break;
               }
             }
@@ -2257,20 +2257,20 @@ public final class MotorMsg {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorCmd_descriptor;
+        return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Cmd_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorCmd_fieldAccessorTable
+        return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Cmd_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.class, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.Builder.class);
+                com.addrobots.protobuf.Motor.MotorMsg.Cmd.class, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Builder.class);
       }
 
       /**
-       * Protobuf enum {@code McuWrapper.MotorCmd.MotorAction}
+       * Protobuf enum {@code MotorMsg.Cmd.Action}
        */
-      public enum MotorAction
+      public enum Action
           implements com.google.protobuf.ProtocolMessageEnum {
         /**
          * <code>UNKNOWN = 0;</code>
@@ -2329,11 +2329,11 @@ public final class MotorMsg {
          * @deprecated Use {@link #forNumber(int)} instead.
          */
         @java.lang.Deprecated
-        public static MotorAction valueOf(int value) {
+        public static Action valueOf(int value) {
           return forNumber(value);
         }
 
-        public static MotorAction forNumber(int value) {
+        public static Action forNumber(int value) {
           switch (value) {
             case 0: return UNKNOWN;
             case 1: return BRAKE;
@@ -2344,15 +2344,15 @@ public final class MotorMsg {
           }
         }
 
-        public static com.google.protobuf.Internal.EnumLiteMap<MotorAction>
+        public static com.google.protobuf.Internal.EnumLiteMap<Action>
             internalGetValueMap() {
           return internalValueMap;
         }
         private static final com.google.protobuf.Internal.EnumLiteMap<
-            MotorAction> internalValueMap =
-              new com.google.protobuf.Internal.EnumLiteMap<MotorAction>() {
-                public MotorAction findValueByNumber(int number) {
-                  return MotorAction.forNumber(number);
+            Action> internalValueMap =
+              new com.google.protobuf.Internal.EnumLiteMap<Action>() {
+                public Action findValueByNumber(int number) {
+                  return Action.forNumber(number);
                 }
               };
 
@@ -2366,12 +2366,12 @@ public final class MotorMsg {
         }
         public static final com.google.protobuf.Descriptors.EnumDescriptor
             getDescriptor() {
-          return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.getDescriptor().getEnumTypes().get(0);
+          return com.addrobots.protobuf.Motor.MotorMsg.Cmd.getDescriptor().getEnumTypes().get(0);
         }
 
-        private static final MotorAction[] VALUES = values();
+        private static final Action[] VALUES = values();
 
-        public static MotorAction valueOf(
+        public static Action valueOf(
             com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
           if (desc.getType() != getDescriptor()) {
             throw new java.lang.IllegalArgumentException(
@@ -2385,25 +2385,25 @@ public final class MotorMsg {
 
         private final int value;
 
-        private MotorAction(int value) {
+        private Action(int value) {
           this.value = value;
         }
 
-        // @@protoc_insertion_point(enum_scope:McuWrapper.MotorCmd.MotorAction)
+        // @@protoc_insertion_point(enum_scope:MotorMsg.Cmd.Action)
       }
 
-      public interface CmdParamOrBuilder extends
-          // @@protoc_insertion_point(interface_extends:McuWrapper.MotorCmd.CmdParam)
+      public interface ParamOrBuilder extends
+          // @@protoc_insertion_point(interface_extends:MotorMsg.Cmd.Param)
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId id = 1;</code>
+         * <code>.MotorMsg.Cmd.Param.Id id = 1;</code>
          */
         int getIdValue();
         /**
-         * <code>.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId id = 1;</code>
+         * <code>.MotorMsg.Cmd.Param.Id id = 1;</code>
          */
-        com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId getId();
+        com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Id getId();
 
         /**
          * <code>double value = 2;</code>
@@ -2411,27 +2411,27 @@ public final class MotorMsg {
         double getValue();
 
         /**
-         * <code>.McuWrapper.Unit unit = 3;</code>
+         * <code>.MotorMsg.Unit unit = 3;</code>
          */
         int getUnitValue();
         /**
-         * <code>.McuWrapper.Unit unit = 3;</code>
+         * <code>.MotorMsg.Unit unit = 3;</code>
          */
-        com.addrobots.protobuf.MotorMsg.McuWrapper.Unit getUnit();
+        com.addrobots.protobuf.Motor.MotorMsg.Unit getUnit();
       }
       /**
-       * Protobuf type {@code McuWrapper.MotorCmd.CmdParam}
+       * Protobuf type {@code MotorMsg.Cmd.Param}
        */
-      public  static final class CmdParam extends
+      public  static final class Param extends
           com.google.protobuf.GeneratedMessageV3 implements
-          // @@protoc_insertion_point(message_implements:McuWrapper.MotorCmd.CmdParam)
-          CmdParamOrBuilder {
+          // @@protoc_insertion_point(message_implements:MotorMsg.Cmd.Param)
+          ParamOrBuilder {
       private static final long serialVersionUID = 0L;
-        // Use CmdParam.newBuilder() to construct.
-        private CmdParam(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+        // Use Param.newBuilder() to construct.
+        private Param(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
           super(builder);
         }
-        private CmdParam() {
+        private Param() {
           id_ = 0;
           value_ = 0D;
           unit_ = 0;
@@ -2442,7 +2442,7 @@ public final class MotorMsg {
         getUnknownFields() {
           return this.unknownFields;
         }
-        private CmdParam(
+        private Param(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
@@ -2499,20 +2499,20 @@ public final class MotorMsg {
         }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorCmd_CmdParam_descriptor;
+          return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Cmd_Param_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorCmd_CmdParam_fieldAccessorTable
+          return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Cmd_Param_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.class, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.Builder.class);
+                  com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.class, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Builder.class);
         }
 
         /**
-         * Protobuf enum {@code McuWrapper.MotorCmd.CmdParam.MotorCmdParamId}
+         * Protobuf enum {@code MotorMsg.Cmd.Param.Id}
          */
-        public enum MotorCmdParamId
+        public enum Id
             implements com.google.protobuf.ProtocolMessageEnum {
           /**
            * <code>UNKNOWN_PARAM = 0;</code>
@@ -2731,11 +2731,11 @@ public final class MotorMsg {
            * @deprecated Use {@link #forNumber(int)} instead.
            */
           @java.lang.Deprecated
-          public static MotorCmdParamId valueOf(int value) {
+          public static Id valueOf(int value) {
             return forNumber(value);
           }
 
-          public static MotorCmdParamId forNumber(int value) {
+          public static Id forNumber(int value) {
             switch (value) {
               case 0: return UNKNOWN_PARAM;
               case 1: return CLOCKWISE;
@@ -2754,15 +2754,15 @@ public final class MotorMsg {
             }
           }
 
-          public static com.google.protobuf.Internal.EnumLiteMap<MotorCmdParamId>
+          public static com.google.protobuf.Internal.EnumLiteMap<Id>
               internalGetValueMap() {
             return internalValueMap;
           }
           private static final com.google.protobuf.Internal.EnumLiteMap<
-              MotorCmdParamId> internalValueMap =
-                new com.google.protobuf.Internal.EnumLiteMap<MotorCmdParamId>() {
-                  public MotorCmdParamId findValueByNumber(int number) {
-                    return MotorCmdParamId.forNumber(number);
+              Id> internalValueMap =
+                new com.google.protobuf.Internal.EnumLiteMap<Id>() {
+                  public Id findValueByNumber(int number) {
+                    return Id.forNumber(number);
                   }
                 };
 
@@ -2776,12 +2776,12 @@ public final class MotorMsg {
           }
           public static final com.google.protobuf.Descriptors.EnumDescriptor
               getDescriptor() {
-            return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.getDescriptor().getEnumTypes().get(0);
+            return com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.getDescriptor().getEnumTypes().get(0);
           }
 
-          private static final MotorCmdParamId[] VALUES = values();
+          private static final Id[] VALUES = values();
 
-          public static MotorCmdParamId valueOf(
+          public static Id valueOf(
               com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
             if (desc.getType() != getDescriptor()) {
               throw new java.lang.IllegalArgumentException(
@@ -2795,27 +2795,27 @@ public final class MotorMsg {
 
           private final int value;
 
-          private MotorCmdParamId(int value) {
+          private Id(int value) {
             this.value = value;
           }
 
-          // @@protoc_insertion_point(enum_scope:McuWrapper.MotorCmd.CmdParam.MotorCmdParamId)
+          // @@protoc_insertion_point(enum_scope:MotorMsg.Cmd.Param.Id)
         }
 
         public static final int ID_FIELD_NUMBER = 1;
         private int id_;
         /**
-         * <code>.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId id = 1;</code>
+         * <code>.MotorMsg.Cmd.Param.Id id = 1;</code>
          */
         public int getIdValue() {
           return id_;
         }
         /**
-         * <code>.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId id = 1;</code>
+         * <code>.MotorMsg.Cmd.Param.Id id = 1;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId getId() {
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId result = com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId.valueOf(id_);
-          return result == null ? com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId.UNRECOGNIZED : result;
+        public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Id getId() {
+          com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Id result = com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Id.valueOf(id_);
+          return result == null ? com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Id.UNRECOGNIZED : result;
         }
 
         public static final int VALUE_FIELD_NUMBER = 2;
@@ -2830,17 +2830,17 @@ public final class MotorMsg {
         public static final int UNIT_FIELD_NUMBER = 3;
         private int unit_;
         /**
-         * <code>.McuWrapper.Unit unit = 3;</code>
+         * <code>.MotorMsg.Unit unit = 3;</code>
          */
         public int getUnitValue() {
           return unit_;
         }
         /**
-         * <code>.McuWrapper.Unit unit = 3;</code>
+         * <code>.MotorMsg.Unit unit = 3;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.Unit getUnit() {
-          com.addrobots.protobuf.MotorMsg.McuWrapper.Unit result = com.addrobots.protobuf.MotorMsg.McuWrapper.Unit.valueOf(unit_);
-          return result == null ? com.addrobots.protobuf.MotorMsg.McuWrapper.Unit.UNRECOGNIZED : result;
+        public com.addrobots.protobuf.Motor.MotorMsg.Unit getUnit() {
+          com.addrobots.protobuf.Motor.MotorMsg.Unit result = com.addrobots.protobuf.Motor.MotorMsg.Unit.valueOf(unit_);
+          return result == null ? com.addrobots.protobuf.Motor.MotorMsg.Unit.UNRECOGNIZED : result;
         }
 
         private byte memoizedIsInitialized = -1;
@@ -2855,13 +2855,13 @@ public final class MotorMsg {
 
         public void writeTo(com.google.protobuf.CodedOutputStream output)
                             throws java.io.IOException {
-          if (id_ != com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId.UNKNOWN_PARAM.getNumber()) {
+          if (id_ != com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Id.UNKNOWN_PARAM.getNumber()) {
             output.writeEnum(1, id_);
           }
           if (value_ != 0D) {
             output.writeDouble(2, value_);
           }
-          if (unit_ != com.addrobots.protobuf.MotorMsg.McuWrapper.Unit.UNKNOWN_UNIT.getNumber()) {
+          if (unit_ != com.addrobots.protobuf.Motor.MotorMsg.Unit.UNKNOWN_UNIT.getNumber()) {
             output.writeEnum(3, unit_);
           }
           unknownFields.writeTo(output);
@@ -2872,7 +2872,7 @@ public final class MotorMsg {
           if (size != -1) return size;
 
           size = 0;
-          if (id_ != com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId.UNKNOWN_PARAM.getNumber()) {
+          if (id_ != com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Id.UNKNOWN_PARAM.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(1, id_);
           }
@@ -2880,7 +2880,7 @@ public final class MotorMsg {
             size += com.google.protobuf.CodedOutputStream
               .computeDoubleSize(2, value_);
           }
-          if (unit_ != com.addrobots.protobuf.MotorMsg.McuWrapper.Unit.UNKNOWN_UNIT.getNumber()) {
+          if (unit_ != com.addrobots.protobuf.Motor.MotorMsg.Unit.UNKNOWN_UNIT.getNumber()) {
             size += com.google.protobuf.CodedOutputStream
               .computeEnumSize(3, unit_);
           }
@@ -2894,10 +2894,10 @@ public final class MotorMsg {
           if (obj == this) {
            return true;
           }
-          if (!(obj instanceof com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam)) {
+          if (!(obj instanceof com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param)) {
             return super.equals(obj);
           }
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam other = (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam) obj;
+          com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param other = (com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param) obj;
 
           boolean result = true;
           result = result && id_ == other.id_;
@@ -2929,69 +2929,69 @@ public final class MotorMsg {
           return hash;
         }
 
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parseFrom(
             java.nio.ByteBuffer data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parseFrom(
             java.nio.ByteBuffer data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parseFrom(
             com.google.protobuf.ByteString data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parseFrom(
             com.google.protobuf.ByteString data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parseFrom(byte[] data)
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parseFrom(byte[] data)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parseFrom(
             byte[] data,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
           return PARSER.parseFrom(data, extensionRegistry);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parseFrom(java.io.InputStream input)
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parseFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parseFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input, extensionRegistry);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parseDelimitedFrom(java.io.InputStream input)
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parseDelimitedFrom(java.io.InputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parseDelimitedFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parseDelimitedFrom(
             java.io.InputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parseFrom(
             com.google.protobuf.CodedInputStream input)
             throws java.io.IOException {
           return com.google.protobuf.GeneratedMessageV3
               .parseWithIOException(PARSER, input);
         }
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parseFrom(
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parseFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
@@ -3003,7 +3003,7 @@ public final class MotorMsg {
         public static Builder newBuilder() {
           return DEFAULT_INSTANCE.toBuilder();
         }
-        public static Builder newBuilder(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam prototype) {
+        public static Builder newBuilder(com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param prototype) {
           return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
         }
         public Builder toBuilder() {
@@ -3018,25 +3018,25 @@ public final class MotorMsg {
           return builder;
         }
         /**
-         * Protobuf type {@code McuWrapper.MotorCmd.CmdParam}
+         * Protobuf type {@code MotorMsg.Cmd.Param}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-            // @@protoc_insertion_point(builder_implements:McuWrapper.MotorCmd.CmdParam)
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParamOrBuilder {
+            // @@protoc_insertion_point(builder_implements:MotorMsg.Cmd.Param)
+            com.addrobots.protobuf.Motor.MotorMsg.Cmd.ParamOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorCmd_CmdParam_descriptor;
+            return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Cmd_Param_descriptor;
           }
 
           protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorCmd_CmdParam_fieldAccessorTable
+            return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Cmd_Param_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
-                    com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.class, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.Builder.class);
+                    com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.class, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Builder.class);
           }
 
-          // Construct using com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.newBuilder()
+          // Construct using com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -3064,23 +3064,23 @@ public final class MotorMsg {
 
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorCmd_CmdParam_descriptor;
+            return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Cmd_Param_descriptor;
           }
 
-          public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam getDefaultInstanceForType() {
-            return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.getDefaultInstance();
+          public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param getDefaultInstanceForType() {
+            return com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.getDefaultInstance();
           }
 
-          public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam build() {
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam result = buildPartial();
+          public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param build() {
+            com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param result = buildPartial();
             if (!result.isInitialized()) {
               throw newUninitializedMessageException(result);
             }
             return result;
           }
 
-          public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam buildPartial() {
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam result = new com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam(this);
+          public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param buildPartial() {
+            com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param result = new com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param(this);
             result.id_ = id_;
             result.value_ = value_;
             result.unit_ = unit_;
@@ -3115,16 +3115,16 @@ public final class MotorMsg {
             return (Builder) super.addRepeatedField(field, value);
           }
           public Builder mergeFrom(com.google.protobuf.Message other) {
-            if (other instanceof com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam) {
-              return mergeFrom((com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam)other);
+            if (other instanceof com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param) {
+              return mergeFrom((com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param)other);
             } else {
               super.mergeFrom(other);
               return this;
             }
           }
 
-          public Builder mergeFrom(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam other) {
-            if (other == com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.getDefaultInstance()) return this;
+          public Builder mergeFrom(com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param other) {
+            if (other == com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.getDefaultInstance()) return this;
             if (other.id_ != 0) {
               setIdValue(other.getIdValue());
             }
@@ -3147,11 +3147,11 @@ public final class MotorMsg {
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws java.io.IOException {
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam parsedMessage = null;
+            com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param parsedMessage = null;
             try {
               parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
             } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-              parsedMessage = (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam) e.getUnfinishedMessage();
+              parsedMessage = (com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param) e.getUnfinishedMessage();
               throw e.unwrapIOException();
             } finally {
               if (parsedMessage != null) {
@@ -3163,13 +3163,13 @@ public final class MotorMsg {
 
           private int id_ = 0;
           /**
-           * <code>.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId id = 1;</code>
+           * <code>.MotorMsg.Cmd.Param.Id id = 1;</code>
            */
           public int getIdValue() {
             return id_;
           }
           /**
-           * <code>.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId id = 1;</code>
+           * <code>.MotorMsg.Cmd.Param.Id id = 1;</code>
            */
           public Builder setIdValue(int value) {
             id_ = value;
@@ -3177,16 +3177,16 @@ public final class MotorMsg {
             return this;
           }
           /**
-           * <code>.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId id = 1;</code>
+           * <code>.MotorMsg.Cmd.Param.Id id = 1;</code>
            */
-          public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId getId() {
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId result = com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId.valueOf(id_);
-            return result == null ? com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId.UNRECOGNIZED : result;
+          public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Id getId() {
+            com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Id result = com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Id.valueOf(id_);
+            return result == null ? com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Id.UNRECOGNIZED : result;
           }
           /**
-           * <code>.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId id = 1;</code>
+           * <code>.MotorMsg.Cmd.Param.Id id = 1;</code>
            */
-          public Builder setId(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId value) {
+          public Builder setId(com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Id value) {
             if (value == null) {
               throw new NullPointerException();
             }
@@ -3196,7 +3196,7 @@ public final class MotorMsg {
             return this;
           }
           /**
-           * <code>.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId id = 1;</code>
+           * <code>.MotorMsg.Cmd.Param.Id id = 1;</code>
            */
           public Builder clearId() {
             
@@ -3233,13 +3233,13 @@ public final class MotorMsg {
 
           private int unit_ = 0;
           /**
-           * <code>.McuWrapper.Unit unit = 3;</code>
+           * <code>.MotorMsg.Unit unit = 3;</code>
            */
           public int getUnitValue() {
             return unit_;
           }
           /**
-           * <code>.McuWrapper.Unit unit = 3;</code>
+           * <code>.MotorMsg.Unit unit = 3;</code>
            */
           public Builder setUnitValue(int value) {
             unit_ = value;
@@ -3247,16 +3247,16 @@ public final class MotorMsg {
             return this;
           }
           /**
-           * <code>.McuWrapper.Unit unit = 3;</code>
+           * <code>.MotorMsg.Unit unit = 3;</code>
            */
-          public com.addrobots.protobuf.MotorMsg.McuWrapper.Unit getUnit() {
-            com.addrobots.protobuf.MotorMsg.McuWrapper.Unit result = com.addrobots.protobuf.MotorMsg.McuWrapper.Unit.valueOf(unit_);
-            return result == null ? com.addrobots.protobuf.MotorMsg.McuWrapper.Unit.UNRECOGNIZED : result;
+          public com.addrobots.protobuf.Motor.MotorMsg.Unit getUnit() {
+            com.addrobots.protobuf.Motor.MotorMsg.Unit result = com.addrobots.protobuf.Motor.MotorMsg.Unit.valueOf(unit_);
+            return result == null ? com.addrobots.protobuf.Motor.MotorMsg.Unit.UNRECOGNIZED : result;
           }
           /**
-           * <code>.McuWrapper.Unit unit = 3;</code>
+           * <code>.MotorMsg.Unit unit = 3;</code>
            */
-          public Builder setUnit(com.addrobots.protobuf.MotorMsg.McuWrapper.Unit value) {
+          public Builder setUnit(com.addrobots.protobuf.Motor.MotorMsg.Unit value) {
             if (value == null) {
               throw new NullPointerException();
             }
@@ -3266,7 +3266,7 @@ public final class MotorMsg {
             return this;
           }
           /**
-           * <code>.McuWrapper.Unit unit = 3;</code>
+           * <code>.MotorMsg.Unit unit = 3;</code>
            */
           public Builder clearUnit() {
             
@@ -3285,39 +3285,39 @@ public final class MotorMsg {
           }
 
 
-          // @@protoc_insertion_point(builder_scope:McuWrapper.MotorCmd.CmdParam)
+          // @@protoc_insertion_point(builder_scope:MotorMsg.Cmd.Param)
         }
 
-        // @@protoc_insertion_point(class_scope:McuWrapper.MotorCmd.CmdParam)
-        private static final com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam DEFAULT_INSTANCE;
+        // @@protoc_insertion_point(class_scope:MotorMsg.Cmd.Param)
+        private static final com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param DEFAULT_INSTANCE;
         static {
-          DEFAULT_INSTANCE = new com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam();
+          DEFAULT_INSTANCE = new com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param();
         }
 
-        public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam getDefaultInstance() {
+        public static com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param getDefaultInstance() {
           return DEFAULT_INSTANCE;
         }
 
-        private static final com.google.protobuf.Parser<CmdParam>
-            PARSER = new com.google.protobuf.AbstractParser<CmdParam>() {
-          public CmdParam parsePartialFrom(
+        private static final com.google.protobuf.Parser<Param>
+            PARSER = new com.google.protobuf.AbstractParser<Param>() {
+          public Param parsePartialFrom(
               com.google.protobuf.CodedInputStream input,
               com.google.protobuf.ExtensionRegistryLite extensionRegistry)
               throws com.google.protobuf.InvalidProtocolBufferException {
-            return new CmdParam(input, extensionRegistry);
+            return new Param(input, extensionRegistry);
           }
         };
 
-        public static com.google.protobuf.Parser<CmdParam> parser() {
+        public static com.google.protobuf.Parser<Param> parser() {
           return PARSER;
         }
 
         @java.lang.Override
-        public com.google.protobuf.Parser<CmdParam> getParserForType() {
+        public com.google.protobuf.Parser<Param> getParserForType() {
           return PARSER;
         }
 
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam getDefaultInstanceForType() {
+        public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param getDefaultInstanceForType() {
           return DEFAULT_INSTANCE;
         }
 
@@ -3327,50 +3327,50 @@ public final class MotorMsg {
       public static final int ACTION_FIELD_NUMBER = 1;
       private int action_;
       /**
-       * <code>.McuWrapper.MotorCmd.MotorAction action = 1;</code>
+       * <code>.MotorMsg.Cmd.Action action = 1;</code>
        */
       public int getActionValue() {
         return action_;
       }
       /**
-       * <code>.McuWrapper.MotorCmd.MotorAction action = 1;</code>
+       * <code>.MotorMsg.Cmd.Action action = 1;</code>
        */
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.MotorAction getAction() {
-        com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.MotorAction result = com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.MotorAction.valueOf(action_);
-        return result == null ? com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.MotorAction.UNRECOGNIZED : result;
+      public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Action getAction() {
+        com.addrobots.protobuf.Motor.MotorMsg.Cmd.Action result = com.addrobots.protobuf.Motor.MotorMsg.Cmd.Action.valueOf(action_);
+        return result == null ? com.addrobots.protobuf.Motor.MotorMsg.Cmd.Action.UNRECOGNIZED : result;
       }
 
       public static final int PARAMS_FIELD_NUMBER = 2;
-      private java.util.List<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam> params_;
+      private java.util.List<com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param> params_;
       /**
-       * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+       * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
        */
-      public java.util.List<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam> getParamsList() {
+      public java.util.List<com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param> getParamsList() {
         return params_;
       }
       /**
-       * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+       * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
        */
-      public java.util.List<? extends com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParamOrBuilder> 
+      public java.util.List<? extends com.addrobots.protobuf.Motor.MotorMsg.Cmd.ParamOrBuilder> 
           getParamsOrBuilderList() {
         return params_;
       }
       /**
-       * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+       * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
        */
       public int getParamsCount() {
         return params_.size();
       }
       /**
-       * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+       * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
        */
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam getParams(int index) {
+      public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param getParams(int index) {
         return params_.get(index);
       }
       /**
-       * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+       * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
        */
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParamOrBuilder getParamsOrBuilder(
+      public com.addrobots.protobuf.Motor.MotorMsg.Cmd.ParamOrBuilder getParamsOrBuilder(
           int index) {
         return params_.get(index);
       }
@@ -3387,7 +3387,7 @@ public final class MotorMsg {
 
       public void writeTo(com.google.protobuf.CodedOutputStream output)
                           throws java.io.IOException {
-        if (action_ != com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.MotorAction.UNKNOWN.getNumber()) {
+        if (action_ != com.addrobots.protobuf.Motor.MotorMsg.Cmd.Action.UNKNOWN.getNumber()) {
           output.writeEnum(1, action_);
         }
         for (int i = 0; i < params_.size(); i++) {
@@ -3401,7 +3401,7 @@ public final class MotorMsg {
         if (size != -1) return size;
 
         size = 0;
-        if (action_ != com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.MotorAction.UNKNOWN.getNumber()) {
+        if (action_ != com.addrobots.protobuf.Motor.MotorMsg.Cmd.Action.UNKNOWN.getNumber()) {
           size += com.google.protobuf.CodedOutputStream
             .computeEnumSize(1, action_);
         }
@@ -3419,10 +3419,10 @@ public final class MotorMsg {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd)) {
+        if (!(obj instanceof com.addrobots.protobuf.Motor.MotorMsg.Cmd)) {
           return super.equals(obj);
         }
-        com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd other = (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) obj;
+        com.addrobots.protobuf.Motor.MotorMsg.Cmd other = (com.addrobots.protobuf.Motor.MotorMsg.Cmd) obj;
 
         boolean result = true;
         result = result && action_ == other.action_;
@@ -3450,69 +3450,69 @@ public final class MotorMsg {
         return hash;
       }
 
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parseFrom(byte[] data)
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parseFrom(java.io.InputStream input)
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parseDelimitedFrom(java.io.InputStream input)
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parseDelimitedFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parseFrom(
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -3524,7 +3524,7 @@ public final class MotorMsg {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd prototype) {
+      public static Builder newBuilder(com.addrobots.protobuf.Motor.MotorMsg.Cmd prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() {
@@ -3543,25 +3543,25 @@ public final class MotorMsg {
        * The message contains one or more motor command tuples
        * </pre>
        *
-       * Protobuf type {@code McuWrapper.MotorCmd}
+       * Protobuf type {@code MotorMsg.Cmd}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:McuWrapper.MotorCmd)
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmdOrBuilder {
+          // @@protoc_insertion_point(builder_implements:MotorMsg.Cmd)
+          com.addrobots.protobuf.Motor.MotorMsg.CmdOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorCmd_descriptor;
+          return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Cmd_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorCmd_fieldAccessorTable
+          return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Cmd_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.class, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.Builder.class);
+                  com.addrobots.protobuf.Motor.MotorMsg.Cmd.class, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Builder.class);
         }
 
-        // Construct using com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.newBuilder()
+        // Construct using com.addrobots.protobuf.Motor.MotorMsg.Cmd.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -3592,23 +3592,23 @@ public final class MotorMsg {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_MotorCmd_descriptor;
+          return com.addrobots.protobuf.Motor.internal_static_MotorMsg_Cmd_descriptor;
         }
 
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd getDefaultInstanceForType() {
-          return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.getDefaultInstance();
+        public com.addrobots.protobuf.Motor.MotorMsg.Cmd getDefaultInstanceForType() {
+          return com.addrobots.protobuf.Motor.MotorMsg.Cmd.getDefaultInstance();
         }
 
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd build() {
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd result = buildPartial();
+        public com.addrobots.protobuf.Motor.MotorMsg.Cmd build() {
+          com.addrobots.protobuf.Motor.MotorMsg.Cmd result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd buildPartial() {
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd result = new com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd(this);
+        public com.addrobots.protobuf.Motor.MotorMsg.Cmd buildPartial() {
+          com.addrobots.protobuf.Motor.MotorMsg.Cmd result = new com.addrobots.protobuf.Motor.MotorMsg.Cmd(this);
           int from_bitField0_ = bitField0_;
           int to_bitField0_ = 0;
           result.action_ = action_;
@@ -3653,16 +3653,16 @@ public final class MotorMsg {
           return (Builder) super.addRepeatedField(field, value);
         }
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) {
-            return mergeFrom((com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd)other);
+          if (other instanceof com.addrobots.protobuf.Motor.MotorMsg.Cmd) {
+            return mergeFrom((com.addrobots.protobuf.Motor.MotorMsg.Cmd)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd other) {
-          if (other == com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.getDefaultInstance()) return this;
+        public Builder mergeFrom(com.addrobots.protobuf.Motor.MotorMsg.Cmd other) {
+          if (other == com.addrobots.protobuf.Motor.MotorMsg.Cmd.getDefaultInstance()) return this;
           if (other.action_ != 0) {
             setActionValue(other.getActionValue());
           }
@@ -3705,11 +3705,11 @@ public final class MotorMsg {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd parsedMessage = null;
+          com.addrobots.protobuf.Motor.MotorMsg.Cmd parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) e.getUnfinishedMessage();
+            parsedMessage = (com.addrobots.protobuf.Motor.MotorMsg.Cmd) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -3722,13 +3722,13 @@ public final class MotorMsg {
 
         private int action_ = 0;
         /**
-         * <code>.McuWrapper.MotorCmd.MotorAction action = 1;</code>
+         * <code>.MotorMsg.Cmd.Action action = 1;</code>
          */
         public int getActionValue() {
           return action_;
         }
         /**
-         * <code>.McuWrapper.MotorCmd.MotorAction action = 1;</code>
+         * <code>.MotorMsg.Cmd.Action action = 1;</code>
          */
         public Builder setActionValue(int value) {
           action_ = value;
@@ -3736,16 +3736,16 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>.McuWrapper.MotorCmd.MotorAction action = 1;</code>
+         * <code>.MotorMsg.Cmd.Action action = 1;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.MotorAction getAction() {
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.MotorAction result = com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.MotorAction.valueOf(action_);
-          return result == null ? com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.MotorAction.UNRECOGNIZED : result;
+        public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Action getAction() {
+          com.addrobots.protobuf.Motor.MotorMsg.Cmd.Action result = com.addrobots.protobuf.Motor.MotorMsg.Cmd.Action.valueOf(action_);
+          return result == null ? com.addrobots.protobuf.Motor.MotorMsg.Cmd.Action.UNRECOGNIZED : result;
         }
         /**
-         * <code>.McuWrapper.MotorCmd.MotorAction action = 1;</code>
+         * <code>.MotorMsg.Cmd.Action action = 1;</code>
          */
-        public Builder setAction(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.MotorAction value) {
+        public Builder setAction(com.addrobots.protobuf.Motor.MotorMsg.Cmd.Action value) {
           if (value == null) {
             throw new NullPointerException();
           }
@@ -3755,7 +3755,7 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>.McuWrapper.MotorCmd.MotorAction action = 1;</code>
+         * <code>.MotorMsg.Cmd.Action action = 1;</code>
          */
         public Builder clearAction() {
           
@@ -3764,22 +3764,22 @@ public final class MotorMsg {
           return this;
         }
 
-        private java.util.List<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam> params_ =
+        private java.util.List<com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param> params_ =
           java.util.Collections.emptyList();
         private void ensureParamsIsMutable() {
           if (!((bitField0_ & 0x00000002) == 0x00000002)) {
-            params_ = new java.util.ArrayList<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam>(params_);
+            params_ = new java.util.ArrayList<com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param>(params_);
             bitField0_ |= 0x00000002;
            }
         }
 
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.Builder, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParamOrBuilder> paramsBuilder_;
+            com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Builder, com.addrobots.protobuf.Motor.MotorMsg.Cmd.ParamOrBuilder> paramsBuilder_;
 
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
-        public java.util.List<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam> getParamsList() {
+        public java.util.List<com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param> getParamsList() {
           if (paramsBuilder_ == null) {
             return java.util.Collections.unmodifiableList(params_);
           } else {
@@ -3787,7 +3787,7 @@ public final class MotorMsg {
           }
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
         public int getParamsCount() {
           if (paramsBuilder_ == null) {
@@ -3797,9 +3797,9 @@ public final class MotorMsg {
           }
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam getParams(int index) {
+        public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param getParams(int index) {
           if (paramsBuilder_ == null) {
             return params_.get(index);
           } else {
@@ -3807,10 +3807,10 @@ public final class MotorMsg {
           }
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
         public Builder setParams(
-            int index, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam value) {
+            int index, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param value) {
           if (paramsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -3824,10 +3824,10 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
         public Builder setParams(
-            int index, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.Builder builderForValue) {
+            int index, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Builder builderForValue) {
           if (paramsBuilder_ == null) {
             ensureParamsIsMutable();
             params_.set(index, builderForValue.build());
@@ -3838,9 +3838,9 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
-        public Builder addParams(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam value) {
+        public Builder addParams(com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param value) {
           if (paramsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -3854,10 +3854,10 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
         public Builder addParams(
-            int index, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam value) {
+            int index, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param value) {
           if (paramsBuilder_ == null) {
             if (value == null) {
               throw new NullPointerException();
@@ -3871,10 +3871,10 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
         public Builder addParams(
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.Builder builderForValue) {
+            com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Builder builderForValue) {
           if (paramsBuilder_ == null) {
             ensureParamsIsMutable();
             params_.add(builderForValue.build());
@@ -3885,10 +3885,10 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
         public Builder addParams(
-            int index, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.Builder builderForValue) {
+            int index, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Builder builderForValue) {
           if (paramsBuilder_ == null) {
             ensureParamsIsMutable();
             params_.add(index, builderForValue.build());
@@ -3899,10 +3899,10 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
         public Builder addAllParams(
-            java.lang.Iterable<? extends com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam> values) {
+            java.lang.Iterable<? extends com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param> values) {
           if (paramsBuilder_ == null) {
             ensureParamsIsMutable();
             com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -3914,7 +3914,7 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
         public Builder clearParams() {
           if (paramsBuilder_ == null) {
@@ -3927,7 +3927,7 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
         public Builder removeParams(int index) {
           if (paramsBuilder_ == null) {
@@ -3940,16 +3940,16 @@ public final class MotorMsg {
           return this;
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.Builder getParamsBuilder(
+        public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Builder getParamsBuilder(
             int index) {
           return getParamsFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParamOrBuilder getParamsOrBuilder(
+        public com.addrobots.protobuf.Motor.MotorMsg.Cmd.ParamOrBuilder getParamsOrBuilder(
             int index) {
           if (paramsBuilder_ == null) {
             return params_.get(index);  } else {
@@ -3957,9 +3957,9 @@ public final class MotorMsg {
           }
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
-        public java.util.List<? extends com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParamOrBuilder> 
+        public java.util.List<? extends com.addrobots.protobuf.Motor.MotorMsg.Cmd.ParamOrBuilder> 
              getParamsOrBuilderList() {
           if (paramsBuilder_ != null) {
             return paramsBuilder_.getMessageOrBuilderList();
@@ -3968,33 +3968,33 @@ public final class MotorMsg {
           }
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.Builder addParamsBuilder() {
+        public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Builder addParamsBuilder() {
           return getParamsFieldBuilder().addBuilder(
-              com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.getDefaultInstance());
+              com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.getDefaultInstance());
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
-        public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.Builder addParamsBuilder(
+        public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Builder addParamsBuilder(
             int index) {
           return getParamsFieldBuilder().addBuilder(
-              index, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.getDefaultInstance());
+              index, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.getDefaultInstance());
         }
         /**
-         * <code>repeated .McuWrapper.MotorCmd.CmdParam params = 2;</code>
+         * <code>repeated .MotorMsg.Cmd.Param params = 2;</code>
          */
-        public java.util.List<com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.Builder> 
+        public java.util.List<com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Builder> 
              getParamsBuilderList() {
           return getParamsFieldBuilder().getBuilderList();
         }
         private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.Builder, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParamOrBuilder> 
+            com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Builder, com.addrobots.protobuf.Motor.MotorMsg.Cmd.ParamOrBuilder> 
             getParamsFieldBuilder() {
           if (paramsBuilder_ == null) {
             paramsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParam.Builder, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.CmdParamOrBuilder>(
+                com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Param.Builder, com.addrobots.protobuf.Motor.MotorMsg.Cmd.ParamOrBuilder>(
                     params_,
                     ((bitField0_ & 0x00000002) == 0x00000002),
                     getParentForChildren(),
@@ -4014,39 +4014,39 @@ public final class MotorMsg {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:McuWrapper.MotorCmd)
+        // @@protoc_insertion_point(builder_scope:MotorMsg.Cmd)
       }
 
-      // @@protoc_insertion_point(class_scope:McuWrapper.MotorCmd)
-      private static final com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:MotorMsg.Cmd)
+      private static final com.addrobots.protobuf.Motor.MotorMsg.Cmd DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd();
+        DEFAULT_INSTANCE = new com.addrobots.protobuf.Motor.MotorMsg.Cmd();
       }
 
-      public static com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd getDefaultInstance() {
+      public static com.addrobots.protobuf.Motor.MotorMsg.Cmd getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
-      private static final com.google.protobuf.Parser<MotorCmd>
-          PARSER = new com.google.protobuf.AbstractParser<MotorCmd>() {
-        public MotorCmd parsePartialFrom(
+      private static final com.google.protobuf.Parser<Cmd>
+          PARSER = new com.google.protobuf.AbstractParser<Cmd>() {
+        public Cmd parsePartialFrom(
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws com.google.protobuf.InvalidProtocolBufferException {
-          return new MotorCmd(input, extensionRegistry);
+          return new Cmd(input, extensionRegistry);
         }
       };
 
-      public static com.google.protobuf.Parser<MotorCmd> parser() {
+      public static com.google.protobuf.Parser<Cmd> parser() {
         return PARSER;
       }
 
       @java.lang.Override
-      public com.google.protobuf.Parser<MotorCmd> getParserForType() {
+      public com.google.protobuf.Parser<Cmd> getParserForType() {
         return PARSER;
       }
 
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd getDefaultInstanceForType() {
+      public com.addrobots.protobuf.Motor.MotorMsg.Cmd getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -4126,54 +4126,54 @@ public final class MotorMsg {
 
     public static final int MOTOR_DATA_FIELD_NUMBER = 2;
     /**
-     * <code>.McuWrapper.MotorData motor_data = 2;</code>
+     * <code>.MotorMsg.Data motor_data = 2;</code>
      */
     public boolean hasMotorData() {
       return contentCase_ == 2;
     }
     /**
-     * <code>.McuWrapper.MotorData motor_data = 2;</code>
+     * <code>.MotorMsg.Data motor_data = 2;</code>
      */
-    public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData getMotorData() {
+    public com.addrobots.protobuf.Motor.MotorMsg.Data getMotorData() {
       if (contentCase_ == 2) {
-         return (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) content_;
+         return (com.addrobots.protobuf.Motor.MotorMsg.Data) content_;
       }
-      return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.getDefaultInstance();
+      return com.addrobots.protobuf.Motor.MotorMsg.Data.getDefaultInstance();
     }
     /**
-     * <code>.McuWrapper.MotorData motor_data = 2;</code>
+     * <code>.MotorMsg.Data motor_data = 2;</code>
      */
-    public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorDataOrBuilder getMotorDataOrBuilder() {
+    public com.addrobots.protobuf.Motor.MotorMsg.DataOrBuilder getMotorDataOrBuilder() {
       if (contentCase_ == 2) {
-         return (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) content_;
+         return (com.addrobots.protobuf.Motor.MotorMsg.Data) content_;
       }
-      return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.getDefaultInstance();
+      return com.addrobots.protobuf.Motor.MotorMsg.Data.getDefaultInstance();
     }
 
     public static final int MOTOR_CMD_FIELD_NUMBER = 3;
     /**
-     * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+     * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
      */
     public boolean hasMotorCmd() {
       return contentCase_ == 3;
     }
     /**
-     * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+     * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
      */
-    public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd getMotorCmd() {
+    public com.addrobots.protobuf.Motor.MotorMsg.Cmd getMotorCmd() {
       if (contentCase_ == 3) {
-         return (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) content_;
+         return (com.addrobots.protobuf.Motor.MotorMsg.Cmd) content_;
       }
-      return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.getDefaultInstance();
+      return com.addrobots.protobuf.Motor.MotorMsg.Cmd.getDefaultInstance();
     }
     /**
-     * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+     * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
      */
-    public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmdOrBuilder getMotorCmdOrBuilder() {
+    public com.addrobots.protobuf.Motor.MotorMsg.CmdOrBuilder getMotorCmdOrBuilder() {
       if (contentCase_ == 3) {
-         return (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) content_;
+         return (com.addrobots.protobuf.Motor.MotorMsg.Cmd) content_;
       }
-      return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.getDefaultInstance();
+      return com.addrobots.protobuf.Motor.MotorMsg.Cmd.getDefaultInstance();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4192,10 +4192,10 @@ public final class MotorMsg {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, uuid_);
       }
       if (contentCase_ == 2) {
-        output.writeMessage(2, (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) content_);
+        output.writeMessage(2, (com.addrobots.protobuf.Motor.MotorMsg.Data) content_);
       }
       if (contentCase_ == 3) {
-        output.writeMessage(3, (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) content_);
+        output.writeMessage(3, (com.addrobots.protobuf.Motor.MotorMsg.Cmd) content_);
       }
       unknownFields.writeTo(output);
     }
@@ -4210,11 +4210,11 @@ public final class MotorMsg {
       }
       if (contentCase_ == 2) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) content_);
+          .computeMessageSize(2, (com.addrobots.protobuf.Motor.MotorMsg.Data) content_);
       }
       if (contentCase_ == 3) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) content_);
+          .computeMessageSize(3, (com.addrobots.protobuf.Motor.MotorMsg.Cmd) content_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -4226,10 +4226,10 @@ public final class MotorMsg {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.addrobots.protobuf.MotorMsg.McuWrapper)) {
+      if (!(obj instanceof com.addrobots.protobuf.Motor.MotorMsg)) {
         return super.equals(obj);
       }
-      com.addrobots.protobuf.MotorMsg.McuWrapper other = (com.addrobots.protobuf.MotorMsg.McuWrapper) obj;
+      com.addrobots.protobuf.Motor.MotorMsg other = (com.addrobots.protobuf.Motor.MotorMsg) obj;
 
       boolean result = true;
       result = result && getUuid()
@@ -4279,69 +4279,69 @@ public final class MotorMsg {
       return hash;
     }
 
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper parseFrom(
+    public static com.addrobots.protobuf.Motor.MotorMsg parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper parseFrom(
+    public static com.addrobots.protobuf.Motor.MotorMsg parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper parseFrom(
+    public static com.addrobots.protobuf.Motor.MotorMsg parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper parseFrom(
+    public static com.addrobots.protobuf.Motor.MotorMsg parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper parseFrom(byte[] data)
+    public static com.addrobots.protobuf.Motor.MotorMsg parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper parseFrom(
+    public static com.addrobots.protobuf.Motor.MotorMsg parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper parseFrom(java.io.InputStream input)
+    public static com.addrobots.protobuf.Motor.MotorMsg parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper parseFrom(
+    public static com.addrobots.protobuf.Motor.MotorMsg parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper parseDelimitedFrom(java.io.InputStream input)
+    public static com.addrobots.protobuf.Motor.MotorMsg parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper parseDelimitedFrom(
+    public static com.addrobots.protobuf.Motor.MotorMsg parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper parseFrom(
+    public static com.addrobots.protobuf.Motor.MotorMsg parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper parseFrom(
+    public static com.addrobots.protobuf.Motor.MotorMsg parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -4353,7 +4353,7 @@ public final class MotorMsg {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.addrobots.protobuf.MotorMsg.McuWrapper prototype) {
+    public static Builder newBuilder(com.addrobots.protobuf.Motor.MotorMsg prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -4372,25 +4372,25 @@ public final class MotorMsg {
      * This message is the outside wrapper that contains one or more motor messages (data or cmd)
      * </pre>
      *
-     * Protobuf type {@code McuWrapper}
+     * Protobuf type {@code MotorMsg}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:McuWrapper)
-        com.addrobots.protobuf.MotorMsg.McuWrapperOrBuilder {
+        // @@protoc_insertion_point(builder_implements:MotorMsg)
+        com.addrobots.protobuf.Motor.MotorMsgOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_descriptor;
+        return com.addrobots.protobuf.Motor.internal_static_MotorMsg_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_fieldAccessorTable
+        return com.addrobots.protobuf.Motor.internal_static_MotorMsg_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.addrobots.protobuf.MotorMsg.McuWrapper.class, com.addrobots.protobuf.MotorMsg.McuWrapper.Builder.class);
+                com.addrobots.protobuf.Motor.MotorMsg.class, com.addrobots.protobuf.Motor.MotorMsg.Builder.class);
       }
 
-      // Construct using com.addrobots.protobuf.MotorMsg.McuWrapper.newBuilder()
+      // Construct using com.addrobots.protobuf.Motor.MotorMsg.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4416,23 +4416,23 @@ public final class MotorMsg {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.addrobots.protobuf.MotorMsg.internal_static_McuWrapper_descriptor;
+        return com.addrobots.protobuf.Motor.internal_static_MotorMsg_descriptor;
       }
 
-      public com.addrobots.protobuf.MotorMsg.McuWrapper getDefaultInstanceForType() {
-        return com.addrobots.protobuf.MotorMsg.McuWrapper.getDefaultInstance();
+      public com.addrobots.protobuf.Motor.MotorMsg getDefaultInstanceForType() {
+        return com.addrobots.protobuf.Motor.MotorMsg.getDefaultInstance();
       }
 
-      public com.addrobots.protobuf.MotorMsg.McuWrapper build() {
-        com.addrobots.protobuf.MotorMsg.McuWrapper result = buildPartial();
+      public com.addrobots.protobuf.Motor.MotorMsg build() {
+        com.addrobots.protobuf.Motor.MotorMsg result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.addrobots.protobuf.MotorMsg.McuWrapper buildPartial() {
-        com.addrobots.protobuf.MotorMsg.McuWrapper result = new com.addrobots.protobuf.MotorMsg.McuWrapper(this);
+      public com.addrobots.protobuf.Motor.MotorMsg buildPartial() {
+        com.addrobots.protobuf.Motor.MotorMsg result = new com.addrobots.protobuf.Motor.MotorMsg(this);
         result.uuid_ = uuid_;
         if (contentCase_ == 2) {
           if (motorDataBuilder_ == null) {
@@ -4480,16 +4480,16 @@ public final class MotorMsg {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.addrobots.protobuf.MotorMsg.McuWrapper) {
-          return mergeFrom((com.addrobots.protobuf.MotorMsg.McuWrapper)other);
+        if (other instanceof com.addrobots.protobuf.Motor.MotorMsg) {
+          return mergeFrom((com.addrobots.protobuf.Motor.MotorMsg)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.addrobots.protobuf.MotorMsg.McuWrapper other) {
-        if (other == com.addrobots.protobuf.MotorMsg.McuWrapper.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.addrobots.protobuf.Motor.MotorMsg other) {
+        if (other == com.addrobots.protobuf.Motor.MotorMsg.getDefaultInstance()) return this;
         if (!other.getUuid().isEmpty()) {
           uuid_ = other.uuid_;
           onChanged();
@@ -4520,11 +4520,11 @@ public final class MotorMsg {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.addrobots.protobuf.MotorMsg.McuWrapper parsedMessage = null;
+        com.addrobots.protobuf.Motor.MotorMsg parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.addrobots.protobuf.MotorMsg.McuWrapper) e.getUnfinishedMessage();
+          parsedMessage = (com.addrobots.protobuf.Motor.MotorMsg) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -4619,33 +4619,33 @@ public final class MotorMsg {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.Builder, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorDataOrBuilder> motorDataBuilder_;
+          com.addrobots.protobuf.Motor.MotorMsg.Data, com.addrobots.protobuf.Motor.MotorMsg.Data.Builder, com.addrobots.protobuf.Motor.MotorMsg.DataOrBuilder> motorDataBuilder_;
       /**
-       * <code>.McuWrapper.MotorData motor_data = 2;</code>
+       * <code>.MotorMsg.Data motor_data = 2;</code>
        */
       public boolean hasMotorData() {
         return contentCase_ == 2;
       }
       /**
-       * <code>.McuWrapper.MotorData motor_data = 2;</code>
+       * <code>.MotorMsg.Data motor_data = 2;</code>
        */
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData getMotorData() {
+      public com.addrobots.protobuf.Motor.MotorMsg.Data getMotorData() {
         if (motorDataBuilder_ == null) {
           if (contentCase_ == 2) {
-            return (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) content_;
+            return (com.addrobots.protobuf.Motor.MotorMsg.Data) content_;
           }
-          return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.getDefaultInstance();
+          return com.addrobots.protobuf.Motor.MotorMsg.Data.getDefaultInstance();
         } else {
           if (contentCase_ == 2) {
             return motorDataBuilder_.getMessage();
           }
-          return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.getDefaultInstance();
+          return com.addrobots.protobuf.Motor.MotorMsg.Data.getDefaultInstance();
         }
       }
       /**
-       * <code>.McuWrapper.MotorData motor_data = 2;</code>
+       * <code>.MotorMsg.Data motor_data = 2;</code>
        */
-      public Builder setMotorData(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData value) {
+      public Builder setMotorData(com.addrobots.protobuf.Motor.MotorMsg.Data value) {
         if (motorDataBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4659,10 +4659,10 @@ public final class MotorMsg {
         return this;
       }
       /**
-       * <code>.McuWrapper.MotorData motor_data = 2;</code>
+       * <code>.MotorMsg.Data motor_data = 2;</code>
        */
       public Builder setMotorData(
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.Builder builderForValue) {
+          com.addrobots.protobuf.Motor.MotorMsg.Data.Builder builderForValue) {
         if (motorDataBuilder_ == null) {
           content_ = builderForValue.build();
           onChanged();
@@ -4673,13 +4673,13 @@ public final class MotorMsg {
         return this;
       }
       /**
-       * <code>.McuWrapper.MotorData motor_data = 2;</code>
+       * <code>.MotorMsg.Data motor_data = 2;</code>
        */
-      public Builder mergeMotorData(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData value) {
+      public Builder mergeMotorData(com.addrobots.protobuf.Motor.MotorMsg.Data value) {
         if (motorDataBuilder_ == null) {
           if (contentCase_ == 2 &&
-              content_ != com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.getDefaultInstance()) {
-            content_ = com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.newBuilder((com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) content_)
+              content_ != com.addrobots.protobuf.Motor.MotorMsg.Data.getDefaultInstance()) {
+            content_ = com.addrobots.protobuf.Motor.MotorMsg.Data.newBuilder((com.addrobots.protobuf.Motor.MotorMsg.Data) content_)
                 .mergeFrom(value).buildPartial();
           } else {
             content_ = value;
@@ -4695,7 +4695,7 @@ public final class MotorMsg {
         return this;
       }
       /**
-       * <code>.McuWrapper.MotorData motor_data = 2;</code>
+       * <code>.MotorMsg.Data motor_data = 2;</code>
        */
       public Builder clearMotorData() {
         if (motorDataBuilder_ == null) {
@@ -4714,37 +4714,37 @@ public final class MotorMsg {
         return this;
       }
       /**
-       * <code>.McuWrapper.MotorData motor_data = 2;</code>
+       * <code>.MotorMsg.Data motor_data = 2;</code>
        */
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.Builder getMotorDataBuilder() {
+      public com.addrobots.protobuf.Motor.MotorMsg.Data.Builder getMotorDataBuilder() {
         return getMotorDataFieldBuilder().getBuilder();
       }
       /**
-       * <code>.McuWrapper.MotorData motor_data = 2;</code>
+       * <code>.MotorMsg.Data motor_data = 2;</code>
        */
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorDataOrBuilder getMotorDataOrBuilder() {
+      public com.addrobots.protobuf.Motor.MotorMsg.DataOrBuilder getMotorDataOrBuilder() {
         if ((contentCase_ == 2) && (motorDataBuilder_ != null)) {
           return motorDataBuilder_.getMessageOrBuilder();
         } else {
           if (contentCase_ == 2) {
-            return (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) content_;
+            return (com.addrobots.protobuf.Motor.MotorMsg.Data) content_;
           }
-          return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.getDefaultInstance();
+          return com.addrobots.protobuf.Motor.MotorMsg.Data.getDefaultInstance();
         }
       }
       /**
-       * <code>.McuWrapper.MotorData motor_data = 2;</code>
+       * <code>.MotorMsg.Data motor_data = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.Builder, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorDataOrBuilder> 
+          com.addrobots.protobuf.Motor.MotorMsg.Data, com.addrobots.protobuf.Motor.MotorMsg.Data.Builder, com.addrobots.protobuf.Motor.MotorMsg.DataOrBuilder> 
           getMotorDataFieldBuilder() {
         if (motorDataBuilder_ == null) {
           if (!(contentCase_ == 2)) {
-            content_ = com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.getDefaultInstance();
+            content_ = com.addrobots.protobuf.Motor.MotorMsg.Data.getDefaultInstance();
           }
           motorDataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData.Builder, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorDataOrBuilder>(
-                  (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorData) content_,
+              com.addrobots.protobuf.Motor.MotorMsg.Data, com.addrobots.protobuf.Motor.MotorMsg.Data.Builder, com.addrobots.protobuf.Motor.MotorMsg.DataOrBuilder>(
+                  (com.addrobots.protobuf.Motor.MotorMsg.Data) content_,
                   getParentForChildren(),
                   isClean());
           content_ = null;
@@ -4755,33 +4755,33 @@ public final class MotorMsg {
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.Builder, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmdOrBuilder> motorCmdBuilder_;
+          com.addrobots.protobuf.Motor.MotorMsg.Cmd, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Builder, com.addrobots.protobuf.Motor.MotorMsg.CmdOrBuilder> motorCmdBuilder_;
       /**
-       * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+       * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
        */
       public boolean hasMotorCmd() {
         return contentCase_ == 3;
       }
       /**
-       * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+       * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
        */
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd getMotorCmd() {
+      public com.addrobots.protobuf.Motor.MotorMsg.Cmd getMotorCmd() {
         if (motorCmdBuilder_ == null) {
           if (contentCase_ == 3) {
-            return (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) content_;
+            return (com.addrobots.protobuf.Motor.MotorMsg.Cmd) content_;
           }
-          return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.getDefaultInstance();
+          return com.addrobots.protobuf.Motor.MotorMsg.Cmd.getDefaultInstance();
         } else {
           if (contentCase_ == 3) {
             return motorCmdBuilder_.getMessage();
           }
-          return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.getDefaultInstance();
+          return com.addrobots.protobuf.Motor.MotorMsg.Cmd.getDefaultInstance();
         }
       }
       /**
-       * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+       * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
        */
-      public Builder setMotorCmd(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd value) {
+      public Builder setMotorCmd(com.addrobots.protobuf.Motor.MotorMsg.Cmd value) {
         if (motorCmdBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -4795,10 +4795,10 @@ public final class MotorMsg {
         return this;
       }
       /**
-       * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+       * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
        */
       public Builder setMotorCmd(
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.Builder builderForValue) {
+          com.addrobots.protobuf.Motor.MotorMsg.Cmd.Builder builderForValue) {
         if (motorCmdBuilder_ == null) {
           content_ = builderForValue.build();
           onChanged();
@@ -4809,13 +4809,13 @@ public final class MotorMsg {
         return this;
       }
       /**
-       * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+       * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
        */
-      public Builder mergeMotorCmd(com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd value) {
+      public Builder mergeMotorCmd(com.addrobots.protobuf.Motor.MotorMsg.Cmd value) {
         if (motorCmdBuilder_ == null) {
           if (contentCase_ == 3 &&
-              content_ != com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.getDefaultInstance()) {
-            content_ = com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.newBuilder((com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) content_)
+              content_ != com.addrobots.protobuf.Motor.MotorMsg.Cmd.getDefaultInstance()) {
+            content_ = com.addrobots.protobuf.Motor.MotorMsg.Cmd.newBuilder((com.addrobots.protobuf.Motor.MotorMsg.Cmd) content_)
                 .mergeFrom(value).buildPartial();
           } else {
             content_ = value;
@@ -4831,7 +4831,7 @@ public final class MotorMsg {
         return this;
       }
       /**
-       * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+       * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
        */
       public Builder clearMotorCmd() {
         if (motorCmdBuilder_ == null) {
@@ -4850,37 +4850,37 @@ public final class MotorMsg {
         return this;
       }
       /**
-       * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+       * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
        */
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.Builder getMotorCmdBuilder() {
+      public com.addrobots.protobuf.Motor.MotorMsg.Cmd.Builder getMotorCmdBuilder() {
         return getMotorCmdFieldBuilder().getBuilder();
       }
       /**
-       * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+       * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
        */
-      public com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmdOrBuilder getMotorCmdOrBuilder() {
+      public com.addrobots.protobuf.Motor.MotorMsg.CmdOrBuilder getMotorCmdOrBuilder() {
         if ((contentCase_ == 3) && (motorCmdBuilder_ != null)) {
           return motorCmdBuilder_.getMessageOrBuilder();
         } else {
           if (contentCase_ == 3) {
-            return (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) content_;
+            return (com.addrobots.protobuf.Motor.MotorMsg.Cmd) content_;
           }
-          return com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.getDefaultInstance();
+          return com.addrobots.protobuf.Motor.MotorMsg.Cmd.getDefaultInstance();
         }
       }
       /**
-       * <code>.McuWrapper.MotorCmd motor_cmd = 3;</code>
+       * <code>.MotorMsg.Cmd motor_cmd = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.Builder, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmdOrBuilder> 
+          com.addrobots.protobuf.Motor.MotorMsg.Cmd, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Builder, com.addrobots.protobuf.Motor.MotorMsg.CmdOrBuilder> 
           getMotorCmdFieldBuilder() {
         if (motorCmdBuilder_ == null) {
           if (!(contentCase_ == 3)) {
-            content_ = com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.getDefaultInstance();
+            content_ = com.addrobots.protobuf.Motor.MotorMsg.Cmd.getDefaultInstance();
           }
           motorCmdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd.Builder, com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmdOrBuilder>(
-                  (com.addrobots.protobuf.MotorMsg.McuWrapper.MotorCmd) content_,
+              com.addrobots.protobuf.Motor.MotorMsg.Cmd, com.addrobots.protobuf.Motor.MotorMsg.Cmd.Builder, com.addrobots.protobuf.Motor.MotorMsg.CmdOrBuilder>(
+                  (com.addrobots.protobuf.Motor.MotorMsg.Cmd) content_,
                   getParentForChildren(),
                   isClean());
           content_ = null;
@@ -4900,69 +4900,69 @@ public final class MotorMsg {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:McuWrapper)
+      // @@protoc_insertion_point(builder_scope:MotorMsg)
     }
 
-    // @@protoc_insertion_point(class_scope:McuWrapper)
-    private static final com.addrobots.protobuf.MotorMsg.McuWrapper DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:MotorMsg)
+    private static final com.addrobots.protobuf.Motor.MotorMsg DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.addrobots.protobuf.MotorMsg.McuWrapper();
+      DEFAULT_INSTANCE = new com.addrobots.protobuf.Motor.MotorMsg();
     }
 
-    public static com.addrobots.protobuf.MotorMsg.McuWrapper getDefaultInstance() {
+    public static com.addrobots.protobuf.Motor.MotorMsg getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<McuWrapper>
-        PARSER = new com.google.protobuf.AbstractParser<McuWrapper>() {
-      public McuWrapper parsePartialFrom(
+    private static final com.google.protobuf.Parser<MotorMsg>
+        PARSER = new com.google.protobuf.AbstractParser<MotorMsg>() {
+      public MotorMsg parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new McuWrapper(input, extensionRegistry);
+        return new MotorMsg(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<McuWrapper> parser() {
+    public static com.google.protobuf.Parser<MotorMsg> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<McuWrapper> getParserForType() {
+    public com.google.protobuf.Parser<MotorMsg> getParserForType() {
       return PARSER;
     }
 
-    public com.addrobots.protobuf.MotorMsg.McuWrapper getDefaultInstanceForType() {
+    public com.addrobots.protobuf.Motor.MotorMsg getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_McuWrapper_descriptor;
+    internal_static_MotorMsg_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_McuWrapper_fieldAccessorTable;
+      internal_static_MotorMsg_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_McuWrapper_MotorData_descriptor;
+    internal_static_MotorMsg_Data_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_McuWrapper_MotorData_fieldAccessorTable;
+      internal_static_MotorMsg_Data_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_McuWrapper_MotorData_DataParam_descriptor;
+    internal_static_MotorMsg_Data_Param_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_McuWrapper_MotorData_DataParam_fieldAccessorTable;
+      internal_static_MotorMsg_Data_Param_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_McuWrapper_MotorCmd_descriptor;
+    internal_static_MotorMsg_Cmd_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_McuWrapper_MotorCmd_fieldAccessorTable;
+      internal_static_MotorMsg_Cmd_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_McuWrapper_MotorCmd_CmdParam_descriptor;
+    internal_static_MotorMsg_Cmd_Param_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_McuWrapper_MotorCmd_CmdParam_fieldAccessorTable;
+      internal_static_MotorMsg_Cmd_Param_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4972,41 +4972,37 @@ public final class MotorMsg {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\016MotorMsg.proto\"\224\n\n\nMcuWrapper\022\014\n\004uuid\030" +
-      "\001 \001(\t\022+\n\nmotor_data\030\002 \001(\0132\025.McuWrapper.M" +
-      "otorDataH\000\022)\n\tmotor_cmd\030\003 \001(\0132\024.McuWrapp" +
-      "er.MotorCmdH\000\032\313\003\n\tMotorData\0220\n\006action\030\001 " +
-      "\001(\0162 .McuWrapper.MotorData.DataAction\022/\n" +
-      "\006params\030\002 \003(\0132\037.McuWrapper.MotorData.Dat" +
-      "aParam\032\243\002\n\tDataParam\0227\n\002id\030\001 \001(\0162+.McuWr" +
-      "apper.MotorData.DataParam.MotorDataId\022\r\n" +
-      "\005value\030\002 \001(\001\022\036\n\004unit\030\003 \001(\0162\020.McuWrapper." +
-      "Unit\"\255\001\n\013MotorDataId\022\016\n\nUNKNOWN_ID\020\000\022\010\n\004" +
-      "UUID\020\001\022\013\n\007VERSION\020\002\022\025\n\021MFG_DATE_YYYYMMDD" +
-      "\020\003\022\n\n\006MFG_ID\020\004\022\014\n\010MODEL_ID\020\005\022\016\n\nSTEP_COU" +
-      "NT\020\006\022\016\n\nINDUCTANCE\020\010\022\013\n\007CUR_POS\020\014\022\013\n\007CUR" +
-      "_AMP\020\r\022\014\n\010CUR_VOLT\020\016\"5\n\nDataAction\022\022\n\016UK" +
-      "NONWN_ACTION\020\000\022\007\n\003GET\020\001\022\n\n\006RESULT\020\002\032\266\004\n\010" +
-      "MotorCmd\0220\n\006action\030\001 \001(\0162 .McuWrapper.Mo" +
-      "torCmd.MotorAction\022-\n\006params\030\002 \003(\0132\035.Mcu" +
-      "Wrapper.MotorCmd.CmdParam\032\373\002\n\010CmdParam\0229" +
-      "\n\002id\030\001 \001(\0162-.McuWrapper.MotorCmd.CmdPara" +
-      "m.MotorCmdParamId\022\r\n\005value\030\002 \001(\001\022\036\n\004unit" +
-      "\030\003 \001(\0162\020.McuWrapper.Unit\"\204\002\n\017MotorCmdPar" +
-      "amId\022\021\n\rUNKNOWN_PARAM\020\000\022\r\n\tCLOCKWISE\020\001\022\014" +
-      "\n\010POSITION\020\002\022\014\n\010VELOCITY\020\003\022\t\n\005ACCEL\020\004\022\017\n" +
-      "\013HOLD_TORQUE\020\005\022\r\n\tBREAKAWAY\020\006\022\025\n\021MIN_CUR" +
-      "RENT_LIMIT\020\007\022\025\n\021MAX_CURRENT_LIMIT\020\010\022\025\n\021M" +
-      "IN_VOLT_VELOCITY\020\t\022\025\n\021MAX_VOLT_VELOCITY\020" +
-      "\n\022\025\n\021MIN_VOLTAGE_LIMIT\020\013\022\025\n\021MAX_VOLTAGE_" +
-      "LIMIT\020\014\"K\n\013MotorAction\022\013\n\007UNKNOWN\020\000\022\t\n\005B" +
-      "RAKE\020\001\022\r\n\tFREEWHEEL\020\002\022\007\n\003RUN\020\003\022\014\n\010GOTO_P" +
-      "OS\020\004\"\215\001\n\004Unit\022\020\n\014UNKNOWN_UNIT\020\000\022\n\n\006STRIN" +
-      "G\020\001\022\013\n\007BOOLEAN\020\002\022\013\n\007INTEGER\020\003\022\n\n\006DOUBLE\020" +
-      "\004\022\n\n\006SECOND\020\005\022\n\n\006DEGREE\020\006\022\007\n\003AMP\020\007\022\010\n\004VO" +
-      "LT\020\010\022\n\n\006NEWTON\020\t\022\n\n\006UHENRY\020\nB\t\n\007contentB" +
-      "\"\n\026com.addrobots.protobufB\010MotorMsgb\006pro" +
-      "to3"
+      "\n\016MotorMsg.proto\"\371\010\n\010MotorMsg\022\014\n\004uuid\030\001 " +
+      "\001(\t\022$\n\nmotor_data\030\002 \001(\0132\016.MotorMsg.DataH" +
+      "\000\022\"\n\tmotor_cmd\030\003 \001(\0132\r.MotorMsg.CmdH\000\032\211\003" +
+      "\n\004Data\022%\n\006action\030\001 \001(\0162\025.MotorMsg.Data.A" +
+      "ction\022$\n\006params\030\002 \003(\0132\024.MotorMsg.Data.Pa" +
+      "ram\032\200\002\n\005Param\022#\n\002id\030\001 \001(\0162\027.MotorMsg.Dat" +
+      "a.Param.Id\022\r\n\005value\030\002 \001(\001\022\034\n\004unit\030\003 \001(\0162" +
+      "\016.MotorMsg.Unit\"\244\001\n\002Id\022\016\n\nUNKNOWN_ID\020\000\022\010" +
+      "\n\004UUID\020\001\022\013\n\007VERSION\020\002\022\025\n\021MFG_DATE_YYYYMM" +
+      "DD\020\003\022\n\n\006MFG_ID\020\004\022\014\n\010MODEL_ID\020\005\022\016\n\nSTEP_C" +
+      "OUNT\020\006\022\016\n\nINDUCTANCE\020\010\022\013\n\007CUR_POS\020\014\022\013\n\007C" +
+      "UR_AMP\020\r\022\014\n\010CUR_VOLT\020\016\"1\n\006Action\022\022\n\016UKNO" +
+      "NWN_ACTION\020\000\022\007\n\003GET\020\001\022\n\n\006RESULT\020\002\032\355\003\n\003Cm" +
+      "d\022$\n\006action\030\001 \001(\0162\024.MotorMsg.Cmd.Action\022" +
+      "#\n\006params\030\002 \003(\0132\023.MotorMsg.Cmd.Param\032\322\002\n" +
+      "\005Param\022\"\n\002id\030\001 \001(\0162\026.MotorMsg.Cmd.Param." +
+      "Id\022\r\n\005value\030\002 \001(\001\022\034\n\004unit\030\003 \001(\0162\016.MotorM" +
+      "sg.Unit\"\367\001\n\002Id\022\021\n\rUNKNOWN_PARAM\020\000\022\r\n\tCLO" +
+      "CKWISE\020\001\022\014\n\010POSITION\020\002\022\014\n\010VELOCITY\020\003\022\t\n\005" +
+      "ACCEL\020\004\022\017\n\013HOLD_TORQUE\020\005\022\r\n\tBREAKAWAY\020\006\022" +
+      "\025\n\021MIN_CURRENT_LIMIT\020\007\022\025\n\021MAX_CURRENT_LI" +
+      "MIT\020\010\022\025\n\021MIN_VOLT_VELOCITY\020\t\022\025\n\021MAX_VOLT" +
+      "_VELOCITY\020\n\022\025\n\021MIN_VOLTAGE_LIMIT\020\013\022\025\n\021MA" +
+      "X_VOLTAGE_LIMIT\020\014\"F\n\006Action\022\013\n\007UNKNOWN\020\000" +
+      "\022\t\n\005BRAKE\020\001\022\r\n\tFREEWHEEL\020\002\022\007\n\003RUN\020\003\022\014\n\010G" +
+      "OTO_POS\020\004\"\215\001\n\004Unit\022\020\n\014UNKNOWN_UNIT\020\000\022\n\n\006" +
+      "STRING\020\001\022\013\n\007BOOLEAN\020\002\022\013\n\007INTEGER\020\003\022\n\n\006DO" +
+      "UBLE\020\004\022\n\n\006SECOND\020\005\022\n\n\006DEGREE\020\006\022\007\n\003AMP\020\007\022" +
+      "\010\n\004VOLT\020\010\022\n\n\006NEWTON\020\t\022\n\n\006UHENRY\020\nB\t\n\007con" +
+      "tentB\037\n\026com.addrobots.protobufB\005Motorb\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -5020,35 +5016,35 @@ public final class MotorMsg {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_McuWrapper_descriptor =
+    internal_static_MotorMsg_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_McuWrapper_fieldAccessorTable = new
+    internal_static_MotorMsg_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_McuWrapper_descriptor,
+        internal_static_MotorMsg_descriptor,
         new java.lang.String[] { "Uuid", "MotorData", "MotorCmd", "Content", });
-    internal_static_McuWrapper_MotorData_descriptor =
-      internal_static_McuWrapper_descriptor.getNestedTypes().get(0);
-    internal_static_McuWrapper_MotorData_fieldAccessorTable = new
+    internal_static_MotorMsg_Data_descriptor =
+      internal_static_MotorMsg_descriptor.getNestedTypes().get(0);
+    internal_static_MotorMsg_Data_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_McuWrapper_MotorData_descriptor,
+        internal_static_MotorMsg_Data_descriptor,
         new java.lang.String[] { "Action", "Params", });
-    internal_static_McuWrapper_MotorData_DataParam_descriptor =
-      internal_static_McuWrapper_MotorData_descriptor.getNestedTypes().get(0);
-    internal_static_McuWrapper_MotorData_DataParam_fieldAccessorTable = new
+    internal_static_MotorMsg_Data_Param_descriptor =
+      internal_static_MotorMsg_Data_descriptor.getNestedTypes().get(0);
+    internal_static_MotorMsg_Data_Param_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_McuWrapper_MotorData_DataParam_descriptor,
+        internal_static_MotorMsg_Data_Param_descriptor,
         new java.lang.String[] { "Id", "Value", "Unit", });
-    internal_static_McuWrapper_MotorCmd_descriptor =
-      internal_static_McuWrapper_descriptor.getNestedTypes().get(1);
-    internal_static_McuWrapper_MotorCmd_fieldAccessorTable = new
+    internal_static_MotorMsg_Cmd_descriptor =
+      internal_static_MotorMsg_descriptor.getNestedTypes().get(1);
+    internal_static_MotorMsg_Cmd_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_McuWrapper_MotorCmd_descriptor,
+        internal_static_MotorMsg_Cmd_descriptor,
         new java.lang.String[] { "Action", "Params", });
-    internal_static_McuWrapper_MotorCmd_CmdParam_descriptor =
-      internal_static_McuWrapper_MotorCmd_descriptor.getNestedTypes().get(0);
-    internal_static_McuWrapper_MotorCmd_CmdParam_fieldAccessorTable = new
+    internal_static_MotorMsg_Cmd_Param_descriptor =
+      internal_static_MotorMsg_Cmd_descriptor.getNestedTypes().get(0);
+    internal_static_MotorMsg_Cmd_Param_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_McuWrapper_MotorCmd_CmdParam_descriptor,
+        internal_static_MotorMsg_Cmd_Param_descriptor,
         new java.lang.String[] { "Id", "Value", "Unit", });
   }
 

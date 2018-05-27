@@ -19,14 +19,14 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='MotorMsg.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x0eMotorMsg.proto\"\x94\n\n\nMcuWrapper\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12+\n\nmotor_data\x18\x02 \x01(\x0b\x32\x15.McuWrapper.MotorDataH\x00\x12)\n\tmotor_cmd\x18\x03 \x01(\x0b\x32\x14.McuWrapper.MotorCmdH\x00\x1a\xcb\x03\n\tMotorData\x12\x30\n\x06\x61\x63tion\x18\x01 \x01(\x0e\x32 .McuWrapper.MotorData.DataAction\x12/\n\x06params\x18\x02 \x03(\x0b\x32\x1f.McuWrapper.MotorData.DataParam\x1a\xa3\x02\n\tDataParam\x12\x37\n\x02id\x18\x01 \x01(\x0e\x32+.McuWrapper.MotorData.DataParam.MotorDataId\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x1e\n\x04unit\x18\x03 \x01(\x0e\x32\x10.McuWrapper.Unit\"\xad\x01\n\x0bMotorDataId\x12\x0e\n\nUNKNOWN_ID\x10\x00\x12\x08\n\x04UUID\x10\x01\x12\x0b\n\x07VERSION\x10\x02\x12\x15\n\x11MFG_DATE_YYYYMMDD\x10\x03\x12\n\n\x06MFG_ID\x10\x04\x12\x0c\n\x08MODEL_ID\x10\x05\x12\x0e\n\nSTEP_COUNT\x10\x06\x12\x0e\n\nINDUCTANCE\x10\x08\x12\x0b\n\x07\x43UR_POS\x10\x0c\x12\x0b\n\x07\x43UR_AMP\x10\r\x12\x0c\n\x08\x43UR_VOLT\x10\x0e\"5\n\nDataAction\x12\x12\n\x0eUKNONWN_ACTION\x10\x00\x12\x07\n\x03GET\x10\x01\x12\n\n\x06RESULT\x10\x02\x1a\xb6\x04\n\x08MotorCmd\x12\x30\n\x06\x61\x63tion\x18\x01 \x01(\x0e\x32 .McuWrapper.MotorCmd.MotorAction\x12-\n\x06params\x18\x02 \x03(\x0b\x32\x1d.McuWrapper.MotorCmd.CmdParam\x1a\xfb\x02\n\x08\x43mdParam\x12\x39\n\x02id\x18\x01 \x01(\x0e\x32-.McuWrapper.MotorCmd.CmdParam.MotorCmdParamId\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x1e\n\x04unit\x18\x03 \x01(\x0e\x32\x10.McuWrapper.Unit\"\x84\x02\n\x0fMotorCmdParamId\x12\x11\n\rUNKNOWN_PARAM\x10\x00\x12\r\n\tCLOCKWISE\x10\x01\x12\x0c\n\x08POSITION\x10\x02\x12\x0c\n\x08VELOCITY\x10\x03\x12\t\n\x05\x41\x43\x43\x45L\x10\x04\x12\x0f\n\x0bHOLD_TORQUE\x10\x05\x12\r\n\tBREAKAWAY\x10\x06\x12\x15\n\x11MIN_CURRENT_LIMIT\x10\x07\x12\x15\n\x11MAX_CURRENT_LIMIT\x10\x08\x12\x15\n\x11MIN_VOLT_VELOCITY\x10\t\x12\x15\n\x11MAX_VOLT_VELOCITY\x10\n\x12\x15\n\x11MIN_VOLTAGE_LIMIT\x10\x0b\x12\x15\n\x11MAX_VOLTAGE_LIMIT\x10\x0c\"K\n\x0bMotorAction\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x42RAKE\x10\x01\x12\r\n\tFREEWHEEL\x10\x02\x12\x07\n\x03RUN\x10\x03\x12\x0c\n\x08GOTO_POS\x10\x04\"\x8d\x01\n\x04Unit\x12\x10\n\x0cUNKNOWN_UNIT\x10\x00\x12\n\n\x06STRING\x10\x01\x12\x0b\n\x07\x42OOLEAN\x10\x02\x12\x0b\n\x07INTEGER\x10\x03\x12\n\n\x06\x44OUBLE\x10\x04\x12\n\n\x06SECOND\x10\x05\x12\n\n\x06\x44\x45GREE\x10\x06\x12\x07\n\x03\x41MP\x10\x07\x12\x08\n\x04VOLT\x10\x08\x12\n\n\x06NEWTON\x10\t\x12\n\n\x06UHENRY\x10\nB\t\n\x07\x63ontentB\"\n\x16\x63om.addrobots.protobufB\x08MotorMsgb\x06proto3')
+  serialized_pb=_b('\n\x0eMotorMsg.proto\"\xf9\x08\n\x08MotorMsg\x12\x0c\n\x04uuid\x18\x01 \x01(\t\x12$\n\nmotor_data\x18\x02 \x01(\x0b\x32\x0e.MotorMsg.DataH\x00\x12\"\n\tmotor_cmd\x18\x03 \x01(\x0b\x32\r.MotorMsg.CmdH\x00\x1a\x89\x03\n\x04\x44\x61ta\x12%\n\x06\x61\x63tion\x18\x01 \x01(\x0e\x32\x15.MotorMsg.Data.Action\x12$\n\x06params\x18\x02 \x03(\x0b\x32\x14.MotorMsg.Data.Param\x1a\x80\x02\n\x05Param\x12#\n\x02id\x18\x01 \x01(\x0e\x32\x17.MotorMsg.Data.Param.Id\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x1c\n\x04unit\x18\x03 \x01(\x0e\x32\x0e.MotorMsg.Unit\"\xa4\x01\n\x02Id\x12\x0e\n\nUNKNOWN_ID\x10\x00\x12\x08\n\x04UUID\x10\x01\x12\x0b\n\x07VERSION\x10\x02\x12\x15\n\x11MFG_DATE_YYYYMMDD\x10\x03\x12\n\n\x06MFG_ID\x10\x04\x12\x0c\n\x08MODEL_ID\x10\x05\x12\x0e\n\nSTEP_COUNT\x10\x06\x12\x0e\n\nINDUCTANCE\x10\x08\x12\x0b\n\x07\x43UR_POS\x10\x0c\x12\x0b\n\x07\x43UR_AMP\x10\r\x12\x0c\n\x08\x43UR_VOLT\x10\x0e\"1\n\x06\x41\x63tion\x12\x12\n\x0eUKNONWN_ACTION\x10\x00\x12\x07\n\x03GET\x10\x01\x12\n\n\x06RESULT\x10\x02\x1a\xed\x03\n\x03\x43md\x12$\n\x06\x61\x63tion\x18\x01 \x01(\x0e\x32\x14.MotorMsg.Cmd.Action\x12#\n\x06params\x18\x02 \x03(\x0b\x32\x13.MotorMsg.Cmd.Param\x1a\xd2\x02\n\x05Param\x12\"\n\x02id\x18\x01 \x01(\x0e\x32\x16.MotorMsg.Cmd.Param.Id\x12\r\n\x05value\x18\x02 \x01(\x01\x12\x1c\n\x04unit\x18\x03 \x01(\x0e\x32\x0e.MotorMsg.Unit\"\xf7\x01\n\x02Id\x12\x11\n\rUNKNOWN_PARAM\x10\x00\x12\r\n\tCLOCKWISE\x10\x01\x12\x0c\n\x08POSITION\x10\x02\x12\x0c\n\x08VELOCITY\x10\x03\x12\t\n\x05\x41\x43\x43\x45L\x10\x04\x12\x0f\n\x0bHOLD_TORQUE\x10\x05\x12\r\n\tBREAKAWAY\x10\x06\x12\x15\n\x11MIN_CURRENT_LIMIT\x10\x07\x12\x15\n\x11MAX_CURRENT_LIMIT\x10\x08\x12\x15\n\x11MIN_VOLT_VELOCITY\x10\t\x12\x15\n\x11MAX_VOLT_VELOCITY\x10\n\x12\x15\n\x11MIN_VOLTAGE_LIMIT\x10\x0b\x12\x15\n\x11MAX_VOLTAGE_LIMIT\x10\x0c\"F\n\x06\x41\x63tion\x12\x0b\n\x07UNKNOWN\x10\x00\x12\t\n\x05\x42RAKE\x10\x01\x12\r\n\tFREEWHEEL\x10\x02\x12\x07\n\x03RUN\x10\x03\x12\x0c\n\x08GOTO_POS\x10\x04\"\x8d\x01\n\x04Unit\x12\x10\n\x0cUNKNOWN_UNIT\x10\x00\x12\n\n\x06STRING\x10\x01\x12\x0b\n\x07\x42OOLEAN\x10\x02\x12\x0b\n\x07INTEGER\x10\x03\x12\n\n\x06\x44OUBLE\x10\x04\x12\n\n\x06SECOND\x10\x05\x12\n\n\x06\x44\x45GREE\x10\x06\x12\x07\n\x03\x41MP\x10\x07\x12\x08\n\x04VOLT\x10\x08\x12\n\n\x06NEWTON\x10\t\x12\n\n\x06UHENRY\x10\nB\t\n\x07\x63ontentB\x1f\n\x16\x63om.addrobots.protobufB\x05Motorb\x06proto3')
 )
 
 
 
-_MCUWRAPPER_MOTORDATA_DATAPARAM_MOTORDATAID = _descriptor.EnumDescriptor(
-  name='MotorDataId',
-  full_name='McuWrapper.MotorData.DataParam.MotorDataId',
+_MOTORMSG_DATA_PARAM_ID = _descriptor.EnumDescriptor(
+  name='Id',
+  full_name='MotorMsg.Data.Param.Id',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -77,14 +77,14 @@ _MCUWRAPPER_MOTORDATA_DATAPARAM_MOTORDATAID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=367,
-  serialized_end=540,
+  serialized_start=298,
+  serialized_end=462,
 )
-_sym_db.RegisterEnumDescriptor(_MCUWRAPPER_MOTORDATA_DATAPARAM_MOTORDATAID)
+_sym_db.RegisterEnumDescriptor(_MOTORMSG_DATA_PARAM_ID)
 
-_MCUWRAPPER_MOTORDATA_DATAACTION = _descriptor.EnumDescriptor(
-  name='DataAction',
-  full_name='McuWrapper.MotorData.DataAction',
+_MOTORMSG_DATA_ACTION = _descriptor.EnumDescriptor(
+  name='Action',
+  full_name='MotorMsg.Data.Action',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -103,14 +103,14 @@ _MCUWRAPPER_MOTORDATA_DATAACTION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=542,
-  serialized_end=595,
+  serialized_start=464,
+  serialized_end=513,
 )
-_sym_db.RegisterEnumDescriptor(_MCUWRAPPER_MOTORDATA_DATAACTION)
+_sym_db.RegisterEnumDescriptor(_MOTORMSG_DATA_ACTION)
 
-_MCUWRAPPER_MOTORCMD_CMDPARAM_MOTORCMDPARAMID = _descriptor.EnumDescriptor(
-  name='MotorCmdParamId',
-  full_name='McuWrapper.MotorCmd.CmdParam.MotorCmdParamId',
+_MOTORMSG_CMD_PARAM_ID = _descriptor.EnumDescriptor(
+  name='Id',
+  full_name='MotorMsg.Cmd.Param.Id',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -169,14 +169,14 @@ _MCUWRAPPER_MOTORCMD_CMDPARAM_MOTORCMDPARAMID = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=827,
-  serialized_end=1087,
+  serialized_start=690,
+  serialized_end=937,
 )
-_sym_db.RegisterEnumDescriptor(_MCUWRAPPER_MOTORCMD_CMDPARAM_MOTORCMDPARAMID)
+_sym_db.RegisterEnumDescriptor(_MOTORMSG_CMD_PARAM_ID)
 
-_MCUWRAPPER_MOTORCMD_MOTORACTION = _descriptor.EnumDescriptor(
-  name='MotorAction',
-  full_name='McuWrapper.MotorCmd.MotorAction',
+_MOTORMSG_CMD_ACTION = _descriptor.EnumDescriptor(
+  name='Action',
+  full_name='MotorMsg.Cmd.Action',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -203,14 +203,14 @@ _MCUWRAPPER_MOTORCMD_MOTORACTION = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1089,
-  serialized_end=1164,
+  serialized_start=939,
+  serialized_end=1009,
 )
-_sym_db.RegisterEnumDescriptor(_MCUWRAPPER_MOTORCMD_MOTORACTION)
+_sym_db.RegisterEnumDescriptor(_MOTORMSG_CMD_ACTION)
 
-_MCUWRAPPER_UNIT = _descriptor.EnumDescriptor(
+_MOTORMSG_UNIT = _descriptor.EnumDescriptor(
   name='Unit',
-  full_name='McuWrapper.Unit',
+  full_name='MotorMsg.Unit',
   filename=None,
   file=DESCRIPTOR,
   values=[
@@ -261,35 +261,35 @@ _MCUWRAPPER_UNIT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   options=None,
-  serialized_start=1167,
-  serialized_end=1308,
+  serialized_start=1012,
+  serialized_end=1153,
 )
-_sym_db.RegisterEnumDescriptor(_MCUWRAPPER_UNIT)
+_sym_db.RegisterEnumDescriptor(_MOTORMSG_UNIT)
 
 
-_MCUWRAPPER_MOTORDATA_DATAPARAM = _descriptor.Descriptor(
-  name='DataParam',
-  full_name='McuWrapper.MotorData.DataParam',
+_MOTORMSG_DATA_PARAM = _descriptor.Descriptor(
+  name='Param',
+  full_name='MotorMsg.Data.Param',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='McuWrapper.MotorData.DataParam.id', index=0,
+      name='id', full_name='MotorMsg.Data.Param.id', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='McuWrapper.MotorData.DataParam.value', index=1,
+      name='value', full_name='MotorMsg.Data.Param.value', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='unit', full_name='McuWrapper.MotorData.DataParam.unit', index=2,
+      name='unit', full_name='MotorMsg.Data.Param.unit', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -300,7 +300,7 @@ _MCUWRAPPER_MOTORDATA_DATAPARAM = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _MCUWRAPPER_MOTORDATA_DATAPARAM_MOTORDATAID,
+    _MOTORMSG_DATA_PARAM_ID,
   ],
   options=None,
   is_extendable=False,
@@ -308,26 +308,26 @@ _MCUWRAPPER_MOTORDATA_DATAPARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=249,
-  serialized_end=540,
+  serialized_start=206,
+  serialized_end=462,
 )
 
-_MCUWRAPPER_MOTORDATA = _descriptor.Descriptor(
-  name='MotorData',
-  full_name='McuWrapper.MotorData',
+_MOTORMSG_DATA = _descriptor.Descriptor(
+  name='Data',
+  full_name='MotorMsg.Data',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='action', full_name='McuWrapper.MotorData.action', index=0,
+      name='action', full_name='MotorMsg.Data.action', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='params', full_name='McuWrapper.MotorData.params', index=1,
+      name='params', full_name='MotorMsg.Data.params', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -336,9 +336,9 @@ _MCUWRAPPER_MOTORDATA = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_MCUWRAPPER_MOTORDATA_DATAPARAM, ],
+  nested_types=[_MOTORMSG_DATA_PARAM, ],
   enum_types=[
-    _MCUWRAPPER_MOTORDATA_DATAACTION,
+    _MOTORMSG_DATA_ACTION,
   ],
   options=None,
   is_extendable=False,
@@ -346,33 +346,33 @@ _MCUWRAPPER_MOTORDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=136,
-  serialized_end=595,
+  serialized_start=120,
+  serialized_end=513,
 )
 
-_MCUWRAPPER_MOTORCMD_CMDPARAM = _descriptor.Descriptor(
-  name='CmdParam',
-  full_name='McuWrapper.MotorCmd.CmdParam',
+_MOTORMSG_CMD_PARAM = _descriptor.Descriptor(
+  name='Param',
+  full_name='MotorMsg.Cmd.Param',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='id', full_name='McuWrapper.MotorCmd.CmdParam.id', index=0,
+      name='id', full_name='MotorMsg.Cmd.Param.id', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='McuWrapper.MotorCmd.CmdParam.value', index=1,
+      name='value', full_name='MotorMsg.Cmd.Param.value', index=1,
       number=2, type=1, cpp_type=5, label=1,
       has_default_value=False, default_value=float(0),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='unit', full_name='McuWrapper.MotorCmd.CmdParam.unit', index=2,
+      name='unit', full_name='MotorMsg.Cmd.Param.unit', index=2,
       number=3, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
@@ -383,7 +383,7 @@ _MCUWRAPPER_MOTORCMD_CMDPARAM = _descriptor.Descriptor(
   ],
   nested_types=[],
   enum_types=[
-    _MCUWRAPPER_MOTORCMD_CMDPARAM_MOTORCMDPARAMID,
+    _MOTORMSG_CMD_PARAM_ID,
   ],
   options=None,
   is_extendable=False,
@@ -391,26 +391,26 @@ _MCUWRAPPER_MOTORCMD_CMDPARAM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=708,
-  serialized_end=1087,
+  serialized_start=599,
+  serialized_end=937,
 )
 
-_MCUWRAPPER_MOTORCMD = _descriptor.Descriptor(
-  name='MotorCmd',
-  full_name='McuWrapper.MotorCmd',
+_MOTORMSG_CMD = _descriptor.Descriptor(
+  name='Cmd',
+  full_name='MotorMsg.Cmd',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='action', full_name='McuWrapper.MotorCmd.action', index=0,
+      name='action', full_name='MotorMsg.Cmd.action', index=0,
       number=1, type=14, cpp_type=8, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='params', full_name='McuWrapper.MotorCmd.params', index=1,
+      name='params', full_name='MotorMsg.Cmd.params', index=1,
       number=2, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -419,9 +419,9 @@ _MCUWRAPPER_MOTORCMD = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_MCUWRAPPER_MOTORCMD_CMDPARAM, ],
+  nested_types=[_MOTORMSG_CMD_PARAM, ],
   enum_types=[
-    _MCUWRAPPER_MOTORCMD_MOTORACTION,
+    _MOTORMSG_CMD_ACTION,
   ],
   options=None,
   is_extendable=False,
@@ -429,33 +429,33 @@ _MCUWRAPPER_MOTORCMD = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=598,
-  serialized_end=1164,
+  serialized_start=516,
+  serialized_end=1009,
 )
 
-_MCUWRAPPER = _descriptor.Descriptor(
-  name='McuWrapper',
-  full_name='McuWrapper',
+_MOTORMSG = _descriptor.Descriptor(
+  name='MotorMsg',
+  full_name='MotorMsg',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='uuid', full_name='McuWrapper.uuid', index=0,
+      name='uuid', full_name='MotorMsg.uuid', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='motor_data', full_name='McuWrapper.motor_data', index=1,
+      name='motor_data', full_name='MotorMsg.motor_data', index=1,
       number=2, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='motor_cmd', full_name='McuWrapper.motor_cmd', index=2,
+      name='motor_cmd', full_name='MotorMsg.motor_cmd', index=2,
       number=3, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
@@ -464,9 +464,9 @@ _MCUWRAPPER = _descriptor.Descriptor(
   ],
   extensions=[
   ],
-  nested_types=[_MCUWRAPPER_MOTORDATA, _MCUWRAPPER_MOTORCMD, ],
+  nested_types=[_MOTORMSG_DATA, _MOTORMSG_CMD, ],
   enum_types=[
-    _MCUWRAPPER_UNIT,
+    _MOTORMSG_UNIT,
   ],
   options=None,
   is_extendable=False,
@@ -474,81 +474,81 @@ _MCUWRAPPER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
     _descriptor.OneofDescriptor(
-      name='content', full_name='McuWrapper.content',
+      name='content', full_name='MotorMsg.content',
       index=0, containing_type=None, fields=[]),
   ],
   serialized_start=19,
-  serialized_end=1319,
+  serialized_end=1164,
 )
 
-_MCUWRAPPER_MOTORDATA_DATAPARAM.fields_by_name['id'].enum_type = _MCUWRAPPER_MOTORDATA_DATAPARAM_MOTORDATAID
-_MCUWRAPPER_MOTORDATA_DATAPARAM.fields_by_name['unit'].enum_type = _MCUWRAPPER_UNIT
-_MCUWRAPPER_MOTORDATA_DATAPARAM.containing_type = _MCUWRAPPER_MOTORDATA
-_MCUWRAPPER_MOTORDATA_DATAPARAM_MOTORDATAID.containing_type = _MCUWRAPPER_MOTORDATA_DATAPARAM
-_MCUWRAPPER_MOTORDATA.fields_by_name['action'].enum_type = _MCUWRAPPER_MOTORDATA_DATAACTION
-_MCUWRAPPER_MOTORDATA.fields_by_name['params'].message_type = _MCUWRAPPER_MOTORDATA_DATAPARAM
-_MCUWRAPPER_MOTORDATA.containing_type = _MCUWRAPPER
-_MCUWRAPPER_MOTORDATA_DATAACTION.containing_type = _MCUWRAPPER_MOTORDATA
-_MCUWRAPPER_MOTORCMD_CMDPARAM.fields_by_name['id'].enum_type = _MCUWRAPPER_MOTORCMD_CMDPARAM_MOTORCMDPARAMID
-_MCUWRAPPER_MOTORCMD_CMDPARAM.fields_by_name['unit'].enum_type = _MCUWRAPPER_UNIT
-_MCUWRAPPER_MOTORCMD_CMDPARAM.containing_type = _MCUWRAPPER_MOTORCMD
-_MCUWRAPPER_MOTORCMD_CMDPARAM_MOTORCMDPARAMID.containing_type = _MCUWRAPPER_MOTORCMD_CMDPARAM
-_MCUWRAPPER_MOTORCMD.fields_by_name['action'].enum_type = _MCUWRAPPER_MOTORCMD_MOTORACTION
-_MCUWRAPPER_MOTORCMD.fields_by_name['params'].message_type = _MCUWRAPPER_MOTORCMD_CMDPARAM
-_MCUWRAPPER_MOTORCMD.containing_type = _MCUWRAPPER
-_MCUWRAPPER_MOTORCMD_MOTORACTION.containing_type = _MCUWRAPPER_MOTORCMD
-_MCUWRAPPER.fields_by_name['motor_data'].message_type = _MCUWRAPPER_MOTORDATA
-_MCUWRAPPER.fields_by_name['motor_cmd'].message_type = _MCUWRAPPER_MOTORCMD
-_MCUWRAPPER_UNIT.containing_type = _MCUWRAPPER
-_MCUWRAPPER.oneofs_by_name['content'].fields.append(
-  _MCUWRAPPER.fields_by_name['motor_data'])
-_MCUWRAPPER.fields_by_name['motor_data'].containing_oneof = _MCUWRAPPER.oneofs_by_name['content']
-_MCUWRAPPER.oneofs_by_name['content'].fields.append(
-  _MCUWRAPPER.fields_by_name['motor_cmd'])
-_MCUWRAPPER.fields_by_name['motor_cmd'].containing_oneof = _MCUWRAPPER.oneofs_by_name['content']
-DESCRIPTOR.message_types_by_name['McuWrapper'] = _MCUWRAPPER
+_MOTORMSG_DATA_PARAM.fields_by_name['id'].enum_type = _MOTORMSG_DATA_PARAM_ID
+_MOTORMSG_DATA_PARAM.fields_by_name['unit'].enum_type = _MOTORMSG_UNIT
+_MOTORMSG_DATA_PARAM.containing_type = _MOTORMSG_DATA
+_MOTORMSG_DATA_PARAM_ID.containing_type = _MOTORMSG_DATA_PARAM
+_MOTORMSG_DATA.fields_by_name['action'].enum_type = _MOTORMSG_DATA_ACTION
+_MOTORMSG_DATA.fields_by_name['params'].message_type = _MOTORMSG_DATA_PARAM
+_MOTORMSG_DATA.containing_type = _MOTORMSG
+_MOTORMSG_DATA_ACTION.containing_type = _MOTORMSG_DATA
+_MOTORMSG_CMD_PARAM.fields_by_name['id'].enum_type = _MOTORMSG_CMD_PARAM_ID
+_MOTORMSG_CMD_PARAM.fields_by_name['unit'].enum_type = _MOTORMSG_UNIT
+_MOTORMSG_CMD_PARAM.containing_type = _MOTORMSG_CMD
+_MOTORMSG_CMD_PARAM_ID.containing_type = _MOTORMSG_CMD_PARAM
+_MOTORMSG_CMD.fields_by_name['action'].enum_type = _MOTORMSG_CMD_ACTION
+_MOTORMSG_CMD.fields_by_name['params'].message_type = _MOTORMSG_CMD_PARAM
+_MOTORMSG_CMD.containing_type = _MOTORMSG
+_MOTORMSG_CMD_ACTION.containing_type = _MOTORMSG_CMD
+_MOTORMSG.fields_by_name['motor_data'].message_type = _MOTORMSG_DATA
+_MOTORMSG.fields_by_name['motor_cmd'].message_type = _MOTORMSG_CMD
+_MOTORMSG_UNIT.containing_type = _MOTORMSG
+_MOTORMSG.oneofs_by_name['content'].fields.append(
+  _MOTORMSG.fields_by_name['motor_data'])
+_MOTORMSG.fields_by_name['motor_data'].containing_oneof = _MOTORMSG.oneofs_by_name['content']
+_MOTORMSG.oneofs_by_name['content'].fields.append(
+  _MOTORMSG.fields_by_name['motor_cmd'])
+_MOTORMSG.fields_by_name['motor_cmd'].containing_oneof = _MOTORMSG.oneofs_by_name['content']
+DESCRIPTOR.message_types_by_name['MotorMsg'] = _MOTORMSG
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
-McuWrapper = _reflection.GeneratedProtocolMessageType('McuWrapper', (_message.Message,), dict(
+MotorMsg = _reflection.GeneratedProtocolMessageType('MotorMsg', (_message.Message,), dict(
 
-  MotorData = _reflection.GeneratedProtocolMessageType('MotorData', (_message.Message,), dict(
+  Data = _reflection.GeneratedProtocolMessageType('Data', (_message.Message,), dict(
 
-    DataParam = _reflection.GeneratedProtocolMessageType('DataParam', (_message.Message,), dict(
-      DESCRIPTOR = _MCUWRAPPER_MOTORDATA_DATAPARAM,
+    Param = _reflection.GeneratedProtocolMessageType('Param', (_message.Message,), dict(
+      DESCRIPTOR = _MOTORMSG_DATA_PARAM,
       __module__ = 'MotorMsg_pb2'
-      # @@protoc_insertion_point(class_scope:McuWrapper.MotorData.DataParam)
+      # @@protoc_insertion_point(class_scope:MotorMsg.Data.Param)
       ))
     ,
-    DESCRIPTOR = _MCUWRAPPER_MOTORDATA,
+    DESCRIPTOR = _MOTORMSG_DATA,
     __module__ = 'MotorMsg_pb2'
-    # @@protoc_insertion_point(class_scope:McuWrapper.MotorData)
+    # @@protoc_insertion_point(class_scope:MotorMsg.Data)
     ))
   ,
 
-  MotorCmd = _reflection.GeneratedProtocolMessageType('MotorCmd', (_message.Message,), dict(
+  Cmd = _reflection.GeneratedProtocolMessageType('Cmd', (_message.Message,), dict(
 
-    CmdParam = _reflection.GeneratedProtocolMessageType('CmdParam', (_message.Message,), dict(
-      DESCRIPTOR = _MCUWRAPPER_MOTORCMD_CMDPARAM,
+    Param = _reflection.GeneratedProtocolMessageType('Param', (_message.Message,), dict(
+      DESCRIPTOR = _MOTORMSG_CMD_PARAM,
       __module__ = 'MotorMsg_pb2'
-      # @@protoc_insertion_point(class_scope:McuWrapper.MotorCmd.CmdParam)
+      # @@protoc_insertion_point(class_scope:MotorMsg.Cmd.Param)
       ))
     ,
-    DESCRIPTOR = _MCUWRAPPER_MOTORCMD,
+    DESCRIPTOR = _MOTORMSG_CMD,
     __module__ = 'MotorMsg_pb2'
-    # @@protoc_insertion_point(class_scope:McuWrapper.MotorCmd)
+    # @@protoc_insertion_point(class_scope:MotorMsg.Cmd)
     ))
   ,
-  DESCRIPTOR = _MCUWRAPPER,
+  DESCRIPTOR = _MOTORMSG,
   __module__ = 'MotorMsg_pb2'
-  # @@protoc_insertion_point(class_scope:McuWrapper)
+  # @@protoc_insertion_point(class_scope:MotorMsg)
   ))
-_sym_db.RegisterMessage(McuWrapper)
-_sym_db.RegisterMessage(McuWrapper.MotorData)
-_sym_db.RegisterMessage(McuWrapper.MotorData.DataParam)
-_sym_db.RegisterMessage(McuWrapper.MotorCmd)
-_sym_db.RegisterMessage(McuWrapper.MotorCmd.CmdParam)
+_sym_db.RegisterMessage(MotorMsg)
+_sym_db.RegisterMessage(MotorMsg.Data)
+_sym_db.RegisterMessage(MotorMsg.Data.Param)
+_sym_db.RegisterMessage(MotorMsg.Cmd)
+_sym_db.RegisterMessage(MotorMsg.Cmd.Param)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\026com.addrobots.protobufB\010MotorMsg'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\026com.addrobots.protobufB\005Motor'))
 # @@protoc_insertion_point(module_scope)
