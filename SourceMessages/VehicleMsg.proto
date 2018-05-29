@@ -1,9 +1,9 @@
 syntax = "proto3";
 
 option java_package = "com.addrobots.protobuf";
-option java_outer_classname = "VehicleMsg";
+option java_outer_classname = "Vehicle";
 
-message VcuWrapper {
+message VehicleMsg {
 
 	message Halt {
 		double acceleration = 1;
