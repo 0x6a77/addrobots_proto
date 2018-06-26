@@ -1,0 +1,44 @@
+apply plugin: 'java'
+apply plugin: "com.github.breadmoirai.github-release"
+
+version = '1.0.0'
+
+buildscript {
+  repositories {
+    maven {
+      url "https://plugins.gradle.org/m2/"
+    }
+  }
+  dependencies {
+    classpath "gradle.plugin.com.github.breadmoirai:github-release:2.0.1"
+  }
+}
+
+task genProtobufCode {
+    doLast {
+        exec {
+            workingDir '.'
+            commandLine 'sh', '-c', './build.sh'
+
+        }
+    }
+}
+
+jar {
+   baseName = 'addrobots_proto'
+   from('src/protobuf') {
+      include '**/*'
+   }
+
+   manifest {
+       attributes 'Implementation-Title': 'Addrobots Protocol Buffers', 'Implementation-Version': version
+   }
+}
+
+jar.dependsOn(genProtobufCode)
+
+githubRelease {
+	token = ''
+	owner = 'addrobots'
+	releaseAssets = 'build/libs'
+}
