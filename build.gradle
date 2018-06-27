@@ -17,52 +17,13 @@ task genProtobufCode {
 
 jar {
    baseName = 'addrobots_proto'
+   archiveName = 'addrobots_proto.jar'
    from('src/protobuf') {
       include '**/*'
    }
-
    manifest {
        attributes 'Implementation-Title': 'Addrobots Protocol Buffers', 'Implementation-Version': version
    }
 }
 
 jar.dependsOn(genProtobufCode)
-
-//githubRelease {
-//	token = '0581bf45c27decd4eca653ef0769a1a8d471f61c'
-//	owner = 'addrobots'
-//	targetCommitish = 'master'
-//	releaseAssets = fileTree(jar.destinationDir).filter { it.isFile() }.files.name
-//}
-
-release {
-    failOnCommitNeeded = false
-    failOnPublishNeeded = true
-    failOnSnapshotDependencies = false
-    failOnUnversionedFiles = false
-    failOnUpdateNeeded = true
-    revertOnFail = true
-    preCommitText = ''
-    preTagCommitMessage = '[Gradle Release Plugin] - pre tag commit: '
-    tagCommitMessage = '[Gradle Release Plugin] - creating tag: '
-    newVersionCommitMessage = '[Gradle Release Plugin] - new version commit: '
-    tagTemplate = '${version}'
-    versionPropertyFile = 'gradle.properties'
-    versionProperties = []
-    buildTasks = ['build']
-//    ignoredSnapshotDependencies = []
-//    versionPatterns = [
-//        /(\d+)([^\d]*$)/: { Matcher m, Project p -> m.replaceAll("${(m[0][1] as int) + 1}${m[0][2]}") }
-//    ]
-    scmAdapters = [
-        net.researchgate.release.GitAdapter
-    ]
-
-    git {
-        requireBranch = 'master'
-        pushToRemote = 'origin'
-        pushToBranchPrefix = ''
-        commitVersionFileOnly = false
-        signTag = false
-    }
-}

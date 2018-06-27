@@ -1,0 +1,34 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:8-jdk
+      
+    working_directory: ~/repo
+
+    environment:
+      JVM_OPTS: -Xmx1024m
+      TERM: dumb
+    
+    steps:
+      - checkout
+      - run: gradle jar
+      
+machine:
+  node:
+    version: 6.2.0
+  environment:
+      project_name: 'addrobots_proto'
+      
+dependencies:
+  pre:
+    - go get github.com/aktau/github-release
+    - npm install github-release-notes -g
+    
+deployment:
+  release:
+    tag: /v[0-9]+(\.[0-9]+)*/
+    commands:
+      - git config user.name $CIRCLE_PROJECT_USERNAME
+      - gren --override --data-source=commits
+      - github-release upload --user $CIRCLE_PROJECT_USERNAME --repo $CIRCLE_PROJECT_REPONAME --tag $CIRCLE_TAG --name $CIRCLE_PROJECT_REPONAME"."$CIRCLE_TAG"-build-"$CIRCLE_BUILD_NUM".jar" --file build/libs/addrobots_proto.jar
