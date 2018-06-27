@@ -15,9 +15,9 @@ jobs:
       - run: gradle jar
       
       - persist_to_workspace:
-          root: workspace
+          root: build
           paths:
-            - build/libs
+            - libs
       
   publish_artifacts:     
     docker:
