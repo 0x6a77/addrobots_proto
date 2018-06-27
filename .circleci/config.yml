@@ -15,18 +15,18 @@ jobs:
       - run: gradle jar
       
   publish:     
-    machine:
-      node:
-        version: 6.2.0
-      environment:
-          project_name: 'addrobots_proto'
+    docker:
+      - image: circleci/node:6.2.0
+
+    environment:
+        project_name: 'addrobots_proto'
           
     dependencies:
       pre:
         - go get github.com/aktau/github-release
         - npm install github-release-notes -g
         
-    deployment:
+    steps:
       release:
         tag: /v[0-9]+(\.[0-9]+)*/
         commands:
@@ -39,4 +39,6 @@ workflows:
   build_and_publish:
     jobs:
       - build
-      - publish          
+      - publish:
+          requires:
+            - build         
