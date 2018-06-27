@@ -31,6 +31,7 @@ jobs:
           at: /tmp/workspace
         
       - checkout
+      - run: ls -lR /tmp/workspace
       - run: git config user.name $CIRCLE_PROJECT_USERNAME 
       - run: go get github.com/aktau/github-release
       - run: github-release upload --user $CIRCLE_PROJECT_USERNAME --repo $CIRCLE_PROJECT_REPONAME --name "$CIRCLE_PROJECT_REPONAME"-build-"$CIRCLE_BUILD_NUM".jar --file /tmp/workspace/addrobots_proto.jar
