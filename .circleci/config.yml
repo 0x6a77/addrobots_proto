@@ -16,7 +16,7 @@ jobs:
       
   publish:     
     docker:
-      - image: circleci/node:6.2.0
+      - image: circleci/node:8.11.3
 
     environment:
         project_name: 'addrobots_proto'
