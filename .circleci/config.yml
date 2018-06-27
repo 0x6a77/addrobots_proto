@@ -25,7 +25,7 @@ jobs:
       - checkout
       - run: git config user.name $CIRCLE_PROJECT_USERNAME 
       - run: go get github.com/aktau/github-release
-      - run: github-release upload --user $CIRCLE_PROJECT_USERNAME --repo $CIRCLE_PROJECT_REPONAME --tag $CIRCLE_TAG --name $CIRCLE_PROJECT_REPONAME"."$CIRCLE_TAG"-build-"$CIRCLE_BUILD_NUM".jar" --file build/libs/addrobots_proto.jar
+      - run: github-release upload --user $CIRCLE_PROJECT_USERNAME --repo $CIRCLE_PROJECT_REPONAME --tag $CIRCLE_TAG --name "$CIRCLE_PROJECT_REPONAME"."$CIRCLE_TAG"-build-"$CIRCLE_BUILD_NUM".jar --file build/libs/addrobots_proto.jar
           
   publish_notes:     
     docker:
@@ -38,7 +38,7 @@ jobs:
       - checkout
       - run: git config user.name $CIRCLE_PROJECT_USERNAME
       - run: sudo npm install github-release-notes -g
-      - run: gren release    
+      - run: gren release --token="$CIRCLE_TOKEN"
            
 workflows:
   version: 2
