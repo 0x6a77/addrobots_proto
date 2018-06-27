@@ -26,4 +26,4 @@ jar {
    }
 }
 
-jar.dependsOn(genProtobufCode)
+build.dependsOn(genProtobufCode)
