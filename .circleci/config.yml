@@ -16,7 +16,7 @@ jobs:
       
   publish:     
     docker:
-      - image: circleci/node:8.11.3
+      - image: vihervas/circleci-golang-node:1.9.2-6.11.2
 
     environment:
         project_name: 'addrobots_proto'
